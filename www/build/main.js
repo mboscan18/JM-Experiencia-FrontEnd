@@ -48,12 +48,11 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\home\home.html"*/'<page-header></page-header>\n\n<ion-content padding style="margin-top: 59px">\n  <h1 text-center ion-text color="principal">\n    <i class="fas fa-home"></i>\n    &nbsp;Home\n  </h1>\n\n  <div class="hidden-lg-up items-container" style="min-height: auto; overflow: auto; margin-bottom: 60px">\n    <a *ngFor="let pag of pages" (click)="openPage(pag)" class="text-decoration: none;">\n      <ion-row >\n        <ion-col>\n          <ion-card class="card-item" [ngStyle]="{\'border-color\': pag.color}">\n            <ion-row class="card-row">\n              <ion-col col-4 class="card-col-icon" *ngIf="pag.iconType == \'icon\'"> \n                <i class="{{pag.icon}} card-icon"></i>\n              </ion-col>\n              <ion-col col-4 class="card-col-icon" *ngIf="pag.iconType == \'img\'"> \n                <img src="{{pag.icon}}"  style="width: 100px; position: relative; left: 50%; margin-left: -50px"/>\n              </ion-col>\n              <ion-col col-6 class="card-col-title">{{pag.title}}</ion-col>\n            </ion-row>\n          </ion-card>\n        </ion-col>\n      </ion-row>\n    </a>\n  </div>\n\n  <div class="hidden-md-down items-container"  style="min-height: auto; overflow: auto; margin-bottom: 60px">\n    <a  class="text-decoration: none;">\n      <ion-row >\n        <ion-col col-6 *ngFor="let pag of pages" (click)="openPage(pag)">\n          <ion-card class="card-item" [ngStyle]="{\'border-color\': pag.color}" style="height: 200px;">\n            <ion-row style="display: table; height: 100%;">\n              <ion-col col-3 class="card-col-icon" *ngIf="pag.iconType == \'icon\'"> \n                <i class="{{pag.icon}}" style="font-size: 8.5rem; color: #003300; margin-left: 40%"></i>\n              </ion-col>\n              <ion-col col-3 class="card-col-icon" *ngIf="pag.iconType == \'img\'"> \n                <img src="{{pag.icon}}"  style="width: 100px; position: relative;  margin-left: 40%"/>\n              </ion-col>\n              <ion-col col-7 class="card-col-title">{{pag.title}}</ion-col>\n            </ion-row>\n          </ion-card>\n        </ion-col>\n      </ion-row>\n    </a>\n\n    <a  class="text-decoration: none;">\n      <ion-row >\n        <ion-col col-6  (click)="openclientes()">\n          <ion-card class="card-item" style="height: 200px;">\n            <ion-row style="display: table; height: 100%;">\n              <ion-col col-3 class="card-col-icon" > \n                <i class="fas fa-user-plus" style="font-size: 8.5rem; color: #003300; margin-left: 40%"></i>\n              </ion-col>\n              <ion-col col-7 class="card-col-title">Crear CLiente</ion-col>\n            </ion-row>\n          </ion-card>\n        </ion-col>\n      </ion-row>\n    </a>\n  </div>\n    \n  </ion-content>\n  '/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\home\home.html"*/'<page-header></page-header>\n\n<ion-content padding style="margin-top: 59px">\n  <h1 text-center ion-text color="principal">\n    <i class="fas fa-home"></i>\n    &nbsp;Home\n  </h1>\n\n  <div class="hidden-lg-up items-container" style="min-height: auto; overflow: auto; margin-bottom: 60px">\n    <a *ngFor="let pag of pages" (click)="openPage(pag)" class="text-decoration: none;">\n      <ion-row >\n        <ion-col>\n          <ion-card class="card-item" [ngStyle]="{\'border-color\': pag.color}">\n            <ion-row class="card-row">\n              <ion-col col-4 class="card-col-icon" *ngIf="pag.iconType == \'icon\'"> \n                <i class="{{pag.icon}} card-icon"></i>\n              </ion-col>\n              <ion-col col-4 class="card-col-icon" *ngIf="pag.iconType == \'img\'"> \n                <img src="{{pag.icon}}"  style="width: 100px; position: relative; left: 50%; margin-left: -50px"/>\n              </ion-col>\n              <ion-col col-6 class="card-col-title">{{pag.title}}</ion-col>\n            </ion-row>\n          </ion-card>\n        </ion-col>\n      </ion-row>\n    </a>\n\n    <a  (click)="openclientes()" class="text-decoration: none;">\n        <ion-row >\n          <ion-col>\n            <ion-card class="card-item">\n              <ion-row class="card-row">\n                <ion-col col-4 class="card-col-icon" > \n                  <i class="fas fa-user-plus card-icon"></i>\n                </ion-col>\n                <ion-col col-6 class="card-col-title">Crear Cliente</ion-col>\n              </ion-row>\n            </ion-card>\n          </ion-col>\n        </ion-row>\n      </a>\n\n  </div>\n\n  <div class="hidden-md-down items-container"  style="min-height: auto; overflow: auto; margin-bottom: 60px">\n    <a  class="text-decoration: none;">\n      <ion-row >\n        <ion-col col-6 *ngFor="let pag of pages" (click)="openPage(pag)">\n          <ion-card class="card-item" [ngStyle]="{\'border-color\': pag.color}" style="height: 200px;">\n            <ion-row style="display: table; height: 100%;">\n              <ion-col col-3 class="card-col-icon" *ngIf="pag.iconType == \'icon\'"> \n                <i class="{{pag.icon}}" style="font-size: 8.5rem; color: #003300; margin-left: 40%"></i>\n              </ion-col>\n              <ion-col col-3 class="card-col-icon" *ngIf="pag.iconType == \'img\'"> \n                <img src="{{pag.icon}}"  style="width: 100px; position: relative;  margin-left: 40%"/>\n              </ion-col>\n              <ion-col col-7 class="card-col-title">{{pag.title}}</ion-col>\n            </ion-row>\n          </ion-card>\n        </ion-col>\n      </ion-row>\n    </a>\n\n    <a  class="text-decoration: none;">\n      <ion-row >\n        <ion-col col-6  (click)="openclientes()">\n          <ion-card class="card-item" style="height: 200px;">\n            <ion-row style="display: table; height: 100%;">\n              <ion-col col-3 class="card-col-icon" > \n                <i class="fas fa-user-plus" style="font-size: 8.5rem; color: #003300; margin-left: 40%"></i>\n              </ion-col>\n              <ion-col col-7 class="card-col-title">Crear CLiente</ion-col>\n            </ion-row>\n          </ion-card>\n        </ion-col>\n      </ion-row>\n    </a>\n  </div>\n    \n  </ion-content>\n  '/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])
     ], HomePage);
     return HomePage;
-    var _a;
 }());
 
 //# sourceMappingURL=home.js.map
@@ -382,7 +381,8 @@ var ManejoMesasPage = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return constantes; });
-var API_URL = 'http://192.168.1.12/JME/public/api/';
+//const API_URL = 'http://192.168.1.12/JME/public/api/';
+var API_URL = 'http://192.168.1.12:8000/api/';
 var constantes = {
     API_URL: API_URL,
 };
@@ -1246,13 +1246,13 @@ var MesaFotosPage = /** @class */ (function () {
                 console.log('Error al obtener fotos');
                 var errorMessage = '';
                 errorMessage = result['error']['message'] + '<br>';
-                var alert = _this.alertCtrl.create({
+                var alert_1 = _this.alertCtrl.create({
                     title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
                     subTitle: 'Hubo errores al obtener las Fotos de la Mesa:<br>',
                     message: errorMessage,
                     buttons: ['OK']
                 });
-                alert.present();
+                alert_1.present();
             }
         });
     };
@@ -1314,13 +1314,13 @@ var MesaFotosPage = /** @class */ (function () {
             else {
                 console.log('Error al Agregar Foto a la mesa');
                 var errorMessage = result['error']['message'] + '<br>';
-                var alert = _this.alertCtrl.create({
+                var alert_2 = _this.alertCtrl.create({
                     title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
                     subTitle: 'Hubo errores al agregar las fotos a la mesa:<br>',
                     message: errorMessage,
                     buttons: ['OK']
                 });
-                alert.present();
+                alert_2.present();
             }
         });
     };
@@ -1328,10 +1328,14 @@ var MesaFotosPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-mesa-fotos',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\mesa-fotos\mesa-fotos.html"*/'<ion-header>\n    <div class="modal-header">\n      <p class="modal-title" >Fotos de la Mesa</p>\n  \n      <button class="modal-close-icon" (click)="closeModal()">\n        <i class="fas fa-times" style="font-size: 2.3rem"></i>\n      </button>\n    </div>      \n  </ion-header>\n  \n  <ion-content>\n\n    <div padding class="search-bar">\n\n      <ion-row justify-content-center>\n        <ion-col col >\n          <button class="button-agregar-mesa" (click)="addFoto()">\n            <i class="fas fa-user-plus" style="font-size: 2rem"> </i> &nbsp;Agregar Referencia de Foto\n          </button>\n        </ion-col>\n      </ion-row>\n\n    </div>\n\n    <div  class="fotos-overflow">\n        <form [formGroup]="fotosMesaForm" >\n            <div  formArrayName="fotosMesa" >\n\n                <div no-padding [formGroupName]="i" *ngFor="let foto of fotosMesaForm.controls.fotosMesa.controls; let i = index">\n                  \n                      <div class="referencia-item">\n                          <ion-item class="item-input-foto">\n                            <ion-label floating>Referencia {{i+1}}:</ion-label>\n                            <ion-input  type="text"  maxlength="50" formControlName="descripcion"></ion-input>\n                          </ion-item>\n                        <ion-item no-lines col-2 class="item-icon-foto" >\n                          <a class="button-trash" *ngIf="fotosMesaForm.controls.fotosMesa.length > 1" (click)="removeFoto(i)">\n                            <i class="far fa-trash-alt"></i>\n                          </a>\n                        </ion-item>\n                      </div>\n                  \n                  </div>\n\n            </div>  \n                         \n        </form>\n    </div>\n        \n        <button class="button-guardar-fotos" (click)="guardar(fotosMesaForm.value)" [disabled]="!fotosMesaForm.valid">\n          <i class="fas fa-save" style="font-size: 2rem"> </i> &nbsp;Guardar \n        </button>\n        \n      </ion-content>\n\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\mesa-fotos\mesa-fotos.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]) === "function" && _f || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
     ], MesaFotosPage);
     return MesaFotosPage;
-    var _a, _b, _c, _d, _e, _f;
 }());
 
 //# sourceMappingURL=mesa-fotos.js.map
@@ -1482,7 +1486,7 @@ var AdminCorreosPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__imports_url__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(297);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(298);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2044,8 +2048,9 @@ var CrearMesaModalPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_clientes_service_clientes_service__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__imports_validator__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__celebraciones_popover_celebraciones_popover__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_clientes_service_clientes_service__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__imports_validator__ = __webpack_require__(215);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2060,6 +2065,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Generated class for the CrearClientePage page.
  *
@@ -2067,11 +2073,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var CrearClientePage = /** @class */ (function () {
-    function CrearClientePage(navCtrl, navParams, formBuilder, alertCtrl, clienteService) {
+    function CrearClientePage(navCtrl, navParams, formBuilder, alertCtrl, popoverCtrl, clienteService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.formBuilder = formBuilder;
         this.alertCtrl = alertCtrl;
+        this.popoverCtrl = popoverCtrl;
         this.clienteService = clienteService;
         this.clienteForm = this.formBuilder.group({
             name: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([
@@ -2079,7 +2086,7 @@ var CrearClientePage = /** @class */ (function () {
                 ])
             ],
             email: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([
-                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].pattern(__WEBPACK_IMPORTED_MODULE_4__imports_validator__["a" /* regexValidators */].email),
+                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].pattern(__WEBPACK_IMPORTED_MODULE_5__imports_validator__["a" /* regexValidators */].email),
                     __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required
                 ])
             ],
@@ -2133,7 +2140,7 @@ var CrearClientePage = /** @class */ (function () {
         this.clienteService.getCelebraciones().then(function (result) {
             if (!result['error']) {
                 console.log('Celebraciones obtenidas Exitosamente');
-                // console.log(result);
+                console.log(result);
                 _this.celebraciones = result;
             }
             else {
@@ -2151,15 +2158,22 @@ var CrearClientePage = /** @class */ (function () {
             }
         });
     };
+    CrearClientePage.prototype.celebracionesPopover = function (myEvent) {
+        var popover = this.popoverCtrl.create(__WEBPACK_IMPORTED_MODULE_3__celebraciones_popover_celebraciones_popover__["a" /* CelebracionesPopoverPage */], { "parentName": "CrearClientePage", "celebrciones": this.celebraciones });
+        popover.present({
+            ev: myEvent
+        });
+    };
     CrearClientePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-crear-cliente',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\crear-cliente\crear-cliente.html"*/'<ion-header >\n    <ion-navbar color="primary" >\n          \n      <img class="navabr-img"  text-center src="../../assets/imgs/logo_navbar.png" />\n                    \n    </ion-navbar>\n  </ion-header>\n  \n  <ion-content>\n    <div padding class="content-overflow">\n      <form  [formGroup]="clienteForm">\n        \n        <ion-item class="form-item">\n          <ion-label stacked>Nombre y Apellido:</ion-label>\n          <ion-input type="text" [formControl]="clienteForm.controls[\'name\']"></ion-input>\n        </ion-item>\n\n        <ion-item class="form-item">\n          <ion-label stacked>E-Mail:</ion-label>\n          <ion-input type="email" [formControl]="clienteForm.controls[\'email\']"></ion-input>\n        </ion-item>\n        \n        <ion-item class="form-item">\n          <ion-label stacked>Teléfono (Whatsapp):</ion-label>\n          <ion-input type="number" [formControl]="clienteForm.controls[\'whatsapp\']"></ion-input>\n        </ion-item>\n\n        <ion-item class="form-item">\n          <ion-label stacked>Teléfono (Opcional):</ion-label>\n          <ion-input type="number" [formControl]="clienteForm.controls[\'telefono\']"></ion-input>\n        </ion-item>\n\n        <ion-item class="form-item">\n          <ion-label stacked>Dirección:</ion-label>\n          <ion-input type="text" [formControl]="clienteForm.controls[\'direccion\']"></ion-input>\n        </ion-item>\n\n        <ion-item class="form-item">\n          <ion-label stacked>gregar Celebración:</ion-label>\n          <ion-input type="text" ></ion-input>\n        </ion-item>\n\n        <ion-item>\n            <ion-label>Gaming</ion-label>\n            <ion-select >\n              <ion-option value="nes">NES</ion-option>\n              <ion-option value="n64">Nintendo64</ion-option>\n              <ion-option value="ps">PlayStation</ion-option>\n              <ion-option value="genesis">Sega Genesis</ion-option>\n              <ion-option value="saturn">Sega Saturn</ion-option>\n              <ion-option value="snes">SNES</ion-option>\n            </ion-select>\n          </ion-item>\n        \n        \n        \n        \n        <ion-row class="sign-in-button-container">\n          <ion-col text-center>\n            <button class="succes-button" (click)="crearMesa()" [disabled]="!clienteForm.valid">\n              <i class="fas fa-plus" style="font-size: 2rem"></i>&nbsp;Crear\n            </button>\n          </ion-col>\n        </ion-row>\n        \n        \n      </form>\n      \n    </div>\n  </ion-content>\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\crear-cliente\crear-cliente.html"*/,
+            selector: 'page-crear-cliente',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\crear-cliente\crear-cliente.html"*/'<ion-header >\n    <ion-navbar color="primary" >\n          \n      <img class="navabr-img"  text-center src="../../assets/imgs/logo_navbar.png" />\n                    \n    </ion-navbar>\n  </ion-header>\n  \n  <ion-content>\n    <div padding class="content-overflow">\n      <form  [formGroup]="clienteForm">\n        \n        <ion-item class="form-item">\n          <ion-label stacked>Nombre y Apellido:</ion-label>\n          <ion-input type="text" [formControl]="clienteForm.controls[\'name\']"></ion-input>\n        </ion-item>\n\n        <ion-item class="form-item">\n          <ion-label stacked>E-Mail:</ion-label>\n          <ion-input type="email" [formControl]="clienteForm.controls[\'email\']"></ion-input>\n        </ion-item>\n        \n        <ion-item class="form-item">\n          <ion-label stacked>Teléfono (Whatsapp):</ion-label>\n          <ion-input type="number" [formControl]="clienteForm.controls[\'whatsapp\']"></ion-input>\n        </ion-item>\n\n        <ion-item class="form-item">\n          <ion-label stacked>Teléfono (Opcional):</ion-label>\n          <ion-input type="number" [formControl]="clienteForm.controls[\'telefono\']"></ion-input>\n        </ion-item>\n\n        <ion-item class="form-item">\n          <ion-label stacked>Dirección:</ion-label>\n          <ion-input type="text" [formControl]="clienteForm.controls[\'direccion\']"></ion-input>\n        </ion-item>\n\n        <ion-item>\n            <ion-label>Seleccione un Celebración:</ion-label>\n            <ion-select interface="popover">\n              <ion-option *ngFor="let celebracion of celebraciones" id="celebracion_{{celebracion.id}}">\n                {{celebracion.descripcion}}\n            </ion-option>\n            </ion-select>\n          </ion-item>\n        \n        \n        \n        \n        <ion-row class="sign-in-button-container">\n          <ion-col text-center>\n            <button class="succes-button" (click)="crearMesa()" [disabled]="!clienteForm.valid">\n              <i class="fas fa-plus" style="font-size: 2rem"></i>&nbsp;Crear\n            </button>\n          </ion-col>\n        </ion-row>\n        \n        \n      </form>\n      \n    </div>\n  </ion-content>\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\crear-cliente\crear-cliente.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_clientes_service_clientes_service__["a" /* ClientesServiceProvider */]])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* PopoverController */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_clientes_service_clientes_service__["a" /* ClientesServiceProvider */]])
     ], CrearClientePage);
     return CrearClientePage;
 }());
@@ -2461,7 +2475,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(289);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_header_header__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_header_header__ = __webpack_require__(297);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_user_popover_user_popover__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(104);
@@ -2476,8 +2490,8 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_mesa_celebraciones_mesa_celebraciones__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_mesa_clientes_mesa_clientes__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_mesa_fotos_mesa_fotos__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_mesa_correo_mesa_correo__ = __webpack_require__(298);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_initial_options_initial_options__ = __webpack_require__(299);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_mesa_correo_mesa_correo__ = __webpack_require__(299);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_initial_options_initial_options__ = __webpack_require__(300);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_crear_cliente_crear_cliente__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__angular_common_http__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__ionic_native_splash_screen__ = __webpack_require__(210);
@@ -3077,6 +3091,52 @@ var MyApp = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CelebracionesPopoverPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the CelebracionesPopoverPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var CelebracionesPopoverPage = /** @class */ (function () {
+    function CelebracionesPopoverPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.celebraciones = this.navParams.get("celebrciones");
+    }
+    CelebracionesPopoverPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CelebracionesPopoverPage');
+    };
+    CelebracionesPopoverPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-celebraciones-popover',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\celebraciones-popover\celebraciones-popover.html"*/'<ion-item *NgFor="let celebracion of celebraciones" id="celebracion_{{celebracion.id}}">\n  {{celebracion.descripcion}}\n</ion-item>\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\celebraciones-popover\celebraciones-popover.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+    ], CelebracionesPopoverPage);
+    return CelebracionesPopoverPage;
+}());
+
+//# sourceMappingURL=celebraciones-popover.js.map
+
+/***/ }),
+
+/***/ 297:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
@@ -3137,7 +3197,7 @@ var HeaderPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 298:
+/***/ 299:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3182,7 +3242,7 @@ var MesaCorreoPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 299:
+/***/ 300:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

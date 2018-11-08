@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, PopoverController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
+
+import { CelebracionesPopoverPage } from '../celebraciones-popover/celebraciones-popover';
+
 import { ClientesServiceProvider } from '../../providers/clientes-service/clientes-service';
 import { regexValidators } from '../../imports/validator';
 
@@ -26,6 +29,7 @@ export class CrearClientePage {
               public navParams: NavParams,
               private formBuilder: FormBuilder, 
               public alertCtrl: AlertController, 
+              public popoverCtrl: PopoverController,
               private clienteService: ClientesServiceProvider) {
 
     this.clienteForm = this.formBuilder.group({
@@ -90,7 +94,7 @@ export class CrearClientePage {
     this.clienteService.getCelebraciones().then(result => {
       if (!result['error']){
         console.log('Celebraciones obtenidas Exitosamente');
-       // console.log(result);
+        console.log(result);
         
         this.celebraciones = result;
         
@@ -111,6 +115,13 @@ export class CrearClientePage {
         });
         alert.present();
       }
+    });
+  }
+
+  celebracionesPopover(myEvent) {
+    let popover = this.popoverCtrl.create(CelebracionesPopoverPage, {"parentName": "CrearClientePage", "celebrciones": this.celebraciones });
+    popover.present({
+      ev: myEvent
     });
   }
 

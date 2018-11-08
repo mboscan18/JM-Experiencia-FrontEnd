@@ -35,20 +35,12 @@
           <ion-input type="text" [formControl]="clienteForm.controls['direccion']"></ion-input>
         </ion-item>
 
-        <ion-item class="form-item">
-          <ion-label stacked>gregar Celebración:</ion-label>
-          <ion-input type="text" ></ion-input>
-        </ion-item>
-
         <ion-item>
-            <ion-label>Gaming</ion-label>
-            <ion-select >
-              <ion-option value="nes">NES</ion-option>
-              <ion-option value="n64">Nintendo64</ion-option>
-              <ion-option value="ps">PlayStation</ion-option>
-              <ion-option value="genesis">Sega Genesis</ion-option>
-              <ion-option value="saturn">Sega Saturn</ion-option>
-              <ion-option value="snes">SNES</ion-option>
+            <ion-label>Seleccione un Celebración:</ion-label>
+            <ion-select interface="popover">
+              <ion-option *ngFor="let celebracion of celebraciones" id="celebracion_{{celebracion.id}}">
+                {{celebracion.descripcion}}
+            </ion-option>
             </ion-select>
           </ion-item>
         
