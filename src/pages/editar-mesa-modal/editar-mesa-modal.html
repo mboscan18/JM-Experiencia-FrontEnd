@@ -1,0 +1,51 @@
+<ion-header>
+    <div class="modal-header">
+      <p class="modal-title" >Editar Mesa</p>
+  
+      <button class="modal-close-icon" (click)="closeModal()">
+        <i class="fas fa-times" style="font-size: 2.3rem"></i>
+      </button>
+    </div>      
+  </ion-header>
+  
+  <ion-content>
+    <div padding class="content-overflow">
+      <form  [formGroup]="editMesaForm">
+        
+        <ion-item class="form-item">
+          <ion-label stacked>Numero de la Mesa:</ion-label>
+          <ion-input type="number" [formControl]="editMesaForm.controls['num_mesa']" readonly></ion-input>
+        </ion-item>
+        
+        <ion-item class="form-item">
+          <ion-label stacked>Etiqueta de la Mesa:</ion-label>
+          <ion-input type="text" [formControl]="editMesaForm.controls['etiqueta']"></ion-input>
+        </ion-item>
+        
+        <ion-item class="form-item">
+          <ion-label stacked>Fecha y Hora de Apertura:</ion-label>
+          <ion-datetime displayFormat="YYYY-MM-DD HH:mm" pickerFormat="MMM/DD/YYYY hh:mma" 
+          doneText="Aceptar" cancelText="Cancelar"	[formControl]="editMesaForm.controls['apertura']"></ion-datetime>
+        </ion-item>
+        
+        <ion-item class="form-item">
+          <ion-label stacked>Fecha y Hora de Clausura (Opcional):</ion-label>
+          <ion-datetime displayFormat="YYYY-MM-DD HH:mm" pickerFormat="MMM/DD/YYYY hh:mma" 
+          doneText="Aceptar" cancelText="Cancelar" [formControl]="editMesaForm.controls['clausura']"></ion-datetime>
+        </ion-item>
+        
+        
+        
+        <ion-row class="sign-in-button-container">
+          <ion-col text-center>
+            <button class="succes-button" (click)="editarMesa()" [disabled]="!editMesaForm.valid">
+              <i class="far fa-save" style="font-size: 2rem"></i>&nbsp;Guardar
+            </button>
+          </ion-col>
+        </ion-row>
+        
+        
+      </form>
+      
+    </div>
+  </ion-content>

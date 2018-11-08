@@ -1,0 +1,87 @@
+<page-header></page-header>
+
+<ion-content padding style="margin-top: 59px">
+  <h1 text-center ion-text color="principal">
+      <img src="../../assets/imgs/meeting_principal.svg" width="50em" style="margin-bottom: -10px">
+    &nbsp;Manejo de Mesas
+  </h1>
+
+  <div class="mesa-selected-page">
+    <a class="cerrar-mesa" (click)="closeShowMesa()">
+      <i class="fas fa-arrow-left"></i>&nbsp; Volver a Manejo de Mesas 
+    </a>
+    <div class="mesa-options-bar">
+      <ion-row>
+        <ion-col col>
+          <a (click)="openMesaEditar()"><i class="far fa-edit"></i></a>
+        </ion-col>
+        <ion-col col >
+          <a (click)="openMesaCelebraciones_show()"><img src="../../assets/imgs/confetti_menu.svg" class="option-img"/></a>
+        </ion-col>
+        <ion-col col >
+          <a (click)="openMesaClientes()"><i class="fas fa-user"></i></a>
+        </ion-col>
+        <ion-col col >
+          <a (click)="openMesaFotos()"><i class="fas fa-camera"></i></a>
+        </ion-col>
+        <ion-col col >
+          <a (click)="openMesaCorreo()"><i class="fas fa-envelope"></i></a>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="mesa-title-bar">
+      <div class="table-cell">
+        <p class="mesa-numero">Mesa {{mesa.num_mesa}}:</p>
+        <p class="mesa-etiqueta">&nbsp; {{mesa.etiqueta}}</p>
+      </div>
+    </div>
+    <div class="mesa-horas-bar">
+      <ion-row>
+        <ion-col col-12 >
+          <i class="far fa-clock"></i> &nbsp; Hora de Apertura: &nbsp;<span style="text-decoration: bold; font-size: 2.4rem">{{horaApertura}}</span>
+        </ion-col>
+        <ion-col col-12 >
+          <i class="far fa-clock"></i> &nbsp; Hora de Clausura: &nbsp;<span style="text-decoration: bold; font-size: 2.4rem">{{horaClausura}}</span>
+        </ion-col>
+      </ion-row>
+    </div>
+    <ion-row >
+      <ion-col col class="title-section">
+        Motivo de Celebración:
+      </ion-col>
+    </ion-row>
+    <div class="mesa-celebraciones-bar">
+      <ion-row>
+        <ion-col col class="empty" *ngIf="celebracionesMesa == 0">
+          ¡No se han agregado Celebraciones aún!
+        </ion-col>
+      </ion-row>  
+      <ion-row *ngFor="let clebracion of celebracionesMesa">
+        <ion-col col >
+          <img src="../../assets/imgs/confetti_menu.svg"/> &nbsp; {{clebracion.celebracion_descripcion}} de {{clebracion.cliente_name}} <a (click)="deleteCelebracionMesa(clebracion)"><i class="far fa-trash-alt icon-delete"></i></a>
+        </ion-col>
+      </ion-row>
+    </div>
+    <ion-row >
+      <ion-col col class="title-section">
+        Clientes de la Mesa:
+      </ion-col>
+    </ion-row>
+    <div class="mesa-clientes-bar">
+      <ion-row>
+        <ion-col col class="empty" *ngIf="cantClientes == 0">
+          ¡No se han agregado Clientes aún!
+        </ion-col>
+      </ion-row>
+      <ion-row *ngFor="let cliente of clientesMesa">
+        <ion-col col >
+          <i class="fas fa-user"></i> &nbsp; {{cliente.cliente_name}} <a (click)="deleteClienteMesa(cliente)"><i class="far fa-trash-alt icon-delete"></i></a>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+    
+    
+    
+  </ion-content>
+  

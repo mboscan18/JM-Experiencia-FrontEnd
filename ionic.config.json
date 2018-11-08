@@ -1,0 +1,7 @@
+{
+  "name": "JME",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

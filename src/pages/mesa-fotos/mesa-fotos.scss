@@ -1,0 +1,54 @@
+.fotos-overflow{
+    width: 100%;
+    min-height: auto; 
+    max-height: 65%; 
+    overflow: auto; 
+    margin-top: -10px;
+    position: fixed !important;
+}
+
+.item-input-foto{
+    display: inline;
+    padding: 0 10px 0 10px;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle
+}
+
+.item-icon-foto{
+    display: inline;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle
+}
+
+.button-trash{
+    color: #FB3D37;
+    font-size: 2.3rem;
+    background-color: none;
+    margin: 0;
+    float: left
+
+}
+
+.referencia-item{
+    width: 50%;
+    display: table;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.button-guardar-fotos{
+    width: 100%;
+    height: 55px;
+    bottom: 0;
+    padding: 5px 0 5px 0;
+    background-color: #8abd5d;
+    color: #ffffff;
+    font-size: 2.3rem;
+    position: fixed !important;
+}
+
+.button-guardar-fotos:hover{
+    background-color: #749e50
+}

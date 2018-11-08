@@ -1,0 +1,61 @@
+.content-overflow{
+    margin-top: 60px;
+    width: 100%;
+    min-height: auto; 
+    overflow: auto; 
+}
+
+.modal-header{
+    width: 100%;
+    height: 60px; 
+    background-color: #04932A;
+    position: absolute;
+    top: 0;
+}
+
+.modal-title{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 3rem;
+    text-decoration: bold;
+    color: white;
+}
+
+.modal-close-icon{
+    text-decoration: none;
+    position: absolute; 
+    right: 10px;
+    top: 16px;
+    color: white;
+    background-color: transparent;
+}
+
+.modal-close-icon:hover{
+    color: #9bdb84;
+}
+
+.succes-button{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 5px 0 5px 0;
+    background-color: #8abd5d;
+    color: #ffffff;
+    font-size: 2.3rem;
+}
+
+.succes-button:hover{
+    background-color: #749e50
+}
+
+.alert-title{
+    color: #FB3D37;
+}
+
+.form-item{
+    margin-bottom: 20px;
+}
+
+.error-item{
+    font-size: 1rem;
+}

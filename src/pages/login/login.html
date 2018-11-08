@@ -1,0 +1,54 @@
+
+<ion-content >
+
+    <ion-row class="app-icon-container">
+      <ion-col text-center>
+        <ion-icon name="ionic" class="app-icon-zoom"></ion-icon>
+      </ion-col>
+    </ion-row>
+  
+    <form [formGroup]="credentialsForm">
+  
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input [formControl]="credentialsForm.controls['email']"
+            type="email" value="miguelboscan18@gmail.com"></ion-input>
+      </ion-item>
+  
+    
+  
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input [formControl]="credentialsForm.controls['password']"
+            type="password" value="Miguel2006*"></ion-input>
+      </ion-item>
+  
+      <div *ngIf="credentialsForm.controls.email.hasError('pattern')">
+          Please enter a valid email.
+      </div>
+     <!-- <div *ngIf="credentialsForm.controls.password.hasError('pattern')">
+          Passwords should be at least 8 characters long and contain one number,
+          one character and one special character.
+      </div> -->
+  
+      <ion-row class="sign-in-button-container">
+        <ion-col text-center>
+          <button ion-button block color="secondary"
+              [disabled]="!credentialsForm.valid" (click)="onLogIn()">
+            Sign in
+          </button>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col text-center>
+          <button ion-button clear color="light"
+              (click)="onForgotPassword()">
+            Forgot your password?
+          </button>
+        </ion-col>
+      </ion-row>
+  
+    </form>
+  
+  </ion-content>

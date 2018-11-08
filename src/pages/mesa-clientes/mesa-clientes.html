@@ -1,0 +1,50 @@
+<ion-header>
+    <div class="modal-header">
+      <p class="modal-title" >Clientes de la Mesa</p>
+  
+      <button class="modal-close-icon" (click)="closeModal()">
+        <i class="fas fa-times" style="font-size: 2.3rem"></i>
+      </button>
+    </div>      
+  </ion-header>
+  
+  <ion-content>
+
+    <div padding class="search-bar">
+
+      <ion-row>
+        <ion-col col-12 col-md-6 col-lg-6 col-xl-6>
+          <button class="button-agregar-mesa" (click)="openCrearMesaModal()">
+            <i class="fas fa-user-plus" style="font-size: 2rem"> </i> &nbsp;Crear Cliente
+          </button>
+        </ion-col>
+        <ion-col col-12 col-md-6 col-lg-6 col-xl-6>
+          <ion-searchbar
+          [showCancelButton]="shouldShowCancel"
+          (ionInput)="filterItems($event)">
+          </ion-searchbar>
+        </ion-col>
+      </ion-row>
+
+    </div>
+
+    <div  class="lista-overflow">
+
+      <ion-list class="client-list">
+        <button ion-item *ngFor="let cliente of items" (click)="changeItemState(cliente)">
+          <i class="far fa-check-square icon-check" item-start *ngIf="cliente.check_mesa == 'checked'"></i>
+          <i class="far fa-square icon-blank" item-start *ngIf="cliente.check_mesa == 'N'"></i>
+          <h1 class="client-name-check" *ngIf="cliente.check_mesa == 'checked'">{{cliente.name}}</h1>
+          <h2 class="client-email-check" *ngIf="cliente.check_mesa == 'checked'">{{cliente.email}}</h2>
+          <h1 class="client-name" *ngIf="cliente.check_mesa == 'N'">{{cliente.name}}</h1>
+          <h2 class="client-email" *ngIf="cliente.check_mesa == 'N'">{{cliente.email}}</h2>
+        </button>
+      </ion-list>
+
+    </div>
+
+    <button class="button-guardar-clientes" (click)="guardar()">
+      <i class="fas fa-save" style="font-size: 2rem"> </i> &nbsp;Guardar
+    </button>
+
+  </ion-content>

@@ -1,0 +1,70 @@
+<ion-header >
+    <ion-navbar color="primary" >
+          
+      <img class="navabr-img"  text-center src="../../assets/imgs/logo_navbar.png" />
+                    
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <div padding class="content-overflow">
+      <form  [formGroup]="clienteForm">
+        
+        <ion-item class="form-item">
+          <ion-label stacked>Nombre y Apellido:</ion-label>
+          <ion-input type="text" [formControl]="clienteForm.controls['name']"></ion-input>
+        </ion-item>
+
+        <ion-item class="form-item">
+          <ion-label stacked>E-Mail:</ion-label>
+          <ion-input type="email" [formControl]="clienteForm.controls['email']"></ion-input>
+        </ion-item>
+        
+        <ion-item class="form-item">
+          <ion-label stacked>Teléfono (Whatsapp):</ion-label>
+          <ion-input type="number" [formControl]="clienteForm.controls['whatsapp']"></ion-input>
+        </ion-item>
+
+        <ion-item class="form-item">
+          <ion-label stacked>Teléfono (Opcional):</ion-label>
+          <ion-input type="number" [formControl]="clienteForm.controls['telefono']"></ion-input>
+        </ion-item>
+
+        <ion-item class="form-item">
+          <ion-label stacked>Dirección:</ion-label>
+          <ion-input type="text" [formControl]="clienteForm.controls['direccion']"></ion-input>
+        </ion-item>
+
+        <ion-item class="form-item">
+          <ion-label stacked>gregar Celebración:</ion-label>
+          <ion-input type="text" ></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Gaming</ion-label>
+            <ion-select >
+              <ion-option value="nes">NES</ion-option>
+              <ion-option value="n64">Nintendo64</ion-option>
+              <ion-option value="ps">PlayStation</ion-option>
+              <ion-option value="genesis">Sega Genesis</ion-option>
+              <ion-option value="saturn">Sega Saturn</ion-option>
+              <ion-option value="snes">SNES</ion-option>
+            </ion-select>
+          </ion-item>
+        
+        
+        
+        
+        <ion-row class="sign-in-button-container">
+          <ion-col text-center>
+            <button class="succes-button" (click)="crearMesa()" [disabled]="!clienteForm.valid">
+              <i class="fas fa-plus" style="font-size: 2rem"></i>&nbsp;Crear
+            </button>
+          </ion-col>
+        </ion-row>
+        
+        
+      </form>
+      
+    </div>
+  </ion-content>

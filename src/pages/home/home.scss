@@ -1,0 +1,40 @@
+.items-container{
+    height: 100%; 
+    margin-bottom: 20px
+}
+
+.card-item{
+    height: 120px; 
+    width: 100%; 
+    margin: 0 0 6px 0; 
+    border: solid 4px
+    
+}
+
+.card-item:hover{
+    background-color: #edf7e9;
+}
+
+.card-row{
+    display: table; 
+    height: 100%;
+}
+
+.card-col-icon{
+    display: table-cell; 
+    vertical-align: middle; 
+    text-align: center
+}
+
+.card-col-title{
+    display: table-cell; 
+    vertical-align: middle; 
+    text-align: center;
+    font-size: 3rem; 
+    color: #003300;
+}
+
+.card-icon{
+    font-size: 8.5rem; 
+    color: #003300;
+}

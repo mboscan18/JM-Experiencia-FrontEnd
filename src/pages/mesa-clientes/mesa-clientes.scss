@@ -1,0 +1,56 @@
+.search-bar{
+    margin-top: 60px;
+    width: 100%;
+}
+
+.lista-overflow{
+    width: 100%;
+    height: 55%; 
+    overflow: auto; 
+    margin-top: -10px;
+}
+
+.icon-check{
+    font-size: 3rem;
+    color: #8abd5d;
+}
+
+.icon-blank{
+    font-size: 3rem;
+    color: #768076;
+}
+
+.client-name{
+    color: #768076;
+
+}
+
+.client-email{
+    color: #768076;
+}
+
+.client-name-check{
+    color: #8abd5d;
+
+}
+
+.client-email-check{
+    color: #8abd5d;
+}
+
+.button-guardar-clientes{
+    width: 100%;
+    height: 55px;
+    bottom: 5px;
+    padding: 5px 0 5px 0;
+    background-color: #8abd5d;
+    color: #ffffff;
+    font-size: 2.3rem;
+    position: fixed;
+}
+
+.button-guardar-clientes:hover{
+    background-color: #749e50
+}
+
+

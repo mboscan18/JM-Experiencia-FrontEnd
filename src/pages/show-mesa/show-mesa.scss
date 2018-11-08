@@ -1,0 +1,135 @@
+.mesa-selected-page{
+    width: 100%;
+    min-height: auto;
+    overflow: auto;
+    margin: 0 0 60px -10px;
+
+}
+
+.mesa-title-bar{
+    width: 100%;
+    height: 60px;
+    background-color: #B4F097;
+    color: #003300;
+    display: table;
+    border: 2px solid #003300;
+    border-bottom: none;
+    padding: 5px 10px 5px 40px;
+}
+
+.mesa-horas-bar{
+    border: 2px solid #003300;
+    font-size: 2rem;
+    padding: 5px 10px 5px 10px;
+    height: auto;
+    min-height: 60px;
+    border-bottom: none;
+
+}
+
+.mesa-numero{
+    font-size: 3rem;
+    margin-left: -30px;
+    display: table-cell;
+    vertical-align: middle;
+    font-style: bold;
+    display: inline;
+}
+
+.mesa-etiqueta{
+    font-size: 2.5rem;
+    display: table-cell;
+    vertical-align: middle;
+    display: inline;
+}
+
+.table-cell{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.cerrar-mesa{
+    font-size: 2.3rem;
+    display: block;
+    margin-top: 20px
+}
+
+.cerrar-mesa:hover{
+    color: #3eb95f;
+}
+
+.mesa-celebraciones-bar{
+    border: 2px solid #003300;
+    border-bottom: none;
+    border-top: none; 
+    font-size: 1.8rem;
+    padding: 5px 10px 5px 5px;
+    overflow: auto;
+    height: 120px;
+    color: #003300
+
+}
+
+.mesa-celebraciones-bar img{
+    margin-bottom: -8px;
+    width: 26px;
+}
+
+.mesa-clientes-bar{
+    border: 2px solid #003300;
+    border-top: none; 
+    font-size: 2rem;
+    padding: 5px 10px 5px 5px;
+    overflow: auto;
+    height: 120px;
+    min-height: 60px;
+    color: #003300
+}
+
+.icon-delete{
+    color: #FB3D37;
+    position: relative;
+    float: right;
+    font-size: 1.8rem;
+    margin-top: 3px;
+}
+
+.icon-delete:hover{
+    color: #e9a2a0;
+
+}
+
+.title-section{
+    color: #252323;
+    border: 2px solid #003300;
+    border-bottom: none;
+}
+
+.mesa-options-bar{
+    font-size: 5rem;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    margin-bottom: 5px
+}
+
+.mesa-options-bar a{
+    color: #003300;
+    font-size: 4rem;
+}
+
+.mesa-options-bar a:hover{
+    color: #119711
+}
+
+.option-img{
+    margin-bottom: -5px;
+    width: 45px
+}
+
+.empty{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 1.8rem;
+    color: #87928e
+}

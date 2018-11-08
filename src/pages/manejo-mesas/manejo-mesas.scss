@@ -1,0 +1,127 @@
+.card-mesa{
+    height: auto; 
+    min-height: 150px;
+    width: 100%; 
+    margin: 0 0 6px 0; 
+    border: solid 4px #04932A;
+}
+
+.card-mesa:hover{
+    background-color: #caf1a7;
+}
+
+.card-mesa-title{
+    text-align: center;
+    font-size: 2.5rem; 
+    color: #003300;
+    padding-bottom: 0;
+    padding-top: 3px;
+}
+
+.card-mesa-etiqueta{
+    text-align: center;
+    font-size: 2rem; 
+    color: #003300;
+    padding-bottom: 0;
+    padding-top: 5px;
+}
+
+.card-mesa-icon{
+    text-align: center;
+    font-size: 2.3rem; 
+    color: #003300;
+    padding-bottom: 0;
+    padding-top: 7px;
+}
+
+.card-mesa-icon img{
+    padding-top: 3px;
+    text-align: center;
+    width: 26px;
+    position: relative; 
+    left: 50%; 
+    margin-left: -13px;
+}
+
+.card-mesa-number{
+    text-align: center;
+    font-size: 2.3rem; 
+    color: #003300;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.button-agregar-mesa{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 5px 0 5px 0;
+    background-color: #8abd5d;
+    color: #ffffff;
+    font-size: 2.3rem;
+}
+
+.button-agregar-mesa:hover{
+    background-color: #749e50
+}
+
+.manejo-mesas-principal{
+    position: relative;
+    float: left;
+    -webkit-transition: width 0.5s; /* For Safari  */
+    -moz-transition: width 0.5s; /* For Mozila  */
+    -o-transition: width 0.5s; /* For Opera  */
+    transition: width 0.5s
+}
+
+.mesa-selected{
+    width: 35%;
+    position: relative;
+    float: left;
+    margin: 10px 10px 10px 30px
+}
+
+.cerrar-show-mesa{
+    font-size: 2.3rem;
+}
+
+.show-mesa-horas-bar{
+    border: 2px solid #003300;
+    font-size: 2rem;
+    padding: 5px 10px 5px 10px;
+    height: auto;
+    min-height: 60px;
+}
+
+.title-section{
+    font-size: 2rem;
+    color: #252323
+}
+
+.mesaSelected-celebraciones-bar{
+    border: 2px solid #003300;
+    font-size: 1.8rem;
+    padding: 5px 10px 5px 5px;
+    overflow: auto;
+    height: 150px;
+    border-top: none;
+    border-bottom: none;
+    color: #003300
+
+}
+
+.mesaSelected-celebraciones-bar img{
+    margin-bottom: -8px;
+    width: 26px;
+}
+
+.mesaSelected-clientes-bar{
+    border: 2px solid #003300;
+    border-top: none;
+    font-size: 2rem;
+    padding: 5px 10px 5px 5px;
+    overflow: auto;
+    height: 150px;
+    min-height: 60px;
+    color: #003300
+}

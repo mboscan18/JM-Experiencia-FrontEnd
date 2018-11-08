@@ -1,0 +1,10 @@
+  <label ion-item class="user-info">
+       <label class="user-name">{{user_name}}</label><br>
+       {{user_rol}}
+  </label>
+  <button ion-item text-right class="user-option">
+      Editar Perfil &nbsp;<i class="fas fa-user-edit"></i>
+  </button>
+  <button ion-item text-right class="user-option" (click)="logout()">
+      Cerrar Sesión &nbsp;<i class="fas fa-sign-out-alt"></i>
+  </button>

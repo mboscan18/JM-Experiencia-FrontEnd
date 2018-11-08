@@ -1,0 +1,23 @@
+<ion-header >
+  <ion-navbar color="primary" >
+          <button ion-button menuToggle color="light" >
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        
+          <img class="navabr-img"  text-center src="../../assets/imgs/logo_navbar.png" />
+        
+            <ion-buttons end style="position: absolute; right: 10px; ">
+              <button ion-button icon-only (click)="userPopover($event)">
+                <ion-icon name="contact" class="avatar"></ion-icon>
+                &nbsp;
+                <label class="hidden-sm-down" >{{user_name}} &nbsp;</label>
+                
+                <i class="fas fa-caret-down"></i>
+              </button>
+            </ion-buttons>
+        
+  </ion-navbar>
+</ion-header>
+  
+  
+  

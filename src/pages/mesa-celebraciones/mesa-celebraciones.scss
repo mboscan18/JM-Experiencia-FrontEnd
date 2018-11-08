@@ -1,0 +1,119 @@
+
+.clientes-overflow{
+    width: 100%;
+    min-height: 70%; 
+    max-height: 70%; 
+    overflow: auto; 
+    margin-top: -10px;
+}
+
+.celebraciones-overflow{
+    width: 100%;
+    min-height: 70%; 
+    max-height: 100%; 
+    overflow: auto; 
+    margin-top: -10px;
+}
+
+.button-guardar-celebraciones{
+    width: 100%;
+    height: 55px;
+    bottom: 0px;
+    padding: 5px 0 5px 0;
+    background-color: #8abd5d;
+    color: #ffffff;
+    font-size: 2.3rem;
+    position: fixed;
+}
+
+.button-guardar-clientes:hover{
+    background-color: #749e50
+}
+
+.border{
+    border-right: 2px solid #636863;
+}
+
+
+.search-bar{
+    margin-top: 60px;
+    width: 100%;
+}
+
+.clebracion-icon-check{
+    font-size: 3rem;
+    color: #8abd5d;
+}
+
+.clebracion-icon-blank{
+    font-size: 3rem;
+    color: #768076;
+}
+
+.clebracion-name{
+    color: #768076;
+    display: inline;
+
+}
+
+.clebracion-cliente{
+    color: #768076;
+    display: inline;
+}
+
+.clebracion-name-check{
+    color: #8abd5d;
+    display: inline;
+
+}
+
+.clebracion-cliente-check{
+    color: #8abd5d;
+    display: inline;
+}
+
+
+.cliente-name{
+    color: #768076;
+    display: inline;
+
+}
+
+.cliente-email{
+    color: #768076;
+    display: inline;
+}
+
+.cliente-name-check{
+    color: #8abd5d;
+    display: inline;
+
+}
+
+.cliente-email-check{
+    color: #8abd5d;
+    display: inline;
+}
+
+.button-agregar-celebracion{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 5px 0 5px 0;
+    background-color: #8abd5d;
+    
+}
+
+.button-agregar-celebracion:hover{
+    background-color: #749e50
+}
+
+.add-celeb-img{
+    width: 30px;
+    position: relative;
+}
+
+.button-agregar-celebracion i{
+    color: #ffffff;
+    font-size: 1.8rem;
+}
