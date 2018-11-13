@@ -260,10 +260,15 @@ export class MesaCelebracionesPage {
                if(this.navParams.get("parentName") == "ShowMesaPage"){
                  this.navParams.get("parentPage").getCelebracionesMesa(); /* Actualiza ShowMesaPage */
                  this.navParams.get("parentPage").navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
-            }else 
+              }else 
                if(this.navParams.get("parentName") == "ManejoMesasPage"){
                  this.navParams.get("parentPage").getCelebracionesMesa(this.mesa); /* Actualiza ManejoMesasPage SelectedMesa */
                  this.navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+              }else
+               if(this.navParams.get("parentName") == "HistorialAsistenciaPage"){
+                this.navParams.get("parentPage").getCelebracionesMesa(this.mesa);
+                this.navParams.get("parentPage").selectMesaHistory(this.mesa);
+                this.navParams.get("parentPage").getMesasHistory(this.navParams.get("fecha")); /* Actualiza HistorialAsistenciaPage */
                }
        
                let toast = this.toastCtrl.create({

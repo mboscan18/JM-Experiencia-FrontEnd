@@ -51,7 +51,7 @@
         </ion-row>
 
         <ion-row justify-content-center *ngIf="selectedMesa">
-            <ion-col col-3 col-md-4 col-lg-3 col-xl-3 *ngFor="let mesa of items" (click)="openMesa(mesa)" >
+            <ion-col col-3 col-md-4 col-lg-4 col-xl-3 *ngFor="let mesa of items" (click)="openMesa(mesa)" >
               <ion-card class="card-mesa" >
                 <ion-row >
                   <ion-col col class="card-mesa-title">Mesa {{mesa.num_mesa}}</ion-col>
@@ -76,8 +76,8 @@
           </ion-row>
       </a>
     </div>
-  
   </div>
+  
   <div class="mesa-selected" *ngIf="selectedMesa">
       <a class="cerrar-show-mesa" (click)="closeShowMesa()">
         Cerrar &nbsp; <i class="fas fa-arrow-right"></i>

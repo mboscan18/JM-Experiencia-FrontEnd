@@ -31,7 +31,7 @@ export class HomePage {
   }
 
   openclientes(){
-    this.navCtrl.push(CrearClientePage);
+    this.navCtrl.setRoot(CrearClientePage);
   }
 
 }

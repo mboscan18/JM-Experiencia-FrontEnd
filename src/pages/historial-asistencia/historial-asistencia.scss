@@ -1,3 +1,172 @@
-page-historial-asistencia {
+.manejo-mesas-history-principal{
+    display: block;
+    overflow: auto;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
 
+.titulo{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.search-bar-history{
+    width: 100% !important;
+    display: block;
+    position: relative;
+}
+
+.fecha-history-panel{
+    width: 100%;
+    display: table;
+    margin-bottom: 10px;
+    position: relative;
+    float: left;
+}
+
+.history-fecha{
+}
+
+.history-fecha-search{
+    position: relative;
+    float: left;
+    width: 10%;
+    display: table;
+    float: left;
+    margin: 40px 0 0 0;
+}
+
+.history-fecha-search-icon{
+    color: #003300;
+    font-size: 1.8rem
+}
+
+.history-fecha-search-icon :hover{
+    color: #5eb65e;
+}
+
+.icon-fecha-history{
+    font-size: 3.2rem;
+    margin: 10px 10px 0 0px;
+    color: #003300;
+}
+
+.mesas-history-principal{
+    position: relative;
+    overflow: auto;
+    float: left;
+    margin-bottom: 60px;
+    height: 100%;
+    -webkit-transition: width 0.5s; /* For Safari  */
+    -moz-transition: width 0.5s; /* For Mozila  */
+    -o-transition: width 0.5s; /* For Opera  */
+    transition: width 0.5s
+}
+
+.cerrar-mesaHistory{
+    font-size: 2.3rem;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px
+}
+
+.mesa-history-instences{
+    width: 35%;
+    position: relative;
+    float: left;
+    margin: 10px 10px 10px 20px;
+    height: 100%;
+}
+
+.mesas-instances{
+    width: 100%;
+    min-height: 550px;
+    border: 2px solid #003300;
+    border-top: none;   
+    overflow: auto;
+    display: block;
+}
+
+.mesa-instance{
+    text-decoration: none
+}
+
+.mesa-instance :hover{
+}
+
+.instanceMesa-title-bar{
+    width: 100%;
+    height: 60px;
+    background-color: #B4F097;
+    color: #003300;
+    display: table;
+    border: 2px solid #003300;
+    padding: 5px 10px 5px 40px;
+}
+
+.mesa-instance-etiqueta{
+    background-color: transparent;
+    text-align: center;
+    color: #003300;
+    font-size: 2.4rem;
+    padding: 5px 10px 5px 10px;
+    height: auto;
+}
+
+.mesa-instance-horas{
+    background-color: transparent;
+    border-bottom: 2px solid #003300;
+    color: #003300;
+    font-size: 2rem;
+    text-decoration: bold;
+    padding: 5px 0px 5px 1px;
+    height: 90px;
+    width: 56%;
+    position: relative;
+    float: left;
+    
+}
+
+.mesa-instance-horas-hora{
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.mesa-instance-icons{
+    background-color: transparent;
+    border-bottom: 2px solid #003300;
+    font-size: 2rem;
+    padding: 5px 3px 5px 3px;
+    height: 90px;
+    width: 44%;
+    position: relative;
+    float: left;
+}
+
+.card-mesa-icon-history{
+    text-align: center;
+    font-size: 2.3rem; 
+    color: #003300;
+    padding-bottom: 0;
+    padding-top: 5px;
+}
+
+.img-confetti-history{
+    padding-top: 3px;
+    float: left;
+    width: 26px !important;
+    height: 26px !important;
+    position: relative;
+    left: 50%;
+    margin-left: -13px;
+
+}
+
+.mesa-selected-history{
+    width: 35%;
+    position: relative;
+    float: left;
+    margin: 10px 0px 10px 20px
 }

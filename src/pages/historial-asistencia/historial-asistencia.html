@@ -1,10 +1,250 @@
 <page-header></page-header>
 
 <ion-content padding style="margin-top: 59px">
-  <h1 text-center ion-text color="principal">
-    <i class="fas fa-history"></i>
-    &nbsp;Hist. Asistencia
-  </h1>
+  <div class="titulo">
+      <h1 text-center ion-text color="principal">
+        <i class="fas fa-history"></i>
+        &nbsp;Hist. de Asistencia
+      </h1>
+  </div>
 
+  <div class="manejo-mesas-history-principal">
+      <div class="search-bar-history">
+          <ion-row>
+            <ion-col col-12 col-md-6 col-lg-4 col-xl-4>
+              <form  [formGroup]="fechaForm">
+                <div class="fecha-history-panel" *ngIf="width_size <= 960">
+                  <ion-item  class="item-celebracion-fecha">
+                    <ion-avatar item-start  style="float: left; ">
+                      <i class="far fa-calendar-alt icon-fecha-history"></i>
+                    </ion-avatar>
+                    <ion-label style="color: #003300" stacked>Indique una fecha :</ion-label>
+
+                    <ion-datetime  class="celebracion-fecha" displayFormat="YYYY-MM-DD" pickerFormat="MMM/DD/YYYY" [(ngModel)]="myDate"
+                    doneText="Aceptar" cancelText="Cancelar" formControlName="fecha" placeholder="YYYY-MM-DD" (ionChange)="selectFecha()"></ion-datetime>
+                  </ion-item>
+                </div>  
+                
+                <div class="fecha-history-panel" *ngIf="width_size > 960" style="width:90%;">
+                  <ion-item  class="item-celebracion-fecha">
+                    <ion-avatar item-start  style="float: left; ">
+                      <i class="far fa-calendar-alt icon-fecha-history"></i>
+                    </ion-avatar>
+                    <ion-label style="color: #003300" stacked>Indique una fecha :</ion-label>
+
+                    <ion-input *ngIf="width_size > 960" class="history-fecha" type="date" formControlName="fecha" placeholder="YYYY-MM-DD"  [(ngModel)]="myDate" 
+                        displayFormat="YYYY-MM-DD" Format="YYYY-MM-DD"></ion-input>
+                    </ion-item>
+                </div>  
+                <div *ngIf="width_size > 960" class="history-fecha-search">
+                  <a  tooltip="Buscar Historial" positionV="bottom" (click)="selectFecha()" class="history-fecha-search-icon"><i class="fas fa-search "></i></a>    
+                </div>
+                    
+              </form>
+            </ion-col>
+            <ion-col col-12  col-md-6 col-lg-4 col-xl-4>
+              <button class="button-agregar-mesa" (click)="openCrearMesaModal()">
+                <i class="fas fa-plus" style="font-size: 1.8rem"> </i> &nbsp;Aperturar Mesa
+              </button>
+            </ion-col>
+            <ion-col col-12 col-md-12 col-lg-4 col-xl-4>
+              <ion-searchbar
+              [showCancelButton]="shouldShowCancel"
+              (ionInput)="filterItems($event)">
+            </ion-searchbar>
+          </ion-col>
+        </ion-row>
+        </div>
+      
+        <div class="mesas-history-principal">
+          <a  style="text-decoration: none;">
+            <ion-row justify-content-center *ngIf="(!selectedMesaHistory && !selectedMesa)">
+              <ion-col col-6 col-md-4 col-lg-3 col-xl-2 *ngFor="let mesa of items" (click)="selectMesaHistory(mesa)" >
+                <ion-card class="card-mesa" >
+                  <ion-row >
+                    <ion-col col class="card-mesa-title">Mesa {{mesa.num_mesa}}</ion-col>
+                    </ion-row>
+                    <ion-row >
+                      <ion-col col class="card-mesa-etiqueta">&nbsp;</ion-col>
+                    </ion-row>
+                    <ion-row >
+                      <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_mesas > 0"><i class="far fa-clock "></i></ion-col>
+                    </ion-row>
+                    <ion-row >
+                      <ion-col col class="card-mesa-number" *ngIf="mesa.cant_mesas > 0">{{mesa.cant_mesas}}</ion-col>
+                    </ion-row>
+                  </ion-card>
+                </ion-col>
+              </ion-row>
+      
+              <ion-row justify-content-center *ngIf="(selectedMesaHistory && !selectedMesa)">
+                  <ion-col col-6 col-md-4 col-lg-4 col-xl-3 *ngFor="let mesa of items" (click)="selectMesaHistory(mesa)" >
+                    <ion-card class="card-mesa" >
+                      <ion-row >
+                        <ion-col col class="card-mesa-title">Mesa {{mesa.num_mesa}}</ion-col>
+                      </ion-row>
+                      <ion-row >
+                        <ion-col col class="card-mesa-etiqueta">&nbsp;</ion-col>
+                      </ion-row>
+                      <ion-row >
+                      <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_mesas > 0"><i class="far fa-clock "></i></ion-col>
+                      </ion-row>
+                      <ion-row >
+                      <ion-col col class="card-mesa-number" *ngIf="mesa.cant_mesas > 0">{{mesa.cant_mesas}}</ion-col>
+                      </ion-row>
+                    </ion-card>
+                  </ion-col>
+                </ion-row>
+
+              <ion-row justify-content-center *ngIf="(selectedMesaHistory && selectedMesa)">
+                  <ion-col col-6  *ngFor="let mesa of items" (click)="selectMesaHistory(mesa)" >
+                    <ion-card class="card-mesa" >
+                      <ion-row >
+                        <ion-col col class="card-mesa-title">Mesa {{mesa.num_mesa}}</ion-col>
+                      </ion-row>
+                      <ion-row >
+                        <ion-col col class="card-mesa-etiqueta">&nbsp;</ion-col>
+                      </ion-row>
+                      <ion-row >
+                      <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_mesas > 0"><i class="far fa-clock "></i></ion-col>
+                      </ion-row>
+                      <ion-row >
+                      <ion-col col class="card-mesa-number" *ngIf="mesa.cant_mesas > 0">{{mesa.cant_mesas}}</ion-col>
+                      </ion-row>
+                    </ion-card>
+                  </ion-col>
+                </ion-row>
+            </a>
+        </div>
+      
+        <div class="mesa-history-instences" *ngIf="selectedMesaHistory">
+          <a class="cerrar-mesaHistory" (click)="closeMesaHistory()">
+            Cerrar &nbsp; <i class="fas fa-arrow-right"></i>
+          </a>
+          <div class="instanceMesa-title-bar">
+            <div class="table-cell">
+              <p class="mesa-numero">Historial de la Mesa {{selectedMesaHistory.num_mesa}}</p>
+            </div>
+          </div>
+          <div class="mesas-instances">
+            <div  *ngFor="let mesaInstance of selectedMesaHistory.mesas; let i = index" (click)="selectIntanceMesa(mesaInstance)">
+                <a class="mesa-instance">
+                        <div class="mesa-instance-etiqueta">
+                            {{mesaInstance.etiqueta}}
+                        </div>
+                        <div class="mesa-instance-horas">
+                            <ion-row>
+                              <ion-col col-12 >
+                                <i class="far fa-clock"></i> &nbsp;Llegada: &nbsp;<span class="mesa-instance-horas-hora">{{horaAperturaHistory[i]}}</span>
+                              </ion-col>
+                              <ion-col col-12 >
+                                <i class="far fa-clock"></i> &nbsp;Salida: &nbsp;<span class="mesa-instance-horas-hora">{{horaClausuraHistory[i]}}</span>
+                              </ion-col>
+                            </ion-row>
+                        </div>
+                        <div class="mesa-instance-icons">
+                            <ion-row >
+                                <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_clientes_mesa > 0">
+                                  <i class="fas fa-users"></i><br>
+                                  {{mesaInstance.cant_clientes_mesa}}
+                                </ion-col>
+                                <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_celebraciones_mesa > 0">
+                                  <img src="../../assets/imgs/confetti_menu.svg" class="img-confetti-history"/><br>
+                                  {{mesaInstance.cant_celebraciones_mesa}}
+                                </ion-col>
+                                <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_fotos_mesa > 0">
+                                  <i class="fas fa-camera"></i><br>
+                                  {{mesaInstance.cant_fotos_mesa}}
+                                </ion-col>
+                                <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_correos_mesa > 0">
+                                  <i class="fas fa-envelope"></i><br>
+                                  {{mesaInstance.cant_correos_mesa}}
+                                </ion-col>
+                              </ion-row>
+                        </div>
+                      </a>
+              </div>
+            </div>
+            
+        </div>
+
+        <div class="mesa-selected-history" *ngIf="selectedMesa">
+            <a class="cerrar-show-mesa" (click)="closeShowMesa()">
+              Cerrar &nbsp; <i class="fas fa-arrow-right"></i>
+            </a>
+            <div class="mesa-options-bar">
+                <ion-row>
+                  <ion-col col>
+                    <a (click)="openMesaEditar()"><i class="far fa-edit"></i></a>
+                  </ion-col>
+                  <ion-col col >
+                    <a (click)="openMesaCelebraciones_manejo()"><img src="../../assets/imgs/confetti_menu.svg" class="option-img"/></a>
+                  </ion-col>
+                  <ion-col col >
+                    <a (click)="openMesaClientes()"><i class="fas fa-user"></i></a>
+                  </ion-col>
+                  <ion-col col >
+                    <a (click)="openMesaFotos_manejo()"><i class="fas fa-camera"></i></a>
+                  </ion-col>
+                  <ion-col col >
+                    <a (click)="openMesaCorreo()"><i class="fas fa-envelope"></i></a>
+                  </ion-col>
+                </ion-row>
+              </div>
+            <div class="mesa-title-bar">
+                <div class="table-cell">
+                  <p class="mesa-numero">Mesa {{selectedMesa.num_mesa}}:</p>
+                  <p class="mesa-etiqueta">&nbsp; {{selectedMesa.etiqueta}}</p>
+                </div>
+              </div>
+              <div class="mesa-horas-bar">
+                  <ion-row>
+                    <ion-col col-12 >
+                      <i class="far fa-clock"></i> &nbsp; Hora de Apertura: &nbsp;<span style="text-decoration: bold; font-size: 2.4rem">{{horaAperturaSelected}}</span>
+                    </ion-col>
+                    <ion-col col-12 >
+                      <i class="far fa-clock"></i> &nbsp; Hora de Clausura: &nbsp;<span style="text-decoration: bold; font-size: 2.4rem">{{horaClausuraSelected}}</span>
+                    </ion-col>
+                  </ion-row>
+              </div>
+                <ion-row >
+                  <ion-col col class="title-section">
+                    Motivo de Celebración:
+                  </ion-col>
+                </ion-row>
+              <div class="mesaSelected-celebraciones-bar">
+                  <ion-row>
+                      <ion-col col class="empty" *ngIf="celebracionesMesa == 0">
+                        ¡No se han agregado Celebraciones aún!
+                      </ion-col>
+                    </ion-row>  
+                    <ion-row *ngFor="let clebracion of celebracionesMesa">
+                      <ion-col col >
+                        <img src="../../assets/imgs/confetti_menu.svg"/> &nbsp; {{clebracion.celebracion_descripcion}} de {{clebracion.cliente_name}} <a (click)="deleteCelebracionMesa(clebracion)"><i class="far fa-trash-alt icon-delete"></i></a>
+                      </ion-col>
+                    </ion-row>
+              </div>
+                <ion-row >
+                  <ion-col col class="title-section">
+                    Clientes de la Mesa:
+                  </ion-col>
+                </ion-row>
+              <div class="mesaSelected-clientes-bar">
+                  <ion-row>
+                      <ion-col col class="empty" *ngIf="cantClientes == 0">
+                        ¡No se han agregado Clientes aún!
+                      </ion-col>
+                    </ion-row>
+                    <ion-row *ngFor="let cliente of clientesMesa">
+                      <ion-col col >
+                        <i class="fas fa-user"></i> &nbsp; {{cliente.cliente_name}} <a (click)="deleteClienteMesa(cliente)"><i class="far fa-trash-alt icon-delete"></i></a>
+                      </ion-col>
+                    </ion-row>
+              </div>
+        </div>
+</div>
+
+  
+    
 </ion-content>
 

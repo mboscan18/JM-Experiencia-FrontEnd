@@ -8,7 +8,7 @@
 
   <div class="hidden-lg-up items-container" style="min-height: auto; overflow: auto; margin-bottom: 60px">
     <a *ngFor="let pag of pages" (click)="openPage(pag)" class="text-decoration: none;">
-      <ion-row >
+      <ion-row justify-content-center>
         <ion-col>
           <ion-card class="card-item" [ngStyle]="{'border-color': pag.color}">
             <ion-row class="card-row">
@@ -44,7 +44,7 @@
 
   <div class="hidden-md-down items-container"  style="min-height: auto; overflow: auto; margin-bottom: 60px">
     <a  class="text-decoration: none;">
-      <ion-row >
+      <ion-row justify-content-center>
         <ion-col col-6 *ngFor="let pag of pages" (click)="openPage(pag)">
           <ion-card class="card-item" [ngStyle]="{'border-color': pag.color}" style="height: 200px;">
             <ion-row style="display: table; height: 100%;">

@@ -141,6 +141,8 @@ export class ManejoMesasPage {
 
           let elm = <HTMLElement>document.querySelector(".manejo-mesas-principal");
           elm.style.width = '60%';
+          elm.style.height = '650px';
+
         }
       });
     }
@@ -162,6 +164,8 @@ export class ManejoMesasPage {
       this.selectedMesa = null;
       let elm = <HTMLElement>document.querySelector(".manejo-mesas-principal");
       elm.style.width = '100%';
+      elm.style.height = '100%';
+
     }
 
   // Obtiene los Clientes de una Mesa

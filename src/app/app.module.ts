@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
+import { TooltipsModule } from 'ionic-tooltips';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MyApp } from './app.component';
 import { HeaderPage } from '../pages/header/header';
@@ -59,6 +61,8 @@ import { ClientesServiceProvider } from '../providers/clientes-service/clientes-
   imports: [
     BrowserModule,    
     HttpClientModule,
+    TooltipsModule,
+    BrowserAnimationsModule,
     IonicModule.forRoot(MyApp, 
     {
       iconMode: 'md',

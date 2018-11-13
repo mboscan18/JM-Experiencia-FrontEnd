@@ -33322,6 +33322,109 @@ body {
   font-family: 'Roboto Condensed';
 }
 
+.content-overflow-cli {
+  margin-top: 60px;
+  width: 100%;
+  min-height: auto;
+  overflow: auto;
+}
+
+.succes-button-cli {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  padding: 5px 0 5px 0;
+  background-color: #8abd5d;
+  color: #ffffff;
+  font-size: 2.3rem;
+}
+
+.succes-button-cli:hover {
+  background-color: #749e50;
+}
+
+.form-item-cli {
+  margin-bottom: 20px;
+}
+
+.celebracion-agregada-descripcion {
+  width: 50%;
+  height: 70px;
+  display: table;
+  float: left;
+  margin-bottom: 10px;
+  border: 1px solid #003300;
+}
+
+.celebracion-agregada-fecha {
+  width: 40%;
+  height: 70px;
+  display: table;
+  float: left;
+  margin-bottom: 10px;
+  border: 1px solid #003300;
+  border-left: none;
+  border-right: none;
+}
+
+.celebracion-agregada-icon {
+  width: 10%;
+  height: 70px;
+  display: table;
+  float: left;
+  margin-bottom: 10px;
+  border: 1px solid;
+  border-left-color: white;
+}
+
+.item-celebracion-descripcion {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  background-color: #FDE6B3;
+}
+
+.item-celebracion-fecha {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.item-celebracion-icon {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.celebracion-fecha {
+  width: 100%;
+  padding: 10px 0 5px 0;
+}
+
+.img-celebracion {
+  margin: 10px 20px 3px 0px;
+  border-radius: 0 !important;
+  height: 40px !important;
+}
+
+.icon-fecha {
+  font-size: 3.2rem;
+  margin: 12px 20px 0 0;
+  color: #003300;
+}
+
+.celebracion-delete {
+  color: #FB3D37;
+  font-size: 1.8rem;
+}
+
+.celebracion-select {
+  width: 100% !important;
+  padding: -30px;
+}
+
 .content-overflow {
   margin-top: 60px;
   width: 100%;
@@ -33391,6 +33494,173 @@ body {
   left: 50%;
   margin-left: -120px !important;
   /* 50% of your logo width */
+}
+
+.manejo-mesas-history-principal {
+  display: block;
+  overflow: auto;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.titulo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.search-bar-history {
+  width: 100% !important;
+  display: block;
+  position: relative;
+}
+
+.fecha-history-panel {
+  width: 100%;
+  display: table;
+  margin-bottom: 10px;
+  position: relative;
+  float: left;
+}
+
+.history-fecha-search {
+  position: relative;
+  float: left;
+  width: 10%;
+  display: table;
+  float: left;
+  margin: 40px 0 0 0;
+}
+
+.history-fecha-search-icon {
+  color: #003300;
+  font-size: 1.8rem;
+}
+
+.history-fecha-search-icon :hover {
+  color: #5eb65e;
+}
+
+.icon-fecha-history {
+  font-size: 3.2rem;
+  margin: 10px 10px 0 0px;
+  color: #003300;
+}
+
+.mesas-history-principal {
+  position: relative;
+  overflow: auto;
+  float: left;
+  margin-bottom: 60px;
+  height: 100%;
+  -webkit-transition: width 0.5s;
+  /* For Safari  */
+  /* For Mozila  */
+  /* For Opera  */
+  transition: width 0.5s;
+}
+
+.cerrar-mesaHistory {
+  font-size: 2.3rem;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.mesa-history-instences {
+  width: 35%;
+  position: relative;
+  float: left;
+  margin: 10px 10px 10px 20px;
+  height: 100%;
+}
+
+.mesas-instances {
+  width: 100%;
+  min-height: 550px;
+  border: 2px solid #003300;
+  border-top: none;
+  overflow: auto;
+  display: block;
+}
+
+.mesa-instance {
+  text-decoration: none;
+}
+
+.instanceMesa-title-bar {
+  width: 100%;
+  height: 60px;
+  background-color: #B4F097;
+  color: #003300;
+  display: table;
+  border: 2px solid #003300;
+  padding: 5px 10px 5px 40px;
+}
+
+.mesa-instance-etiqueta {
+  background-color: transparent;
+  text-align: center;
+  color: #003300;
+  font-size: 2.4rem;
+  padding: 5px 10px 5px 10px;
+  height: auto;
+}
+
+.mesa-instance-horas {
+  background-color: transparent;
+  border-bottom: 2px solid #003300;
+  color: #003300;
+  font-size: 2rem;
+  -webkit-text-decoration: bold;
+  text-decoration: bold;
+  padding: 5px 0px 5px 1px;
+  height: 90px;
+  width: 56%;
+  position: relative;
+  float: left;
+}
+
+.mesa-instance-horas-hora {
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.mesa-instance-icons {
+  background-color: transparent;
+  border-bottom: 2px solid #003300;
+  font-size: 2rem;
+  padding: 5px 3px 5px 3px;
+  height: 90px;
+  width: 44%;
+  position: relative;
+  float: left;
+}
+
+.card-mesa-icon-history {
+  text-align: center;
+  font-size: 2.3rem;
+  color: #003300;
+  padding-bottom: 0;
+  padding-top: 5px;
+}
+
+.img-confetti-history {
+  padding-top: 3px;
+  float: left;
+  width: 26px !important;
+  height: 26px !important;
+  position: relative;
+  left: 50%;
+  margin-left: -13px;
+}
+
+.mesa-selected-history {
+  width: 35%;
+  position: relative;
+  float: left;
+  margin: 10px 0px 10px 20px;
 }
 
 .items-container {

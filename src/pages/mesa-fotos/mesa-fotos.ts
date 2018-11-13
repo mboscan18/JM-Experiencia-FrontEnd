@@ -184,6 +184,10 @@ export class MesaFotosPage {
         }else 
         if(this.navParams.get("parentName") == "ManejoMesasPage"){
           this.navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+        }else
+        if(this.navParams.get("parentName") == "HistorialAsistenciaPage"){
+         this.navParams.get("parentPage").selectMesaHistory(this.mesa);
+         this.navParams.get("parentPage").getMesasHistory( this.navParams.get("fecha")); /* Actualiza HistorialAsistenciaPage */
         }
 
         let toast = this.toastCtrl.create({
