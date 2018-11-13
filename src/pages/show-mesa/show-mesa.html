@@ -52,13 +52,14 @@
     </ion-row>
     <div class="mesa-celebraciones-bar">
       <ion-row>
-        <ion-col col class="empty" *ngIf="celebracionesMesa == 0">
+        <ion-col col class="empty" *ngIf="cantCelebraciones == 0">
           ¡No se han agregado Celebraciones aún!
         </ion-col>
       </ion-row>  
-      <ion-row *ngFor="let clebracion of celebracionesMesa">
-        <ion-col col >
-          <img src="../../assets/imgs/confetti_menu.svg"/> &nbsp; {{clebracion.celebracion_descripcion}} de {{clebracion.cliente_name}} <a (click)="deleteCelebracionMesa(clebracion)"><i class="far fa-trash-alt icon-delete"></i></a>
+      <ion-row *ngFor="let clebracion of celebracionesMesa" >
+        <ion-col col>
+          <img src="../../assets/imgs/confetti_menu.svg"/> &nbsp;{{clebracion.celebracion_descripcion}} (<span class="cliente-celebracion-bar">{{clebracion.cliente_name}}</span>)
+          <a (click)="deleteCelebracionMesa(clebracion)"><i class="far fa-trash-alt icon-delete"></i></a>
         </ion-col>
       </ion-row>
     </div>

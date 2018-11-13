@@ -129,9 +129,10 @@
                 </ion-col>
               </ion-row>  
               <ion-row *ngFor="let clebracion of celebracionesMesa">
-                <ion-col col >
-                  <img src="../../assets/imgs/confetti_menu.svg"/> &nbsp; {{clebracion.celebracion_descripcion}} de {{clebracion.cliente_name}} <a (click)="deleteCelebracionMesa(clebracion)"><i class="far fa-trash-alt icon-delete"></i></a>
-                </ion-col>
+                  <ion-col col>
+                    <img src="../../assets/imgs/confetti_menu.svg"/> &nbsp;{{clebracion.celebracion_descripcion}} (<span class="cliente-celebracion-bar">{{clebracion.cliente_name}}</span>)
+                    <a (click)="deleteCelebracionMesa(clebracion)"><i class="far fa-trash-alt icon-delete"></i></a>
+                  </ion-col>
               </ion-row>
         </div>
           <ion-row >

@@ -187,7 +187,12 @@ export class ShowMesaPage {
         //  console.log(result);
         
         this.getClientesMesa();
-        this.navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+        if(this.navParams.get("parentName") == "ManejoMesasPage"){
+          this.navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+        }else 
+        if(this.navParams.get("parentName") == "ShowMesaHistoryPage"){
+          this.navParams.get("parentPage").getMesaHistory(this.navParams.get("fecha"), this.mesa.num_mesa); /* Actualiza ShowMesaHistoryPage */
+        }
 
         let toast = this.toastCtrl.create({
           message: result['message'],
@@ -224,7 +229,12 @@ export class ShowMesaPage {
         //  console.log(result);
         
         this.getCelebracionesMesa();
-        this.navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+        if(this.navParams.get("parentName") == "ManejoMesasPage"){
+          this.navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+        }else 
+        if(this.navParams.get("parentName") == "ShowMesaHistoryPage"){
+          this.navParams.get("parentPage").getMesaHistory(this.navParams.get("fecha"), this.mesa.num_mesa); /* Actualiza ManejoMesasPage */
+        }
 
         let toast = this.toastCtrl.create({
           message: result['message'],

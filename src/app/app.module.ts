@@ -25,6 +25,7 @@ import { MesaFotosPage } from '../pages/mesa-fotos/mesa-fotos';
 import { MesaCorreoPage } from '../pages/mesa-correo/mesa-correo';
 import { InitialOptionsPage } from '../pages/initial-options/initial-options';
 import { CrearClientePage } from '../pages/crear-cliente/crear-cliente';
+import { ShowMesaHistoryPage } from '../pages/show-mesa-history/show-mesa-history';
 
 import { HttpClientModule } from '@angular/common/http';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -55,7 +56,8 @@ import { ClientesServiceProvider } from '../providers/clientes-service/clientes-
     MesaFotosPage,
     MesaCorreoPage,
     InitialOptionsPage,
-    CrearClientePage
+    CrearClientePage,
+    ShowMesaHistoryPage
 
   ],
   imports: [
@@ -97,7 +99,8 @@ import { ClientesServiceProvider } from '../providers/clientes-service/clientes-
     MesaFotosPage,
     MesaCorreoPage,
     InitialOptionsPage,
-    CrearClientePage
+    CrearClientePage,
+    ShowMesaHistoryPage
 
   ],
   providers: [

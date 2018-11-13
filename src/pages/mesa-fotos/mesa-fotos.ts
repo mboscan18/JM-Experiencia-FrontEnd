@@ -180,7 +180,13 @@ export class MesaFotosPage {
         //console.log(result);
         
         if(this.navParams.get("parentName") == "ShowMesaPage"){
-          this.navParams.get("parentPage").navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+          if(this.navParams.get("parentPage").navParams.get("parentName") == "ManejoMesasPage"){
+            this.navParams.get("parentPage").navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+          }else 
+          if(this.navParams.get("parentPage").navParams.get("parentName") == "ShowMesaHistoryPage"){
+            this.navParams.get("parentPage").navParams.get("parentPage")
+            .getMesaHistory(this.navParams.get("parentPage").navParams.get("fecha"), this.mesa.num_mesa); /* Actualiza ShowMesaHistoryPage */
+          }
         }else 
         if(this.navParams.get("parentName") == "ManejoMesasPage"){
           this.navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */

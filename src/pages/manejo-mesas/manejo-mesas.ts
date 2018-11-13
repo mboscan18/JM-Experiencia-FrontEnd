@@ -131,7 +131,7 @@ export class ManejoMesasPage {
       this.platform.ready().then((readySource) => {
         width = this.platform.width();
         if(width < 960){
-          this.navCtrl.push(ShowMesaPage, { "parentPage": this, "mesa": mesa });
+          this.navCtrl.push(ShowMesaPage, { "parentPage": this, "mesa": mesa, "parentName": "ManejoMesasPage" });
         }else{
 
           console.log('\nPANEL MESA SELECCIONADA');
@@ -150,7 +150,7 @@ export class ManejoMesasPage {
     // Llamada al modal de crear mesa
     //----------------------------------------------------------
     openCrearMesaModal() {
-      this.modalCrear = this.modalCtrl.create(CrearMesaModalPage, { "parentPage": this }, {
+      this.modalCrear = this.modalCtrl.create(CrearMesaModalPage, { "parentPage": this, "parentName": "ManejoMesasPage" }, {
         showBackdrop: true,
         enableBackdropDismiss: true
       });

@@ -24,6 +24,7 @@ export class CrearClientePage {
   clienteForm: FormGroup;
   celebraciones: any; 
   celebracionSelected: any;
+  isModal = null;
 
 
   constructor(public navCtrl: NavController, 
@@ -54,6 +55,9 @@ export class CrearClientePage {
       celebraciones_cliente: this.formBuilder.array([ this.initCelebracion() ])
     });  
 
+    if(this.navParams.get("IsModal")){
+        this.isModal = true;
+    }
     this.getAllCelebrciones();
 
   }
@@ -157,8 +161,15 @@ export class CrearClientePage {
             position: 'middle'
           });
           toast.present();
+
+          if(this.navParams.get("parentName") == "MesaClientesPage"){
+              this.navParams.get("parentPage").getAllClientes(); /* Actualiza MesaClientesPage */
+          }else 
+          if(this.navParams.get("parentName") == "MesaCelebracionesPage"){
+              this.navParams.get("parentPage").getAllClientes(); /* Actualiza MesaCelebracionesPage */
+          }
+
           this.navCtrl.pop();
-          this.navCtrl.setRoot(CrearClientePage);
         }
         else{
           console.log('Error en los datos enviados');
@@ -206,5 +217,11 @@ export class CrearClientePage {
 
         });
 
+  }
+
+  // Cierra el Modal
+  //----------------------------------------------------------
+  closeModal() {
+    this.navCtrl.pop();
   }
 }

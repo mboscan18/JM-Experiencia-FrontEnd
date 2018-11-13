@@ -33373,7 +33373,7 @@ body {
   display: table;
   float: left;
   margin-bottom: 10px;
-  border: 1px solid;
+  border: 1px solid #003300;
   border-left-color: white;
 }
 
@@ -34124,6 +34124,10 @@ body {
   width: 26px;
 }
 
+.cliente-celebracion-bar {
+  font-size: 1.5rem;
+}
+
 .mesa-clientes-bar {
   border: 2px solid #003300;
   border-top: none;
@@ -34180,6 +34184,31 @@ body {
   padding-top: 30px;
   font-size: 1.8rem;
   color: #87928e;
+}
+
+page-show-mesa-history .mesa-history-page {
+  width: 100%;
+  min-height: auto;
+  overflow: auto;
+  margin: 0 0 60px 0px;
+}
+
+page-show-mesa-history .cerrar-mesa-history {
+  font-size: 2.3rem;
+  width: 100%;
+  display: block;
+  margin: 10px 0 10px 0;
+}
+
+page-show-mesa-history .mesas-instancias {
+  width: 100%;
+  min-height: 380px;
+  max-height: 500px;
+  border-top: none;
+  overflow: auto;
+  display: block;
+  border: 2px solid #003300;
+  margin-top: -2px;
 }
 
 .user-info {

@@ -1,17 +1,17 @@
 webpackJsonp([0],{
 
-/***/ 110:
+/***/ 112:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__manejo_mesas_manejo_mesas__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__historial_asistencia_historial_asistencia__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__admin_clientes_admin_clientes__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__admin_correos_admin_correos__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__crear_cliente_crear_cliente__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__manejo_mesas_manejo_mesas__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__historial_asistencia_historial_asistencia__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__admin_clientes_admin_clientes__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__admin_correos_admin_correos__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__crear_cliente_crear_cliente__ = __webpack_require__(56);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,7 +44,7 @@ var HomePage = /** @class */ (function () {
         this.navCtrl.setRoot(page.component);
     };
     HomePage.prototype.openclientes = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_6__crear_cliente_crear_cliente__["a" /* CrearClientePage */]);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__crear_cliente_crear_cliente__["a" /* CrearClientePage */]);
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
@@ -59,20 +59,20 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 111:
+/***/ 113:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ManejoMesasPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__show_mesa_show_mesa__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__crear_mesa_modal_crear_mesa_modal__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__editar_mesa_modal_editar_mesa_modal__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mesa_clientes_mesa_clientes__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mesa_celebraciones_mesa_celebraciones__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__mesa_fotos_mesa_fotos__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__show_mesa_show_mesa__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__crear_mesa_modal_crear_mesa_modal__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__editar_mesa_modal_editar_mesa_modal__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mesa_clientes_mesa_clientes__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mesa_celebraciones_mesa_celebraciones__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__mesa_fotos_mesa_fotos__ = __webpack_require__(58);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -180,7 +180,7 @@ var ManejoMesasPage = /** @class */ (function () {
         this.platform.ready().then(function (readySource) {
             width = _this.platform.width();
             if (width < 960) {
-                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__show_mesa_show_mesa__["a" /* ShowMesaPage */], { "parentPage": _this, "mesa": mesa });
+                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__show_mesa_show_mesa__["a" /* ShowMesaPage */], { "parentPage": _this, "mesa": mesa, "parentName": "ManejoMesasPage" });
             }
             else {
                 console.log('\nPANEL MESA SELECCIONADA');
@@ -196,7 +196,7 @@ var ManejoMesasPage = /** @class */ (function () {
     // Llamada al modal de crear mesa
     //----------------------------------------------------------
     ManejoMesasPage.prototype.openCrearMesaModal = function () {
-        this.modalCrear = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_4__crear_mesa_modal_crear_mesa_modal__["a" /* CrearMesaModalPage */], { "parentPage": this }, {
+        this.modalCrear = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_4__crear_mesa_modal_crear_mesa_modal__["a" /* CrearMesaModalPage */], { "parentPage": this, "parentName": "ManejoMesasPage" }, {
             showBackdrop: true,
             enableBackdropDismiss: true
         });
@@ -361,7 +361,7 @@ var ManejoMesasPage = /** @class */ (function () {
     };
     ManejoMesasPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-manejo-mesas',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\manejo-mesas\manejo-mesas.html"*/'<page-header></page-header>\n\n<ion-content padding style="margin-top: 59px">\n  <h1 text-center ion-text color="principal">\n      <img src="../../assets/imgs/meeting_principal.svg" width="50em" style="margin-bottom: -10px">\n    &nbsp;Manejo de Mesas\n  </h1>\n\n  <div class="manejo-mesas-principal">\n\n      <ion-row>\n        <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n          <button class="button-agregar-mesa" (click)="openCrearMesaModal()">\n            <i class="fas fa-plus" style="font-size: 2rem"> </i> &nbsp;Aperturar Mesa\n          </button>\n        </ion-col>\n        <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n          <ion-searchbar\n          [showCancelButton]="shouldShowCancel"\n          (ionInput)="filterItems($event)">\n        </ion-searchbar>\n      </ion-col>\n    </ion-row>\n    \n    \n    <div style="height: 100%; overflow: auto; margin-bottom: 60px" >\n      <a  style="text-decoration: none;">\n        <ion-row justify-content-center *ngIf="!selectedMesa">\n          <ion-col col-6 col-md-4 col-lg-3 col-xl-2 *ngFor="let mesa of items" (click)="openMesa(mesa)" >\n            <ion-card class="card-mesa" >\n              <ion-row >\n                <ion-col col class="card-mesa-title">Mesa {{mesa.num_mesa}}</ion-col>\n              </ion-row>\n              <ion-row >\n                <ion-col col class="card-mesa-etiqueta">{{mesa.etiqueta}}</ion-col>\n              </ion-row>\n              <ion-row >\n                <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_clientes_mesa > 0"><i class="fas fa-users"></i></ion-col>\n                <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_celebraciones_mesa > 0"><img src="../../assets/imgs/confetti_menu.svg"/></ion-col>\n                <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_fotos_mesa > 0"><i class="fas fa-camera"></i></ion-col>\n                <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_correos_mesa > 0"><i class="fas fa-envelope"></i></ion-col>\n              </ion-row>\n              <ion-row >\n                <ion-col col class="card-mesa-number" *ngIf="mesa.cant_clientes_mesa > 0">{{mesa.cant_clientes_mesa}}</ion-col>\n                <ion-col col class="card-mesa-number" *ngIf="mesa.cant_celebraciones_mesa > 0">{{mesa.cant_celebraciones_mesa}}</ion-col>\n                <ion-col col class="card-mesa-number" *ngIf="mesa.cant_fotos_mesa > 0">{{mesa.cant_fotos_mesa}}</ion-col>\n                <ion-col col class="card-mesa-number" *ngIf="mesa.cant_correos_mesa > 0">{{mesa.cant_correos_mesa}}</ion-col>\n              </ion-row>\n            </ion-card>\n          </ion-col>\n        </ion-row>\n\n        <ion-row justify-content-center *ngIf="selectedMesa">\n            <ion-col col-3 col-md-4 col-lg-4 col-xl-3 *ngFor="let mesa of items" (click)="openMesa(mesa)" >\n              <ion-card class="card-mesa" >\n                <ion-row >\n                  <ion-col col class="card-mesa-title">Mesa {{mesa.num_mesa}}</ion-col>\n                </ion-row>\n                <ion-row >\n                  <ion-col col class="card-mesa-etiqueta">{{mesa.etiqueta}}</ion-col>\n                </ion-row>\n                <ion-row >\n                  <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_clientes_mesa > 0"><i class="fas fa-users"></i></ion-col>\n                  <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_celebraciones_mesa > 0"><img src="../../assets/imgs/confetti_menu.svg"/></ion-col>\n                  <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_fotos_mesa > 0"><i class="fas fa-camera"></i></ion-col>\n                  <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_correos_mesa > 0"><i class="fas fa-envelope"></i></ion-col>\n                </ion-row>\n                <ion-row >\n                  <ion-col col class="card-mesa-number" *ngIf="mesa.cant_clientes_mesa > 0">{{mesa.cant_clientes_mesa}}</ion-col>\n                  <ion-col col class="card-mesa-number" *ngIf="mesa.cant_celebraciones_mesa > 0">{{mesa.cant_celebraciones_mesa}}</ion-col>\n                  <ion-col col class="card-mesa-number" *ngIf="mesa.cant_fotos_mesa > 0">{{mesa.cant_fotos_mesa}}</ion-col>\n                  <ion-col col class="card-mesa-number" *ngIf="mesa.cant_correos_mesa > 0">{{mesa.cant_correos_mesa}}</ion-col>\n                </ion-row>\n              </ion-card>\n            </ion-col>\n          </ion-row>\n      </a>\n    </div>\n  </div>\n  \n  <div class="mesa-selected" *ngIf="selectedMesa">\n      <a class="cerrar-show-mesa" (click)="closeShowMesa()">\n        Cerrar &nbsp; <i class="fas fa-arrow-right"></i>\n      </a>\n      <div class="mesa-options-bar">\n          <ion-row>\n            <ion-col col>\n              <a (click)="openMesaEditar()"><i class="far fa-edit"></i></a>\n            </ion-col>\n            <ion-col col >\n              <a (click)="openMesaCelebraciones_manejo()"><img src="../../assets/imgs/confetti_menu.svg" class="option-img"/></a>\n            </ion-col>\n            <ion-col col >\n              <a (click)="openMesaClientes()"><i class="fas fa-user"></i></a>\n            </ion-col>\n            <ion-col col >\n              <a (click)="openMesaFotos_manejo()"><i class="fas fa-camera"></i></a>\n            </ion-col>\n            <ion-col col >\n              <a (click)="openMesaCorreo()"><i class="fas fa-envelope"></i></a>\n            </ion-col>\n          </ion-row>\n        </div>\n      <div class="mesa-title-bar">\n          <div class="table-cell">\n            <p class="mesa-numero">Mesa {{selectedMesa.num_mesa}}:</p>\n            <p class="mesa-etiqueta">&nbsp; {{selectedMesa.etiqueta}}</p>\n          </div>\n        </div>\n        <div class="mesa-horas-bar">\n            <ion-row>\n              <ion-col col-12 >\n                <i class="far fa-clock"></i> &nbsp; Hora de Apertura: &nbsp;<span style="text-decoration: bold; font-size: 2.4rem">{{horaApertura}}</span>\n              </ion-col>\n              <ion-col col-12 >\n                <i class="far fa-clock"></i> &nbsp; Hora de Clausura: &nbsp;<span style="text-decoration: bold; font-size: 2.4rem">{{horaClausura}}</span>\n              </ion-col>\n            </ion-row>\n        </div>\n          <ion-row >\n            <ion-col col class="title-section">\n              Motivo de Celebración:\n            </ion-col>\n          </ion-row>\n        <div class="mesaSelected-celebraciones-bar">\n            <ion-row>\n                <ion-col col class="empty" *ngIf="celebracionesMesa == 0">\n                  ¡No se han agregado Celebraciones aún!\n                </ion-col>\n              </ion-row>  \n              <ion-row *ngFor="let clebracion of celebracionesMesa">\n                <ion-col col >\n                  <img src="../../assets/imgs/confetti_menu.svg"/> &nbsp; {{clebracion.celebracion_descripcion}} de {{clebracion.cliente_name}} <a (click)="deleteCelebracionMesa(clebracion)"><i class="far fa-trash-alt icon-delete"></i></a>\n                </ion-col>\n              </ion-row>\n        </div>\n          <ion-row >\n            <ion-col col class="title-section">\n              Clientes de la Mesa:\n            </ion-col>\n          </ion-row>\n        <div class="mesaSelected-clientes-bar">\n            <ion-row>\n                <ion-col col class="empty" *ngIf="cantClientes == 0">\n                  ¡No se han agregado Clientes aún!\n                </ion-col>\n              </ion-row>\n              <ion-row *ngFor="let cliente of clientesMesa">\n                <ion-col col >\n                  <i class="fas fa-user"></i> &nbsp; {{cliente.cliente_name}} <a (click)="deleteClienteMesa(cliente)"><i class="far fa-trash-alt icon-delete"></i></a>\n                </ion-col>\n              </ion-row>\n        </div>\n\n  </div>\n</ion-content>\n\n\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\manejo-mesas\manejo-mesas.html"*/,
+            selector: 'page-manejo-mesas',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\manejo-mesas\manejo-mesas.html"*/'<page-header></page-header>\n\n<ion-content padding style="margin-top: 59px">\n  <h1 text-center ion-text color="principal">\n      <img src="../../assets/imgs/meeting_principal.svg" width="50em" style="margin-bottom: -10px">\n    &nbsp;Manejo de Mesas\n  </h1>\n\n  <div class="manejo-mesas-principal">\n\n      <ion-row>\n        <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n          <button class="button-agregar-mesa" (click)="openCrearMesaModal()">\n            <i class="fas fa-plus" style="font-size: 2rem"> </i> &nbsp;Aperturar Mesa\n          </button>\n        </ion-col>\n        <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n          <ion-searchbar\n          [showCancelButton]="shouldShowCancel"\n          (ionInput)="filterItems($event)">\n        </ion-searchbar>\n      </ion-col>\n    </ion-row>\n    \n    \n    <div style="height: 100%; overflow: auto; margin-bottom: 60px" >\n      <a  style="text-decoration: none;">\n        <ion-row justify-content-center *ngIf="!selectedMesa">\n          <ion-col col-6 col-md-4 col-lg-3 col-xl-2 *ngFor="let mesa of items" (click)="openMesa(mesa)" >\n            <ion-card class="card-mesa" >\n              <ion-row >\n                <ion-col col class="card-mesa-title">Mesa {{mesa.num_mesa}}</ion-col>\n              </ion-row>\n              <ion-row >\n                <ion-col col class="card-mesa-etiqueta">{{mesa.etiqueta}}</ion-col>\n              </ion-row>\n              <ion-row >\n                <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_clientes_mesa > 0"><i class="fas fa-users"></i></ion-col>\n                <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_celebraciones_mesa > 0"><img src="../../assets/imgs/confetti_menu.svg"/></ion-col>\n                <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_fotos_mesa > 0"><i class="fas fa-camera"></i></ion-col>\n                <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_correos_mesa > 0"><i class="fas fa-envelope"></i></ion-col>\n              </ion-row>\n              <ion-row >\n                <ion-col col class="card-mesa-number" *ngIf="mesa.cant_clientes_mesa > 0">{{mesa.cant_clientes_mesa}}</ion-col>\n                <ion-col col class="card-mesa-number" *ngIf="mesa.cant_celebraciones_mesa > 0">{{mesa.cant_celebraciones_mesa}}</ion-col>\n                <ion-col col class="card-mesa-number" *ngIf="mesa.cant_fotos_mesa > 0">{{mesa.cant_fotos_mesa}}</ion-col>\n                <ion-col col class="card-mesa-number" *ngIf="mesa.cant_correos_mesa > 0">{{mesa.cant_correos_mesa}}</ion-col>\n              </ion-row>\n            </ion-card>\n          </ion-col>\n        </ion-row>\n\n        <ion-row justify-content-center *ngIf="selectedMesa">\n            <ion-col col-3 col-md-4 col-lg-4 col-xl-3 *ngFor="let mesa of items" (click)="openMesa(mesa)" >\n              <ion-card class="card-mesa" >\n                <ion-row >\n                  <ion-col col class="card-mesa-title">Mesa {{mesa.num_mesa}}</ion-col>\n                </ion-row>\n                <ion-row >\n                  <ion-col col class="card-mesa-etiqueta">{{mesa.etiqueta}}</ion-col>\n                </ion-row>\n                <ion-row >\n                  <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_clientes_mesa > 0"><i class="fas fa-users"></i></ion-col>\n                  <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_celebraciones_mesa > 0"><img src="../../assets/imgs/confetti_menu.svg"/></ion-col>\n                  <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_fotos_mesa > 0"><i class="fas fa-camera"></i></ion-col>\n                  <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_correos_mesa > 0"><i class="fas fa-envelope"></i></ion-col>\n                </ion-row>\n                <ion-row >\n                  <ion-col col class="card-mesa-number" *ngIf="mesa.cant_clientes_mesa > 0">{{mesa.cant_clientes_mesa}}</ion-col>\n                  <ion-col col class="card-mesa-number" *ngIf="mesa.cant_celebraciones_mesa > 0">{{mesa.cant_celebraciones_mesa}}</ion-col>\n                  <ion-col col class="card-mesa-number" *ngIf="mesa.cant_fotos_mesa > 0">{{mesa.cant_fotos_mesa}}</ion-col>\n                  <ion-col col class="card-mesa-number" *ngIf="mesa.cant_correos_mesa > 0">{{mesa.cant_correos_mesa}}</ion-col>\n                </ion-row>\n              </ion-card>\n            </ion-col>\n          </ion-row>\n      </a>\n    </div>\n  </div>\n  \n  <div class="mesa-selected" *ngIf="selectedMesa">\n      <a class="cerrar-show-mesa" (click)="closeShowMesa()">\n        Cerrar &nbsp; <i class="fas fa-arrow-right"></i>\n      </a>\n      <div class="mesa-options-bar">\n          <ion-row>\n            <ion-col col>\n              <a (click)="openMesaEditar()"><i class="far fa-edit"></i></a>\n            </ion-col>\n            <ion-col col >\n              <a (click)="openMesaCelebraciones_manejo()"><img src="../../assets/imgs/confetti_menu.svg" class="option-img"/></a>\n            </ion-col>\n            <ion-col col >\n              <a (click)="openMesaClientes()"><i class="fas fa-user"></i></a>\n            </ion-col>\n            <ion-col col >\n              <a (click)="openMesaFotos_manejo()"><i class="fas fa-camera"></i></a>\n            </ion-col>\n            <ion-col col >\n              <a (click)="openMesaCorreo()"><i class="fas fa-envelope"></i></a>\n            </ion-col>\n          </ion-row>\n        </div>\n      <div class="mesa-title-bar">\n          <div class="table-cell">\n            <p class="mesa-numero">Mesa {{selectedMesa.num_mesa}}:</p>\n            <p class="mesa-etiqueta">&nbsp; {{selectedMesa.etiqueta}}</p>\n          </div>\n        </div>\n        <div class="mesa-horas-bar">\n            <ion-row>\n              <ion-col col-12 >\n                <i class="far fa-clock"></i> &nbsp; Hora de Apertura: &nbsp;<span style="text-decoration: bold; font-size: 2.4rem">{{horaApertura}}</span>\n              </ion-col>\n              <ion-col col-12 >\n                <i class="far fa-clock"></i> &nbsp; Hora de Clausura: &nbsp;<span style="text-decoration: bold; font-size: 2.4rem">{{horaClausura}}</span>\n              </ion-col>\n            </ion-row>\n        </div>\n          <ion-row >\n            <ion-col col class="title-section">\n              Motivo de Celebración:\n            </ion-col>\n          </ion-row>\n        <div class="mesaSelected-celebraciones-bar">\n            <ion-row>\n                <ion-col col class="empty" *ngIf="celebracionesMesa == 0">\n                  ¡No se han agregado Celebraciones aún!\n                </ion-col>\n              </ion-row>  \n              <ion-row *ngFor="let clebracion of celebracionesMesa">\n                  <ion-col col>\n                    <img src="../../assets/imgs/confetti_menu.svg"/> &nbsp;{{clebracion.celebracion_descripcion}} (<span class="cliente-celebracion-bar">{{clebracion.cliente_name}}</span>)\n                    <a (click)="deleteCelebracionMesa(clebracion)"><i class="far fa-trash-alt icon-delete"></i></a>\n                  </ion-col>\n              </ion-row>\n        </div>\n          <ion-row >\n            <ion-col col class="title-section">\n              Clientes de la Mesa:\n            </ion-col>\n          </ion-row>\n        <div class="mesaSelected-clientes-bar">\n            <ion-row>\n                <ion-col col class="empty" *ngIf="cantClientes == 0">\n                  ¡No se han agregado Clientes aún!\n                </ion-col>\n              </ion-row>\n              <ion-row *ngFor="let cliente of clientesMesa">\n                <ion-col col >\n                  <i class="fas fa-user"></i> &nbsp; {{cliente.cliente_name}} <a (click)="deleteClienteMesa(cliente)"><i class="far fa-trash-alt icon-delete"></i></a>\n                </ion-col>\n              </ion-row>\n        </div>\n\n  </div>\n</ion-content>\n\n\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\manejo-mesas\manejo-mesas.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
@@ -378,13 +378,13 @@ var ManejoMesasPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 112:
+/***/ 114:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return constantes; });
 //const API_URL = 'http://192.168.1.12/JME/public/api/';
-var API_URL = 'http://192.168.1.11:8000/api/';
+var API_URL = 'http://192.168.1.3:8000/api/';
 //const API_URL = 'http://192.168.0.180:8000/api/';
 //const API_URL = 'http://127.0.0.1:8000/api/';
 var constantes = {
@@ -394,286 +394,14 @@ var constantes = {
 
 /***/ }),
 
-/***/ 113:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShowMesaPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__editar_mesa_modal_editar_mesa_modal__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mesa_clientes_mesa_clientes__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__mesa_celebraciones_mesa_celebraciones__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mesa_fotos_mesa_fotos__ = __webpack_require__(56);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-
-/**
- * Generated class for the ShowMesaPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var ShowMesaPage = /** @class */ (function () {
-    function ShowMesaPage(navCtrl, navParams, manejoMesasService, alertCtrl, platform, modalCtrl, toastCtrl) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.manejoMesasService = manejoMesasService;
-        this.alertCtrl = alertCtrl;
-        this.platform = platform;
-        this.modalCtrl = modalCtrl;
-        this.toastCtrl = toastCtrl;
-        this.initializeSelectedMesa(this.navParams.get("mesa"));
-        this.getClientesMesa();
-        this.getCelebracionesMesa();
-    }
-    ShowMesaPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        console.log('\nPAGINA SHOW MESA');
-        var elm = document.querySelector(".mesa-selected-page");
-        this.platform.ready().then(function (readySource) {
-            var width = _this.platform.width() - 15;
-            elm.style.width = width + 'px';
-        });
-    };
-    // Inicializa las variables importantes de la página
-    //----------------------------------------------------------
-    ShowMesaPage.prototype.initializeSelectedMesa = function (messa) {
-        this.mesa = messa;
-        var time = new Date(this.mesa.apertura);
-        var horas = time.getHours();
-        var minutos = time.getMinutes();
-        var meridian = 'am';
-        if (horas > 12) {
-            horas -= 12;
-            meridian = 'pm';
-        }
-        this.horaApertura = horas + ':' + minutos + ' ' + meridian;
-        if (this.mesa.clausura) {
-            time = new Date(this.mesa.clausura);
-            horas = time.getHours();
-            minutos = time.getMinutes();
-            meridian = 'am';
-            if (horas > 12) {
-                horas -= 12;
-                meridian = 'pm';
-            }
-            this.horaClausura = horas + ':' + minutos + ' ' + meridian;
-        }
-        else {
-            this.horaClausura = '';
-        }
-    };
-    // Se ejecuta cuando se redimensiona el Width de la pantalla
-    //----------------------------------------------------------
-    ShowMesaPage.prototype.onWindowResize = function () {
-        var elm = document.querySelector(".mesa-selected-page");
-        var width = window.outerWidth - 15;
-        elm.style.width = width + 'px';
-    };
-    // Cierra la pagina actual
-    //----------------------------------------------------------
-    ShowMesaPage.prototype.closeShowMesa = function () {
-        this.navCtrl.pop();
-    };
-    // Obtiene los Clientes de una Mesa
-    //----------------------------------------------------------
-    ShowMesaPage.prototype.getClientesMesa = function () {
-        var _this = this;
-        this.manejoMesasService.getClientesMesa(this.mesa.id).then(function (result) {
-            if (!result['error']) {
-                console.log('Clientes obtenidos Exitosamente');
-                //console.log(result);
-                //console.log(result['length']);
-                _this.clientesMesa = result;
-                _this.cantClientes = result['length'];
-            }
-            else {
-                console.log('Error al obtener clientes');
-                var errorMessage = '';
-                errorMessage = result['error']['message'] + '<br>';
-                var alert_1 = _this.alertCtrl.create({
-                    title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
-                    subTitle: 'Hubo errores al obtener los Clientes de la Mesa:<br>',
-                    message: errorMessage,
-                    buttons: ['OK']
-                });
-                alert_1.present();
-            }
-        });
-    };
-    // Obtiene las Celebraciones de una Mesa
-    //----------------------------------------------------------
-    ShowMesaPage.prototype.getCelebracionesMesa = function () {
-        var _this = this;
-        this.manejoMesasService.getCelebracionesMesa(this.mesa.id).then(function (result) {
-            if (!result['error']) {
-                console.log('Celebraciones obtenidas Exitosamente');
-                //  console.log(result);
-                _this.celebracionesMesa = result;
-                _this.cantCelebraciones = result['length'];
-            }
-            else {
-                console.log('Error al obtener celebraciones');
-                var errorMessage = '';
-                errorMessage = result['error']['message'] + '<br>';
-                var alert_2 = _this.alertCtrl.create({
-                    title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
-                    subTitle: 'Hubo errores al obtener las Celebraciones de la Mesa:<br>',
-                    message: errorMessage,
-                    buttons: ['OK']
-                });
-                alert_2.present();
-            }
-        });
-    };
-    // Abre el modal de Editar Mesa
-    //----------------------------------------------------------
-    ShowMesaPage.prototype.openMesaEditar = function () {
-        this.modalEditar = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__editar_mesa_modal_editar_mesa_modal__["a" /* EditarMesaModalPage */], { "parentPage": this, "mesa": this.mesa, "parentName": "ShowMesaPage" }, {
-            showBackdrop: true,
-            enableBackdropDismiss: true
-        });
-        this.modalEditar.present();
-    };
-    // Elimina un Cliente de la Mesa
-    //----------------------------------------------------------
-    ShowMesaPage.prototype.deleteClienteMesa = function (cliente) {
-        var _this = this;
-        this.manejoMesasService.deleteClienteMesa(cliente.id).then(function (result) {
-            if (!result['error']) {
-                console.log('Cliente eliminado de la mesa Exitosamente');
-                //  console.log(result);
-                _this.getClientesMesa();
-                _this.navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
-                var toast = _this.toastCtrl.create({
-                    message: result['message'],
-                    duration: 3000,
-                    position: 'middle'
-                });
-                toast.present();
-            }
-            else {
-                console.log('Error al eliminar cliente de la mesa');
-                var errorMessage = '';
-                errorMessage = result['error']['message'] + '<br>';
-                var alert_3 = _this.alertCtrl.create({
-                    title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
-                    subTitle: 'Hubo errores al eliminar el cliente de la Mesa:<br>',
-                    message: errorMessage,
-                    buttons: ['OK']
-                });
-                alert_3.present();
-            }
-        });
-    };
-    // Elimina un Cliente de la Mesa
-    //----------------------------------------------------------
-    ShowMesaPage.prototype.deleteCelebracionMesa = function (celebracion) {
-        var _this = this;
-        this.manejoMesasService.deleteCelebracionMesa(celebracion.id).then(function (result) {
-            if (!result['error']) {
-                console.log('Celebración eliminada de la mesa Exitosamente');
-                //  console.log(result);
-                _this.getCelebracionesMesa();
-                _this.navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
-                var toast = _this.toastCtrl.create({
-                    message: result['message'],
-                    duration: 3000,
-                    position: 'middle'
-                });
-                toast.present();
-            }
-            else {
-                console.log('Error al eliminar celebración de la mesa');
-                var errorMessage = '';
-                errorMessage = result['error']['message'] + '<br>';
-                var alert_4 = _this.alertCtrl.create({
-                    title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
-                    subTitle: 'Hubo errores al eliminar la celebración de la Mesa:<br>',
-                    message: errorMessage,
-                    buttons: ['OK']
-                });
-                alert_4.present();
-            }
-        });
-    };
-    // Abre el modal de Clientes de la Mesa
-    //----------------------------------------------------------
-    ShowMesaPage.prototype.openMesaClientes = function () {
-        this.modalClientesMesa = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_4__mesa_clientes_mesa_clientes__["a" /* MesaClientesPage */], { "parentPage": this, "mesa": this.mesa, "parentName": "ShowMesaPage" }, {
-            showBackdrop: true,
-            enableBackdropDismiss: true
-        });
-        this.modalClientesMesa.present();
-    };
-    // Abre el modal de Celebraciones de la Mesa
-    //----------------------------------------------------------
-    ShowMesaPage.prototype.openMesaCelebraciones_show = function () {
-        this.modalCelebracionesMesa = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__mesa_celebraciones_mesa_celebraciones__["a" /* MesaCelebracionesPage */], { "parentPage": this, "mesa": this.mesa, "parentName": "ShowMesaPage" }, {
-            showBackdrop: true,
-            enableBackdropDismiss: true
-        });
-        this.modalCelebracionesMesa.present();
-    };
-    // Abre el modal de Fotos de la Mesa
-    //----------------------------------------------------------
-    ShowMesaPage.prototype.openMesaFotos = function () {
-        this.modalFotosMesa = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_6__mesa_fotos_mesa_fotos__["a" /* MesaFotosPage */], { "parentPage": this, "mesa": this.mesa, "parentName": "ShowMesaPage" }, {
-            showBackdrop: true,
-            enableBackdropDismiss: true
-        });
-        this.modalFotosMesa.present();
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* HostListener */])('window:resize'),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], ShowMesaPage.prototype, "onWindowResize", null);
-    ShowMesaPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-show-mesa',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\show-mesa\show-mesa.html"*/'<page-header></page-header>\n\n<ion-content padding style="margin-top: 59px">\n  <h1 text-center ion-text color="principal">\n      <img src="../../assets/imgs/meeting_principal.svg" width="50em" style="margin-bottom: -10px">\n    &nbsp;Manejo de Mesas\n  </h1>\n\n  <div class="mesa-selected-page">\n    <a class="cerrar-mesa" (click)="closeShowMesa()">\n      <i class="fas fa-arrow-left"></i>&nbsp; Volver a Manejo de Mesas \n    </a>\n    <div class="mesa-options-bar">\n      <ion-row>\n        <ion-col col>\n          <a (click)="openMesaEditar()"><i class="far fa-edit"></i></a>\n        </ion-col>\n        <ion-col col >\n          <a (click)="openMesaCelebraciones_show()"><img src="../../assets/imgs/confetti_menu.svg" class="option-img"/></a>\n        </ion-col>\n        <ion-col col >\n          <a (click)="openMesaClientes()"><i class="fas fa-user"></i></a>\n        </ion-col>\n        <ion-col col >\n          <a (click)="openMesaFotos()"><i class="fas fa-camera"></i></a>\n        </ion-col>\n        <ion-col col >\n          <a (click)="openMesaCorreo()"><i class="fas fa-envelope"></i></a>\n        </ion-col>\n      </ion-row>\n    </div>\n    <div class="mesa-title-bar">\n      <div class="table-cell">\n        <p class="mesa-numero">Mesa {{mesa.num_mesa}}:</p>\n        <p class="mesa-etiqueta">&nbsp; {{mesa.etiqueta}}</p>\n      </div>\n    </div>\n    <div class="mesa-horas-bar">\n      <ion-row>\n        <ion-col col-12 >\n          <i class="far fa-clock"></i> &nbsp; Hora de Apertura: &nbsp;<span style="text-decoration: bold; font-size: 2.4rem">{{horaApertura}}</span>\n        </ion-col>\n        <ion-col col-12 >\n          <i class="far fa-clock"></i> &nbsp; Hora de Clausura: &nbsp;<span style="text-decoration: bold; font-size: 2.4rem">{{horaClausura}}</span>\n        </ion-col>\n      </ion-row>\n    </div>\n    <ion-row >\n      <ion-col col class="title-section">\n        Motivo de Celebración:\n      </ion-col>\n    </ion-row>\n    <div class="mesa-celebraciones-bar">\n      <ion-row>\n        <ion-col col class="empty" *ngIf="celebracionesMesa == 0">\n          ¡No se han agregado Celebraciones aún!\n        </ion-col>\n      </ion-row>  \n      <ion-row *ngFor="let clebracion of celebracionesMesa">\n        <ion-col col >\n          <img src="../../assets/imgs/confetti_menu.svg"/> &nbsp; {{clebracion.celebracion_descripcion}} de {{clebracion.cliente_name}} <a (click)="deleteCelebracionMesa(clebracion)"><i class="far fa-trash-alt icon-delete"></i></a>\n        </ion-col>\n      </ion-row>\n    </div>\n    <ion-row >\n      <ion-col col class="title-section">\n        Clientes de la Mesa:\n      </ion-col>\n    </ion-row>\n    <div class="mesa-clientes-bar">\n      <ion-row>\n        <ion-col col class="empty" *ngIf="cantClientes == 0">\n          ¡No se han agregado Clientes aún!\n        </ion-col>\n      </ion-row>\n      <ion-row *ngFor="let cliente of clientesMesa">\n        <ion-col col >\n          <i class="fas fa-user"></i> &nbsp; {{cliente.cliente_name}} <a (click)="deleteClienteMesa(cliente)"><i class="far fa-trash-alt icon-delete"></i></a>\n        </ion-col>\n      </ion-row>\n    </div>\n  </div>\n    \n    \n    \n  </ion-content>\n  '/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\show-mesa\show-mesa.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
-    ], ShowMesaPage);
-    return ShowMesaPage;
-}());
-
-//# sourceMappingURL=show-mesa.js.map
-
-/***/ }),
-
-/***/ 114:
+/***/ 115:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClientesServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__imports_url__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__imports_url__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(34);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -777,20 +505,15 @@ var ClientesServiceProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 115:
+/***/ 116:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HistorialAsistenciaPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CrearMesaModalPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__show_mesa_show_mesa__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__editar_mesa_modal_editar_mesa_modal__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mesa_clientes_mesa_clientes__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mesa_celebraciones_mesa_celebraciones__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__mesa_fotos_mesa_fotos__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -800,6 +523,171 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+
+
+
+/**
+ * Generated class for the CrearMesaModalPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var CrearMesaModalPage = /** @class */ (function () {
+    function CrearMesaModalPage(navCtrl, navParams, formBuilder, manejoMesasService, alertCtrl, toastCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.formBuilder = formBuilder;
+        this.manejoMesasService = manejoMesasService;
+        this.alertCtrl = alertCtrl;
+        this.toastCtrl = toastCtrl;
+        this.newMesaForm = this.formBuilder.group({
+            num_mesa: ['', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].compose([
+                    __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].required
+                ])
+            ],
+            etiqueta: ['', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].compose([
+                    __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].required
+                ])
+            ],
+            apertura: ['', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].compose([
+                    __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].required
+                ])
+            ],
+            clausura: ['']
+        });
+    }
+    CrearMesaModalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CrearMesaModalPage');
+    };
+    // Cierra el Modal
+    //----------------------------------------------------------
+    CrearMesaModalPage.prototype.closeModal = function () {
+        this.navCtrl.pop();
+    };
+    // Crea una Mesa
+    //----------------------------------------------------------
+    CrearMesaModalPage.prototype.crearMesa = function () {
+        var _this = this;
+        if (this.newMesaForm.valid) {
+            var fechaApertura = this.newMesaForm.controls['apertura'].value + '';
+            var str = fechaApertura.substring(0, 10);
+            var str2 = fechaApertura.substring(11, 16);
+            fechaApertura = str + ' ' + str2;
+            var fechaClausura = this.newMesaForm.controls['clausura'].value + '';
+            str = fechaClausura.substring(0, 10);
+            str2 = fechaClausura.substring(11, 16);
+            fechaClausura = str + ' ' + str2;
+            var mesaData = {
+                'num_mesa': this.newMesaForm.controls['num_mesa'].value,
+                'etiqueta': this.newMesaForm.controls['etiqueta'].value,
+                'apertura': fechaApertura,
+                'clausura': fechaClausura
+            };
+            console.log(mesaData);
+            this.manejoMesasService.crearMesa(mesaData).then(function (result) {
+                if (!result['error']) {
+                    console.log('Mesa creada Exitosamente');
+                    if (_this.navParams.get("parentName") == "ManejoMesasPage") {
+                        _this.navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+                    }
+                    else if (_this.navParams.get("parentName") == "HistorialAsistenciaPage") {
+                        _this.navParams.get("parentPage").getMesasHistory(_this.navParams.get("fecha")); /* Actualiza ManejoMesasPage */
+                    }
+                    var toast = _this.toastCtrl.create({
+                        message: 'Mesa Aperturada Exitosamente',
+                        duration: 3000,
+                        position: 'middle'
+                    });
+                    toast.present();
+                    _this.closeModal();
+                }
+                else {
+                    console.log('Error en los datos enviados');
+                    var errorMessage_1 = '';
+                    if (result['error']['errors']) {
+                        if (result['error']['errors']['num_mesa']) {
+                            result['error']['errors']['num_mesa'].forEach(function (element) {
+                                errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
+                            });
+                        }
+                        if (result['error']['errors']['etiqueta']) {
+                            result['error']['errors']['etiqueta'].forEach(function (element) {
+                                errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
+                            });
+                        }
+                        if (result['error']['errors']['apertura']) {
+                            result['error']['errors']['apertura'].forEach(function (element) {
+                                errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
+                            });
+                        }
+                        if (result['error']['errors']['clausura']) {
+                            result['error']['errors']['clausura'].forEach(function (element) {
+                                errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
+                            });
+                        }
+                    }
+                    else {
+                        errorMessage_1 = result['error']['message'] + '<br>';
+                    }
+                    var alert_1 = _this.alertCtrl.create({
+                        title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
+                        subTitle: 'Hubo errores al Aperturar la Mesa:<br>',
+                        message: errorMessage_1,
+                        buttons: ['OK']
+                    });
+                    alert_1.present();
+                }
+            }, function (err) {
+            });
+        }
+    };
+    CrearMesaModalPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-crear-mesa-modal',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\crear-mesa-modal\crear-mesa-modal.html"*/'<!--\n  Generated template for the CrearMesaModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <div class="modal-header">\n    <p class="modal-title" >Aperturar Mesa</p>\n\n    <button class="modal-close-icon" (click)="closeModal()">\n      <i class="fas fa-times" style="font-size: 2.3rem"></i>\n    </button>\n  </div>      \n</ion-header>\n\n<ion-content>\n  <div padding class="content-overflow">\n    <form  [formGroup]="newMesaForm">\n      \n      <ion-item class="form-item">\n        <ion-label stacked>Numero de la Mesa:</ion-label>\n        <ion-input type="number" [formControl]="newMesaForm.controls[\'num_mesa\']"></ion-input>\n      </ion-item>\n      \n      <ion-item class="form-item">\n        <ion-label stacked>Etiqueta de la Mesa:</ion-label>\n        <ion-input type="text" [formControl]="newMesaForm.controls[\'etiqueta\']"></ion-input>\n      </ion-item>\n      \n      <ion-item class="form-item">\n        <ion-label stacked>Fecha y Hora de Apertura:</ion-label>\n        <ion-datetime displayFormat="YYYY-MM-DD HH:mm" pickerFormat="MMM/DD/YYYY hh:mma" \n        doneText="Aceptar" cancelText="Cancelar"	[formControl]="newMesaForm.controls[\'apertura\']"></ion-datetime>\n      </ion-item>\n      \n      <ion-item class="form-item">\n        <ion-label stacked>Fecha y Hora de Clausura (Opcional):</ion-label>\n        <ion-datetime displayFormat="YYYY-MM-DD HH:mm" pickerFormat="MMM/DD/YYYY hh:mma" \n        doneText="Aceptar" cancelText="Cancelar" [formControl]="newMesaForm.controls[\'clausura\']"></ion-datetime>\n      </ion-item>\n      \n      \n      \n      <ion-row class="sign-in-button-container">\n        <ion-col text-center>\n          <button class="succes-button" (click)="crearMesa()" [disabled]="!newMesaForm.valid">\n            <i class="fas fa-plus" style="font-size: 2rem"></i>&nbsp;Crear\n          </button>\n        </ion-col>\n      </ion-row>\n      \n      \n    </form>\n    \n  </div>\n</ion-content>\n  '/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\crear-mesa-modal\crear-mesa-modal.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
+    ], CrearMesaModalPage);
+    return CrearMesaModalPage;
+}());
+
+//# sourceMappingURL=crear-mesa-modal.js.map
+
+/***/ }),
+
+/***/ 117:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HistorialAsistenciaPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__show_mesa_show_mesa__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__crear_mesa_modal_crear_mesa_modal__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__show_mesa_history_show_mesa_history__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__editar_mesa_modal_editar_mesa_modal__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__mesa_clientes_mesa_clientes__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__mesa_celebraciones_mesa_celebraciones__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__mesa_fotos_mesa_fotos__ = __webpack_require__(58);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
 
 
 
@@ -867,20 +755,20 @@ var HistorialAsistenciaPage = /** @class */ (function () {
                     _this.mesasHistory = result;
                     _this.initializeItems();
                     _this.loading.dismiss();
-                }, 2000);
+                }, 1000);
             }
             else {
                 _this.loading.dismiss();
                 console.log('Error al obtener Historial de Mesas');
                 var errorMessage = '';
                 errorMessage = result['error']['message'] + '<br>';
-                var alert = _this.alertCtrl.create({
+                var alert_1 = _this.alertCtrl.create({
                     title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
                     subTitle: 'Hubo errores al obtener las Historial de Mesas:<br>',
                     message: errorMessage,
                     buttons: ['OK']
                 });
-                alert.present();
+                alert_1.present();
             }
         });
     };
@@ -912,19 +800,23 @@ var HistorialAsistenciaPage = /** @class */ (function () {
     // Muestra la mesa seleccionada
     //----------------------------------------------------------
     HistorialAsistenciaPage.prototype.selectMesaHistory = function (mesa) {
-        //console.log('Abriendo Mesa');
-        if (window.outerWidth < 960) {
-            //this.navCtrl.push(ShowMesaPage, { "parentPage": this, "mesa": mesa });
-        }
-        else {
-            console.log('\nPANEL HISTORIAL MESA SELECCIONADA');
-            this.initializeMesaHistory(mesa);
-            if (!this.selectedMesa) {
-                var elm = document.querySelector(".mesas-history-principal");
-                elm.style.width = '60%';
-                elm.style.height = '650px';
+        var _this = this;
+        this.platform.ready().then(function (readySource) {
+            var width = _this.platform.width();
+            console.log('Abriendo Historial Mesa: ' + width);
+            if (width < 960) {
+                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__show_mesa_history_show_mesa_history__["a" /* ShowMesaHistoryPage */], { "parentPage": _this, "mesa": mesa });
             }
-        }
+            else {
+                console.log('\nPANEL HISTORIAL MESA SELECCIONADA');
+                _this.initializeMesaHistory(mesa);
+                if (!_this.selectedMesa) {
+                    var elm = document.querySelector(".mesas-history-principal");
+                    elm.style.width = '60%';
+                    elm.style.height = '650px';
+                }
+            }
+        });
     };
     // Inicialización de datos de la mesa seleccionada
     //---------------------------------------------------------- 
@@ -969,20 +861,24 @@ var HistorialAsistenciaPage = /** @class */ (function () {
     // Muestra la mesa seleccionada
     //----------------------------------------------------------
     HistorialAsistenciaPage.prototype.selectIntanceMesa = function (mesa) {
+        var _this = this;
         //console.log('Abriendo Mesa');
-        if (window.outerWidth < 960) {
-            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__show_mesa_show_mesa__["a" /* ShowMesaPage */], { "parentPage": this, "mesa": mesa });
-        }
-        else {
-            console.log('\nPANEL MESA SELECCIONADA');
-            this.initializeInstanceMesa(mesa);
-            this.getClientesMesa(mesa);
-            this.getCelebracionesMesa(mesa);
-            var elm = document.querySelector(".mesas-history-principal");
-            elm.style.width = '30%';
-            elm = document.querySelector(".mesa-history-instences");
-            elm.style.width = '30%';
-        }
+        this.platform.ready().then(function (readySource) {
+            var width = _this.platform.width();
+            if (width < 960) {
+                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__show_mesa_show_mesa__["a" /* ShowMesaPage */], { "parentPage": _this, "mesa": mesa });
+            }
+            else {
+                console.log('\nPANEL MESA SELECCIONADA');
+                _this.initializeInstanceMesa(mesa);
+                _this.getClientesMesa(mesa);
+                _this.getCelebracionesMesa(mesa);
+                var elm = document.querySelector(".mesas-history-principal");
+                elm.style.width = '30%';
+                elm = document.querySelector(".mesa-history-instences");
+                elm.style.width = '30%';
+            }
+        });
     };
     // Inicialización de datos de la mesa seleccionada
     //----------------------------------------------------------  
@@ -1028,13 +924,13 @@ var HistorialAsistenciaPage = /** @class */ (function () {
                 console.log('Error al obtener clientes');
                 var errorMessage = '';
                 errorMessage = result['error']['message'] + '<br>';
-                var alert = _this.alertCtrl.create({
+                var alert_2 = _this.alertCtrl.create({
                     title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
                     subTitle: 'Hubo errores al obtener los Clientes de la Mesa:<br>',
                     message: errorMessage,
                     buttons: ['OK']
                 });
-                alert.present();
+                alert_2.present();
             }
         });
     };
@@ -1053,13 +949,13 @@ var HistorialAsistenciaPage = /** @class */ (function () {
                 console.log('Error al obtener celebraciones');
                 var errorMessage = '';
                 errorMessage = result['error']['message'] + '<br>';
-                var alert = _this.alertCtrl.create({
+                var alert_3 = _this.alertCtrl.create({
                     title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
                     subTitle: 'Hubo errores al obtener las Celebraciones de la Mesa:<br>',
                     message: errorMessage,
                     buttons: ['OK']
                 });
-                alert.present();
+                alert_3.present();
             }
         });
     };
@@ -1084,7 +980,7 @@ var HistorialAsistenciaPage = /** @class */ (function () {
     // Abre el modal de Editar Mesa
     //----------------------------------------------------------
     HistorialAsistenciaPage.prototype.openMesaEditar = function () {
-        this.modalEditar = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__editar_mesa_modal_editar_mesa_modal__["a" /* EditarMesaModalPage */], { "parentPage": this, "mesa": this.selectedMesa, "parentName": "HistorialAsistenciaPage", "fecha": this.fechaForm.controls.fecha.value }, {
+        this.modalEditar = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_7__editar_mesa_modal_editar_mesa_modal__["a" /* EditarMesaModalPage */], { "parentPage": this, "mesa": this.selectedMesa, "parentName": "HistorialAsistenciaPage", "fecha": this.fechaForm.controls.fecha.value }, {
             showBackdrop: true,
             enableBackdropDismiss: true
         });
@@ -1112,13 +1008,13 @@ var HistorialAsistenciaPage = /** @class */ (function () {
                 console.log('Error al eliminar cliente de la mesa');
                 var errorMessage = '';
                 errorMessage = result['error']['message'] + '<br>';
-                var alert = _this.alertCtrl.create({
+                var alert_4 = _this.alertCtrl.create({
                     title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
                     subTitle: 'Hubo errores al eliminar el cliente de la Mesa:<br>',
                     message: errorMessage,
                     buttons: ['OK']
                 });
-                alert.present();
+                alert_4.present();
             }
         });
     };
@@ -1143,20 +1039,20 @@ var HistorialAsistenciaPage = /** @class */ (function () {
                 console.log('Error al eliminar celebración de la mesa');
                 var errorMessage = '';
                 errorMessage = result['error']['message'] + '<br>';
-                var alert = _this.alertCtrl.create({
+                var alert_5 = _this.alertCtrl.create({
                     title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
                     subTitle: 'Hubo errores al eliminar la celebración de la Mesa:<br>',
                     message: errorMessage,
                     buttons: ['OK']
                 });
-                alert.present();
+                alert_5.present();
             }
         });
     };
     // Abre el modal de Clientes de la Mesa
     //----------------------------------------------------------
     HistorialAsistenciaPage.prototype.openMesaClientes = function () {
-        this.modalClientesMesa = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_6__mesa_clientes_mesa_clientes__["a" /* MesaClientesPage */], { "parentPage": this, "mesa": this.selectedMesa, "parentName": "HistorialAsistenciaPage", "fecha": this.fechaForm.controls.fecha.value }, {
+        this.modalClientesMesa = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_8__mesa_clientes_mesa_clientes__["a" /* MesaClientesPage */], { "parentPage": this, "mesa": this.selectedMesa, "parentName": "HistorialAsistenciaPage", "fecha": this.fechaForm.controls.fecha.value }, {
             showBackdrop: true,
             enableBackdropDismiss: true
         });
@@ -1165,7 +1061,7 @@ var HistorialAsistenciaPage = /** @class */ (function () {
     // Abre el modal de Celebraciones de la Mesa
     //----------------------------------------------------------
     HistorialAsistenciaPage.prototype.openMesaCelebraciones_manejo = function () {
-        this.modalCelebracionesMesa = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_7__mesa_celebraciones_mesa_celebraciones__["a" /* MesaCelebracionesPage */], { "parentPage": this, "mesa": this.selectedMesa, "parentName": "HistorialAsistenciaPage", "fecha": this.fechaForm.controls.fecha.value }, {
+        this.modalCelebracionesMesa = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_9__mesa_celebraciones_mesa_celebraciones__["a" /* MesaCelebracionesPage */], { "parentPage": this, "mesa": this.selectedMesa, "parentName": "HistorialAsistenciaPage", "fecha": this.fechaForm.controls.fecha.value }, {
             showBackdrop: true,
             enableBackdropDismiss: true
         });
@@ -1174,11 +1070,21 @@ var HistorialAsistenciaPage = /** @class */ (function () {
     // Abre el modal de Fotos de la Mesa
     //----------------------------------------------------------
     HistorialAsistenciaPage.prototype.openMesaFotos_manejo = function () {
-        this.modalFotosMesa = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_8__mesa_fotos_mesa_fotos__["a" /* MesaFotosPage */], { "parentPage": this, "mesa": this.selectedMesa, "parentName": "HistorialAsistenciaPage", "fecha": this.fechaForm.controls.fecha.value }, {
+        this.modalFotosMesa = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_10__mesa_fotos_mesa_fotos__["a" /* MesaFotosPage */], { "parentPage": this, "mesa": this.selectedMesa, "parentName": "HistorialAsistenciaPage", "fecha": this.fechaForm.controls.fecha.value }, {
             showBackdrop: true,
             enableBackdropDismiss: true
         });
         this.modalFotosMesa.present();
+    };
+    // Llamada al modal de crear mesa
+    //----------------------------------------------------------
+    HistorialAsistenciaPage.prototype.openCrearMesaModal = function () {
+        this.modalCrear = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__crear_mesa_modal_crear_mesa_modal__["a" /* CrearMesaModalPage */], { "parentPage": this, "parentName": "HistorialAsistenciaPage", "fecha": this.fechaForm.controls.fecha.value }, {
+            showBackdrop: true,
+            enableBackdropDismiss: true
+        });
+        this.modalCrear.present();
+        console.log("modal");
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* HostListener */])('window:resize'),
@@ -1188,25 +1094,32 @@ var HistorialAsistenciaPage = /** @class */ (function () {
     ], HistorialAsistenciaPage.prototype, "onWindowResize", null);
     HistorialAsistenciaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-historial-asistencia',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\historial-asistencia\historial-asistencia.html"*/'<page-header></page-header>\n\n<ion-content padding style="margin-top: 59px">\n  <div class="titulo">\n      <h1 text-center ion-text color="principal">\n        <i class="fas fa-history"></i>\n        &nbsp;Hist. de Asistencia\n      </h1>\n  </div>\n\n  <div class="manejo-mesas-history-principal">\n      <div class="search-bar-history">\n          <ion-row>\n            <ion-col col-12 col-md-6 col-lg-4 col-xl-4>\n              <form  [formGroup]="fechaForm">\n                <div class="fecha-history-panel" *ngIf="width_size <= 960">\n                  <ion-item  class="item-celebracion-fecha">\n                    <ion-avatar item-start  style="float: left; ">\n                      <i class="far fa-calendar-alt icon-fecha-history"></i>\n                    </ion-avatar>\n                    <ion-label style="color: #003300" stacked>Indique una fecha :</ion-label>\n\n                    <ion-datetime  class="celebracion-fecha" displayFormat="YYYY-MM-DD" pickerFormat="MMM/DD/YYYY" [(ngModel)]="myDate"\n                    doneText="Aceptar" cancelText="Cancelar" formControlName="fecha" placeholder="YYYY-MM-DD" (ionChange)="selectFecha()"></ion-datetime>\n                  </ion-item>\n                </div>  \n                \n                <div class="fecha-history-panel" *ngIf="width_size > 960" style="width:90%;">\n                  <ion-item  class="item-celebracion-fecha">\n                    <ion-avatar item-start  style="float: left; ">\n                      <i class="far fa-calendar-alt icon-fecha-history"></i>\n                    </ion-avatar>\n                    <ion-label style="color: #003300" stacked>Indique una fecha :</ion-label>\n\n                    <ion-input *ngIf="width_size > 960" class="history-fecha" type="date" formControlName="fecha" placeholder="YYYY-MM-DD"  [(ngModel)]="myDate" \n                        displayFormat="YYYY-MM-DD" Format="YYYY-MM-DD"></ion-input>\n                    </ion-item>\n                </div>  \n                <div *ngIf="width_size > 960" class="history-fecha-search">\n                  <a  tooltip="Buscar Historial" positionV="bottom" (click)="selectFecha()" class="history-fecha-search-icon"><i class="fas fa-search "></i></a>    \n                </div>\n                    \n              </form>\n            </ion-col>\n            <ion-col col-12  col-md-6 col-lg-4 col-xl-4>\n              <button class="button-agregar-mesa" (click)="openCrearMesaModal()">\n                <i class="fas fa-plus" style="font-size: 1.8rem"> </i> &nbsp;Aperturar Mesa\n              </button>\n            </ion-col>\n            <ion-col col-12 col-md-12 col-lg-4 col-xl-4>\n              <ion-searchbar\n              [showCancelButton]="shouldShowCancel"\n              (ionInput)="filterItems($event)">\n            </ion-searchbar>\n          </ion-col>\n        </ion-row>\n        </div>\n      \n        <div class="mesas-history-principal">\n          <a  style="text-decoration: none;">\n            <ion-row justify-content-center *ngIf="(!selectedMesaHistory && !selectedMesa)">\n              <ion-col col-6 col-md-4 col-lg-3 col-xl-2 *ngFor="let mesa of items" (click)="selectMesaHistory(mesa)" >\n                <ion-card class="card-mesa" >\n                  <ion-row >\n                    <ion-col col class="card-mesa-title">Mesa {{mesa.num_mesa}}</ion-col>\n                    </ion-row>\n                    <ion-row >\n                      <ion-col col class="card-mesa-etiqueta">&nbsp;</ion-col>\n                    </ion-row>\n                    <ion-row >\n                      <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_mesas > 0"><i class="far fa-clock "></i></ion-col>\n                    </ion-row>\n                    <ion-row >\n                      <ion-col col class="card-mesa-number" *ngIf="mesa.cant_mesas > 0">{{mesa.cant_mesas}}</ion-col>\n                    </ion-row>\n                  </ion-card>\n                </ion-col>\n              </ion-row>\n      \n              <ion-row justify-content-center *ngIf="(selectedMesaHistory && !selectedMesa)">\n                  <ion-col col-6 col-md-4 col-lg-4 col-xl-3 *ngFor="let mesa of items" (click)="selectMesaHistory(mesa)" >\n                    <ion-card class="card-mesa" >\n                      <ion-row >\n                        <ion-col col class="card-mesa-title">Mesa {{mesa.num_mesa}}</ion-col>\n                      </ion-row>\n                      <ion-row >\n                        <ion-col col class="card-mesa-etiqueta">&nbsp;</ion-col>\n                      </ion-row>\n                      <ion-row >\n                      <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_mesas > 0"><i class="far fa-clock "></i></ion-col>\n                      </ion-row>\n                      <ion-row >\n                      <ion-col col class="card-mesa-number" *ngIf="mesa.cant_mesas > 0">{{mesa.cant_mesas}}</ion-col>\n                      </ion-row>\n                    </ion-card>\n                  </ion-col>\n                </ion-row>\n\n              <ion-row justify-content-center *ngIf="(selectedMesaHistory && selectedMesa)">\n                  <ion-col col-6  *ngFor="let mesa of items" (click)="selectMesaHistory(mesa)" >\n                    <ion-card class="card-mesa" >\n                      <ion-row >\n                        <ion-col col class="card-mesa-title">Mesa {{mesa.num_mesa}}</ion-col>\n                      </ion-row>\n                      <ion-row >\n                        <ion-col col class="card-mesa-etiqueta">&nbsp;</ion-col>\n                      </ion-row>\n                      <ion-row >\n                      <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_mesas > 0"><i class="far fa-clock "></i></ion-col>\n                      </ion-row>\n                      <ion-row >\n                      <ion-col col class="card-mesa-number" *ngIf="mesa.cant_mesas > 0">{{mesa.cant_mesas}}</ion-col>\n                      </ion-row>\n                    </ion-card>\n                  </ion-col>\n                </ion-row>\n            </a>\n        </div>\n      \n        <div class="mesa-history-instences" *ngIf="selectedMesaHistory">\n          <a class="cerrar-mesaHistory" (click)="closeMesaHistory()">\n            Cerrar &nbsp; <i class="fas fa-arrow-right"></i>\n          </a>\n          <div class="instanceMesa-title-bar">\n            <div class="table-cell">\n              <p class="mesa-numero">Historial de la Mesa {{selectedMesaHistory.num_mesa}}</p>\n            </div>\n          </div>\n          <div class="mesas-instances">\n            <div  *ngFor="let mesaInstance of selectedMesaHistory.mesas; let i = index" (click)="selectIntanceMesa(mesaInstance)">\n                <a class="mesa-instance">\n                        <div class="mesa-instance-etiqueta">\n                            {{mesaInstance.etiqueta}}\n                        </div>\n                        <div class="mesa-instance-horas">\n                            <ion-row>\n                              <ion-col col-12 >\n                                <i class="far fa-clock"></i> &nbsp;Llegada: &nbsp;<span class="mesa-instance-horas-hora">{{horaAperturaHistory[i]}}</span>\n                              </ion-col>\n                              <ion-col col-12 >\n                                <i class="far fa-clock"></i> &nbsp;Salida: &nbsp;<span class="mesa-instance-horas-hora">{{horaClausuraHistory[i]}}</span>\n                              </ion-col>\n                            </ion-row>\n                        </div>\n                        <div class="mesa-instance-icons">\n                            <ion-row >\n                                <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_clientes_mesa > 0">\n                                  <i class="fas fa-users"></i><br>\n                                  {{mesaInstance.cant_clientes_mesa}}\n                                </ion-col>\n                                <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_celebraciones_mesa > 0">\n                                  <img src="../../assets/imgs/confetti_menu.svg" class="img-confetti-history"/><br>\n                                  {{mesaInstance.cant_celebraciones_mesa}}\n                                </ion-col>\n                                <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_fotos_mesa > 0">\n                                  <i class="fas fa-camera"></i><br>\n                                  {{mesaInstance.cant_fotos_mesa}}\n                                </ion-col>\n                                <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_correos_mesa > 0">\n                                  <i class="fas fa-envelope"></i><br>\n                                  {{mesaInstance.cant_correos_mesa}}\n                                </ion-col>\n                              </ion-row>\n                        </div>\n                      </a>\n              </div>\n            </div>\n            \n        </div>\n\n        <div class="mesa-selected-history" *ngIf="selectedMesa">\n            <a class="cerrar-show-mesa" (click)="closeShowMesa()">\n              Cerrar &nbsp; <i class="fas fa-arrow-right"></i>\n            </a>\n            <div class="mesa-options-bar">\n                <ion-row>\n                  <ion-col col>\n                    <a (click)="openMesaEditar()"><i class="far fa-edit"></i></a>\n                  </ion-col>\n                  <ion-col col >\n                    <a (click)="openMesaCelebraciones_manejo()"><img src="../../assets/imgs/confetti_menu.svg" class="option-img"/></a>\n                  </ion-col>\n                  <ion-col col >\n                    <a (click)="openMesaClientes()"><i class="fas fa-user"></i></a>\n                  </ion-col>\n                  <ion-col col >\n                    <a (click)="openMesaFotos_manejo()"><i class="fas fa-camera"></i></a>\n                  </ion-col>\n                  <ion-col col >\n                    <a (click)="openMesaCorreo()"><i class="fas fa-envelope"></i></a>\n                  </ion-col>\n                </ion-row>\n              </div>\n            <div class="mesa-title-bar">\n                <div class="table-cell">\n                  <p class="mesa-numero">Mesa {{selectedMesa.num_mesa}}:</p>\n                  <p class="mesa-etiqueta">&nbsp; {{selectedMesa.etiqueta}}</p>\n                </div>\n              </div>\n              <div class="mesa-horas-bar">\n                  <ion-row>\n                    <ion-col col-12 >\n                      <i class="far fa-clock"></i> &nbsp; Hora de Apertura: &nbsp;<span style="text-decoration: bold; font-size: 2.4rem">{{horaAperturaSelected}}</span>\n                    </ion-col>\n                    <ion-col col-12 >\n                      <i class="far fa-clock"></i> &nbsp; Hora de Clausura: &nbsp;<span style="text-decoration: bold; font-size: 2.4rem">{{horaClausuraSelected}}</span>\n                    </ion-col>\n                  </ion-row>\n              </div>\n                <ion-row >\n                  <ion-col col class="title-section">\n                    Motivo de Celebración:\n                  </ion-col>\n                </ion-row>\n              <div class="mesaSelected-celebraciones-bar">\n                  <ion-row>\n                      <ion-col col class="empty" *ngIf="celebracionesMesa == 0">\n                        ¡No se han agregado Celebraciones aún!\n                      </ion-col>\n                    </ion-row>  \n                    <ion-row *ngFor="let clebracion of celebracionesMesa">\n                      <ion-col col >\n                        <img src="../../assets/imgs/confetti_menu.svg"/> &nbsp; {{clebracion.celebracion_descripcion}} de {{clebracion.cliente_name}} <a (click)="deleteCelebracionMesa(clebracion)"><i class="far fa-trash-alt icon-delete"></i></a>\n                      </ion-col>\n                    </ion-row>\n              </div>\n                <ion-row >\n                  <ion-col col class="title-section">\n                    Clientes de la Mesa:\n                  </ion-col>\n                </ion-row>\n              <div class="mesaSelected-clientes-bar">\n                  <ion-row>\n                      <ion-col col class="empty" *ngIf="cantClientes == 0">\n                        ¡No se han agregado Clientes aún!\n                      </ion-col>\n                    </ion-row>\n                    <ion-row *ngFor="let cliente of clientesMesa">\n                      <ion-col col >\n                        <i class="fas fa-user"></i> &nbsp; {{cliente.cliente_name}} <a (click)="deleteClienteMesa(cliente)"><i class="far fa-trash-alt icon-delete"></i></a>\n                      </ion-col>\n                    </ion-row>\n              </div>\n        </div>\n</div>\n\n  \n    \n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\historial-asistencia\historial-asistencia.html"*/,
+            selector: 'page-historial-asistencia',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\historial-asistencia\historial-asistencia.html"*/'<page-header></page-header>\n\n<ion-content padding style="margin-top: 59px">\n  <div class="titulo">\n      <h1 text-center ion-text color="principal">\n        <i class="fas fa-history"></i>\n        &nbsp;Hist. de Asistencia\n      </h1>\n  </div>\n\n  <div class="manejo-mesas-history-principal">\n      <div class="search-bar-history">\n          <ion-row>\n            <ion-col col-12 col-md-6 col-lg-4 col-xl-4>\n              <form  [formGroup]="fechaForm">\n                <div class="fecha-history-panel" *ngIf="!width_size">\n                  <ion-item  class="item-celebracion-fecha">\n                    <ion-avatar item-start  style="float: left; ">\n                      <i class="far fa-calendar-alt icon-fecha-history"></i>\n                    </ion-avatar>\n                    <ion-label style="color: #003300" stacked>Indique una fecha :</ion-label>\n\n                    <ion-datetime  class="celebracion-fecha" displayFormat="YYYY-MM-DD" pickerFormat="MMM/DD/YYYY" [(ngModel)]="myDate"\n                    doneText="Aceptar" cancelText="Cancelar" formControlName="fecha" placeholder="YYYY-MM-DD" (ionChange)="selectFecha()"></ion-datetime>\n                  </ion-item>\n                </div>  \n                \n                <div class="fecha-history-panel" style="width:90%;">\n                  <ion-item  class="item-celebracion-fecha">\n                    <ion-avatar item-start  style="float: left; ">\n                      <i class="far fa-calendar-alt icon-fecha-history"></i>\n                    </ion-avatar>\n                    <ion-label style="color: #003300" stacked>Indique una fecha :</ion-label>\n\n                    <ion-input  class="history-fecha" type="date" formControlName="fecha" placeholder="YYYY-MM-DD"  [(ngModel)]="myDate" \n                        displayFormat="YYYY-MM-DD" Format="YYYY-MM-DD"></ion-input>\n                    </ion-item>\n                </div>  \n                <div  class="history-fecha-search">\n                  <a  tooltip="Buscar Historial" positionV="bottom" (click)="selectFecha()" class="history-fecha-search-icon"><i class="fas fa-search "></i></a>    \n                </div>\n                    \n              </form>\n            </ion-col>\n            <ion-col col-12  col-md-6 col-lg-4 col-xl-4>\n              <button class="button-agregar-mesa" (click)="openCrearMesaModal()">\n                <i class="fas fa-plus" style="font-size: 1.8rem"> </i> &nbsp;Aperturar Mesa\n              </button>\n            </ion-col>\n            <ion-col col-12 col-md-12 col-lg-4 col-xl-4>\n              <ion-searchbar\n              [showCancelButton]="shouldShowCancel"\n              (ionInput)="filterItems($event)">\n            </ion-searchbar>\n          </ion-col>\n        </ion-row>\n        </div>\n      \n        <div class="mesas-history-principal">\n          <a  style="text-decoration: none;">\n            <ion-row justify-content-center *ngIf="(!selectedMesaHistory && !selectedMesa)">\n              <ion-col col-6 col-md-4 col-lg-3 col-xl-2 *ngFor="let mesa of items" (click)="selectMesaHistory(mesa)" >\n                <ion-card class="card-mesa" >\n                  <ion-row >\n                    <ion-col col class="card-mesa-title">Mesa {{mesa.num_mesa}}</ion-col>\n                    </ion-row>\n                    <ion-row >\n                      <ion-col col class="card-mesa-etiqueta">&nbsp;</ion-col>\n                    </ion-row>\n                    <ion-row >\n                      <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_mesas > 0"><i class="far fa-clock "></i></ion-col>\n                    </ion-row>\n                    <ion-row >\n                      <ion-col col class="card-mesa-number" *ngIf="mesa.cant_mesas > 0">{{mesa.cant_mesas}}</ion-col>\n                    </ion-row>\n                  </ion-card>\n                </ion-col>\n              </ion-row>\n      \n              <ion-row justify-content-center *ngIf="(selectedMesaHistory && !selectedMesa)">\n                  <ion-col col-6 col-md-4 col-lg-4 col-xl-3 *ngFor="let mesa of items" (click)="selectMesaHistory(mesa)" >\n                    <ion-card class="card-mesa" >\n                      <ion-row >\n                        <ion-col col class="card-mesa-title">Mesa {{mesa.num_mesa}}</ion-col>\n                      </ion-row>\n                      <ion-row >\n                        <ion-col col class="card-mesa-etiqueta">&nbsp;</ion-col>\n                      </ion-row>\n                      <ion-row >\n                      <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_mesas > 0"><i class="far fa-clock "></i></ion-col>\n                      </ion-row>\n                      <ion-row >\n                      <ion-col col class="card-mesa-number" *ngIf="mesa.cant_mesas > 0">{{mesa.cant_mesas}}</ion-col>\n                      </ion-row>\n                    </ion-card>\n                  </ion-col>\n                </ion-row>\n\n              <ion-row justify-content-center *ngIf="(selectedMesaHistory && selectedMesa)">\n                  <ion-col col-6  *ngFor="let mesa of items" (click)="selectMesaHistory(mesa)" >\n                    <ion-card class="card-mesa" >\n                      <ion-row >\n                        <ion-col col class="card-mesa-title">Mesa {{mesa.num_mesa}}</ion-col>\n                      </ion-row>\n                      <ion-row >\n                        <ion-col col class="card-mesa-etiqueta">&nbsp;</ion-col>\n                      </ion-row>\n                      <ion-row >\n                      <ion-col col class="card-mesa-icon" *ngIf="mesa.cant_mesas > 0"><i class="far fa-clock "></i></ion-col>\n                      </ion-row>\n                      <ion-row >\n                      <ion-col col class="card-mesa-number" *ngIf="mesa.cant_mesas > 0">{{mesa.cant_mesas}}</ion-col>\n                      </ion-row>\n                    </ion-card>\n                  </ion-col>\n                </ion-row>\n            </a>\n        </div>\n      \n        <div class="mesa-history-instences" *ngIf="selectedMesaHistory">\n          <a class="cerrar-mesaHistory" (click)="closeMesaHistory()">\n            Cerrar &nbsp; <i class="fas fa-arrow-right"></i>\n          </a>\n          <div class="instanceMesa-title-bar">\n            <div class="table-cell">\n              <p class="mesa-numero">Historial de la Mesa {{selectedMesaHistory.num_mesa}}</p>\n            </div>\n          </div>\n          <div class="mesas-instances">\n            <ion-row>\n              <ion-col col class="empty" *ngIf="selectedMesaHistory.mesas.length == 0">\n                ¡No hay Historial disponible para la Mesa Seleccionada!\n              </ion-col>\n            </ion-row> \n            <div  *ngFor="let mesaInstance of selectedMesaHistory.mesas; let i = index" (click)="selectIntanceMesa(mesaInstance)">\n                <a class="mesa-instance">\n                        <div class="mesa-instance-etiqueta">\n                            {{mesaInstance.etiqueta}}\n                        </div>\n                        <div class="mesa-instance-horas">\n                            <ion-row>\n                              <ion-col col-12 >\n                                <i class="far fa-clock"></i> &nbsp;Llegada: &nbsp;<span class="mesa-instance-horas-hora">{{horaAperturaHistory[i]}}</span>\n                              </ion-col>\n                              <ion-col col-12 >\n                                <i class="far fa-clock"></i> &nbsp;Salida: &nbsp;<span class="mesa-instance-horas-hora">{{horaClausuraHistory[i]}}</span>\n                              </ion-col>\n                            </ion-row>\n                        </div>\n                        <div class="mesa-instance-icons">\n                            <ion-row >\n                                <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_clientes_mesa > 0">\n                                  <i class="fas fa-users"></i><br>\n                                  {{mesaInstance.cant_clientes_mesa}}\n                                </ion-col>\n                                <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_celebraciones_mesa > 0">\n                                  <img src="../../assets/imgs/confetti_menu.svg" class="img-confetti-history"/><br>\n                                  {{mesaInstance.cant_celebraciones_mesa}}\n                                </ion-col>\n                                <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_fotos_mesa > 0">\n                                  <i class="fas fa-camera"></i><br>\n                                  {{mesaInstance.cant_fotos_mesa}}\n                                </ion-col>\n                                <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_correos_mesa > 0">\n                                  <i class="fas fa-envelope"></i><br>\n                                  {{mesaInstance.cant_correos_mesa}}\n                                </ion-col>\n                              </ion-row>\n                        </div>\n                      </a>\n              </div>\n            </div>\n            \n        </div>\n\n        <div class="mesa-selected-history" *ngIf="selectedMesa">\n            <a class="cerrar-show-mesa" (click)="closeShowMesa()">\n              Cerrar &nbsp; <i class="fas fa-arrow-right"></i>\n            </a>\n            <div class="mesa-options-bar">\n                <ion-row>\n                  <ion-col col>\n                    <a (click)="openMesaEditar()"><i class="far fa-edit"></i></a>\n                  </ion-col>\n                  <ion-col col >\n                    <a (click)="openMesaCelebraciones_manejo()"><img src="../../assets/imgs/confetti_menu.svg" class="option-img"/></a>\n                  </ion-col>\n                  <ion-col col >\n                    <a (click)="openMesaClientes()"><i class="fas fa-user"></i></a>\n                  </ion-col>\n                  <ion-col col >\n                    <a (click)="openMesaFotos_manejo()"><i class="fas fa-camera"></i></a>\n                  </ion-col>\n                  <ion-col col >\n                    <a (click)="openMesaCorreo()"><i class="fas fa-envelope"></i></a>\n                  </ion-col>\n                </ion-row>\n              </div>\n            <div class="mesa-title-bar">\n                <div class="table-cell">\n                  <p class="mesa-numero">Mesa {{selectedMesa.num_mesa}}:</p>\n                  <p class="mesa-etiqueta">&nbsp; {{selectedMesa.etiqueta}}</p>\n                </div>\n              </div>\n              <div class="mesa-horas-bar">\n                  <ion-row>\n                    <ion-col col-12 >\n                      <i class="far fa-clock"></i> &nbsp; Hora de Apertura: &nbsp;<span style="text-decoration: bold; font-size: 2.4rem">{{horaAperturaSelected}}</span>\n                    </ion-col>\n                    <ion-col col-12 >\n                      <i class="far fa-clock"></i> &nbsp; Hora de Clausura: &nbsp;<span style="text-decoration: bold; font-size: 2.4rem">{{horaClausuraSelected}}</span>\n                    </ion-col>\n                  </ion-row>\n              </div>\n                <ion-row >\n                  <ion-col col class="title-section">\n                    Motivo de Celebración:\n                  </ion-col>\n                </ion-row>\n              <div class="mesaSelected-celebraciones-bar">\n                  <ion-row>\n                      <ion-col col class="empty" *ngIf="celebracionesMesa == 0">\n                        ¡No se han agregado Celebraciones aún!\n                      </ion-col>\n                    </ion-row>  \n                    <ion-row *ngFor="let clebracion of celebracionesMesa">\n                      <ion-col col >\n                        <img src="../../assets/imgs/confetti_menu.svg"/> &nbsp; {{clebracion.celebracion_descripcion}} de {{clebracion.cliente_name}} <a (click)="deleteCelebracionMesa(clebracion)"><i class="far fa-trash-alt icon-delete"></i></a>\n                      </ion-col>\n                    </ion-row>\n              </div>\n                <ion-row >\n                  <ion-col col class="title-section">\n                    Clientes de la Mesa:\n                  </ion-col>\n                </ion-row>\n              <div class="mesaSelected-clientes-bar">\n                  <ion-row>\n                      <ion-col col class="empty" *ngIf="cantClientes == 0">\n                        ¡No se han agregado Clientes aún!\n                      </ion-col>\n                    </ion-row>\n                    <ion-row *ngFor="let cliente of clientesMesa">\n                      <ion-col col >\n                        <i class="fas fa-user"></i> &nbsp; {{cliente.cliente_name}} <a (click)="deleteClienteMesa(cliente)"><i class="far fa-trash-alt icon-delete"></i></a>\n                      </ion-col>\n                    </ion-row>\n              </div>\n        </div>\n</div>\n\n  \n    \n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\historial-asistencia\historial-asistencia.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]) === "function" && _j || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
     ], HistorialAsistenciaPage);
     return HistorialAsistenciaPage;
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 }());
 
 //# sourceMappingURL=historial-asistencia.js.map
 
 /***/ }),
 
-/***/ 116:
+/***/ 118:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdminClientesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1245,13 +1158,13 @@ var AdminClientesPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 117:
+/***/ 119:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdminCorreosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1290,7 +1203,7 @@ var AdminCorreosPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 118:
+/***/ 120:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1298,8 +1211,8 @@ var AdminCorreosPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__imports_url__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__imports_url__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(305);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1396,7 +1309,7 @@ var AuthServiceProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 129:
+/***/ 131:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -1409,11 +1322,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 129;
+webpackEmptyAsyncContext.id = 131;
 
 /***/ }),
 
-/***/ 170:
+/***/ 172:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -1426,451 +1339,18 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 170;
+webpackEmptyAsyncContext.id = 172;
 
 /***/ }),
 
-/***/ 216:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CrearMesaModalPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(12);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-/**
- * Generated class for the CrearMesaModalPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var CrearMesaModalPage = /** @class */ (function () {
-    function CrearMesaModalPage(navCtrl, navParams, formBuilder, manejoMesasService, alertCtrl, toastCtrl) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.formBuilder = formBuilder;
-        this.manejoMesasService = manejoMesasService;
-        this.alertCtrl = alertCtrl;
-        this.toastCtrl = toastCtrl;
-        this.newMesaForm = this.formBuilder.group({
-            num_mesa: ['', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].compose([
-                    __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].required
-                ])
-            ],
-            etiqueta: ['', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].compose([
-                    __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].required
-                ])
-            ],
-            apertura: ['', __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].compose([
-                    __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].required
-                ])
-            ],
-            clausura: ['']
-        });
-    }
-    CrearMesaModalPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CrearMesaModalPage');
-    };
-    // Cierra el Modal
-    //----------------------------------------------------------
-    CrearMesaModalPage.prototype.closeModal = function () {
-        this.navCtrl.pop();
-    };
-    // Crea una Mesa
-    //----------------------------------------------------------
-    CrearMesaModalPage.prototype.crearMesa = function () {
-        var _this = this;
-        if (this.newMesaForm.valid) {
-            var fechaApertura = this.newMesaForm.controls['apertura'].value + '';
-            var str = fechaApertura.substring(0, 10);
-            var str2 = fechaApertura.substring(11, 16);
-            fechaApertura = str + ' ' + str2;
-            var fechaClausura = this.newMesaForm.controls['clausura'].value + '';
-            str = fechaClausura.substring(0, 10);
-            str2 = fechaClausura.substring(11, 16);
-            fechaClausura = str + ' ' + str2;
-            var mesaData = {
-                'num_mesa': this.newMesaForm.controls['num_mesa'].value,
-                'etiqueta': this.newMesaForm.controls['etiqueta'].value,
-                'apertura': fechaApertura,
-                'clausura': fechaClausura
-            };
-            console.log(mesaData);
-            this.manejoMesasService.crearMesa(mesaData).then(function (result) {
-                if (!result['error']) {
-                    console.log('Mesa creada Exitosamente');
-                    _this.navParams.get("parentPage").getMesasActivas();
-                    var toast = _this.toastCtrl.create({
-                        message: 'Mesa Aperturada Exitosamente',
-                        duration: 3000,
-                        position: 'middle'
-                    });
-                    toast.present();
-                    _this.closeModal();
-                }
-                else {
-                    console.log('Error en los datos enviados');
-                    var errorMessage_1 = '';
-                    if (result['error']['errors']) {
-                        if (result['error']['errors']['num_mesa']) {
-                            result['error']['errors']['num_mesa'].forEach(function (element) {
-                                errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
-                            });
-                        }
-                        if (result['error']['errors']['etiqueta']) {
-                            result['error']['errors']['etiqueta'].forEach(function (element) {
-                                errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
-                            });
-                        }
-                        if (result['error']['errors']['apertura']) {
-                            result['error']['errors']['apertura'].forEach(function (element) {
-                                errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
-                            });
-                        }
-                        if (result['error']['errors']['clausura']) {
-                            result['error']['errors']['clausura'].forEach(function (element) {
-                                errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
-                            });
-                        }
-                    }
-                    else {
-                        errorMessage_1 = result['error']['message'] + '<br>';
-                    }
-                    var alert_1 = _this.alertCtrl.create({
-                        title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
-                        subTitle: 'Hubo errores al Aperturar la Mesa:<br>',
-                        message: errorMessage_1,
-                        buttons: ['OK']
-                    });
-                    alert_1.present();
-                }
-            }, function (err) {
-            });
-        }
-    };
-    CrearMesaModalPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-crear-mesa-modal',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\crear-mesa-modal\crear-mesa-modal.html"*/'<!--\n  Generated template for the CrearMesaModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <div class="modal-header">\n    <p class="modal-title" >Aperturar Mesa</p>\n\n    <button class="modal-close-icon" (click)="closeModal()">\n      <i class="fas fa-times" style="font-size: 2.3rem"></i>\n    </button>\n  </div>      \n</ion-header>\n\n<ion-content>\n  <div padding class="content-overflow">\n    <form  [formGroup]="newMesaForm">\n      \n      <ion-item class="form-item">\n        <ion-label stacked>Numero de la Mesa:</ion-label>\n        <ion-input type="number" [formControl]="newMesaForm.controls[\'num_mesa\']"></ion-input>\n      </ion-item>\n      \n      <ion-item class="form-item">\n        <ion-label stacked>Etiqueta de la Mesa:</ion-label>\n        <ion-input type="text" [formControl]="newMesaForm.controls[\'etiqueta\']"></ion-input>\n      </ion-item>\n      \n      <ion-item class="form-item">\n        <ion-label stacked>Fecha y Hora de Apertura:</ion-label>\n        <ion-datetime displayFormat="YYYY-MM-DD HH:mm" pickerFormat="MMM/DD/YYYY hh:mma" \n        doneText="Aceptar" cancelText="Cancelar"	[formControl]="newMesaForm.controls[\'apertura\']"></ion-datetime>\n      </ion-item>\n      \n      <ion-item class="form-item">\n        <ion-label stacked>Fecha y Hora de Clausura (Opcional):</ion-label>\n        <ion-datetime displayFormat="YYYY-MM-DD HH:mm" pickerFormat="MMM/DD/YYYY hh:mma" \n        doneText="Aceptar" cancelText="Cancelar" [formControl]="newMesaForm.controls[\'clausura\']"></ion-datetime>\n      </ion-item>\n      \n      \n      \n      <ion-row class="sign-in-button-container">\n        <ion-col text-center>\n          <button class="succes-button" (click)="crearMesa()" [disabled]="!newMesaForm.valid">\n            <i class="fas fa-plus" style="font-size: 2rem"></i>&nbsp;Crear\n          </button>\n        </ion-col>\n      </ion-row>\n      \n      \n    </form>\n    \n  </div>\n</ion-content>\n  '/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\crear-mesa-modal\crear-mesa-modal.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormBuilder */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
-    ], CrearMesaModalPage);
-    return CrearMesaModalPage;
-}());
-
-//# sourceMappingURL=crear-mesa-modal.js.map
-
-/***/ }),
-
-/***/ 217:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CrearClientePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_clientes_service_clientes_service__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__imports_validator__ = __webpack_require__(218);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-/**
- * Generated class for the CrearClientePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var CrearClientePage = /** @class */ (function () {
-    function CrearClientePage(navCtrl, navParams, formBuilder, alertCtrl, popoverCtrl, toastCtrl, clienteService) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.formBuilder = formBuilder;
-        this.alertCtrl = alertCtrl;
-        this.popoverCtrl = popoverCtrl;
-        this.toastCtrl = toastCtrl;
-        this.clienteService = clienteService;
-        this.clienteForm = this.formBuilder.group({
-            name: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([
-                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required
-                ])
-            ],
-            email: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([
-                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].pattern(__WEBPACK_IMPORTED_MODULE_4__imports_validator__["a" /* regexValidators */].email),
-                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required
-                ])
-            ],
-            whatsapp: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([
-                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required
-                ])
-            ],
-            telefono: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([
-                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required
-                ])
-            ],
-            direccion: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([
-                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required
-                ])
-            ],
-            celebraciones_cliente: this.formBuilder.array([this.initCelebracion()])
-        });
-        this.getAllCelebrciones();
-    }
-    CrearClientePage_1 = CrearClientePage;
-    CrearClientePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CrearClientePage');
-    };
-    // Inicializa el Input  si no existen celebraciones agregadas
-    //----------------------------------------------------------
-    CrearClientePage.prototype.initCelebracion = function () {
-        return this.formBuilder.group({
-            celebracion_descripcion: [''],
-            fecha: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required],
-            celebracion_id: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required],
-            id: -1
-        });
-    };
-    // Inicializa el Input si existen celebraciones agregadas
-    //----------------------------------------------------------
-    CrearClientePage.prototype.initCelebracionesCliente = function (celebracion_cliente) {
-        return this.formBuilder.group({
-            celebracion_descripcion: [celebracion_cliente.celebracion_descripcion],
-            fecha: [celebracion_cliente.fecha, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required],
-            celebracion_id: celebracion_cliente.celebracion_id,
-            id: celebracion_cliente.id
-        });
-    };
-    // Agrega un input al arreglo de Inputs
-    //----------------------------------------------------------
-    CrearClientePage.prototype.addCelebracion = function () {
-        var control = this.clienteForm.controls.celebraciones_cliente;
-        control.push(this.initCelebracion());
-    };
-    // Remueveun input del arreglo de Inputs
-    //----------------------------------------------------------
-    CrearClientePage.prototype.removeCelebracion = function (i) {
-        var control = this.clienteForm.controls.celebraciones_cliente;
-        control.removeAt(i);
-    };
-    // Acción cuando se selcciona una celebración
-    //----------------------------------------------------------
-    CrearClientePage.prototype.selectCelebracion = function (index) {
-        var control = this.clienteForm.controls.celebraciones_cliente.value;
-        var celebracion = this.celebraciones.filter(function (item) {
-            return (item.id == control[index].celebracion_id);
-        });
-        control[index].celebracion_descripcion = celebracion[0].descripcion;
-        //console.log(control[index].celebracion_id);
-        //console.log(control[index].celebracion_descripcion);
-    };
-    // Remueveun input del arreglo de Inputs
-    //----------------------------------------------------------
-    CrearClientePage.prototype.getAllCelebrciones = function () {
-        var _this = this;
-        this.clienteService.getCelebraciones().then(function (result) {
-            if (!result['error']) {
-                console.log('Celebraciones obtenidas Exitosamente');
-                console.log(result);
-                _this.celebraciones = result;
-            }
-            else {
-                console.log('Error al obtener Celebraciones');
-                console.log(result);
-                var errorMessage = '';
-                errorMessage = result['error']['message'] + '<br>';
-                var alert_1 = _this.alertCtrl.create({
-                    title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
-                    subTitle: 'Hubo errores al obtener las Celebraciones:<br>',
-                    message: errorMessage,
-                    buttons: ['OK']
-                });
-                alert_1.present();
-            }
-        });
-    };
-    // Crea el cliente y las celebraciones agregadas
-    //----------------------------------------------------------
-    CrearClientePage.prototype.crearCliente = function (formResult) {
-        var _this = this;
-        this.clienteService.crearCliente(formResult).then(function (result) {
-            if (!result['error']) {
-                console.log('Cliente creado Exitosamente');
-                var toast = _this.toastCtrl.create({
-                    message: result['message'],
-                    duration: 3000,
-                    position: 'middle'
-                });
-                toast.present();
-                _this.navCtrl.pop();
-                _this.navCtrl.setRoot(CrearClientePage_1);
-            }
-            else {
-                console.log('Error en los datos enviados');
-                var errorMessage_1 = '';
-                if (result['error']['errors']) {
-                    if (result['error']['errors']['name']) {
-                        result['error']['errors']['name'].forEach(function (element) {
-                            errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
-                        });
-                    }
-                    if (result['error']['errors']['email']) {
-                        result['error']['errors']['email'].forEach(function (element) {
-                            errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
-                        });
-                    }
-                    if (result['error']['errors']['whatsapp']) {
-                        result['error']['errors']['whatsapp'].forEach(function (element) {
-                            errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
-                        });
-                    }
-                    if (result['error']['errors']['direccion']) {
-                        result['error']['errors']['direccion'].forEach(function (element) {
-                            errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
-                        });
-                    }
-                    if (result['error']['errors']['celebraciones_cliente']) {
-                        result['error']['errors']['celebraciones_cliente'].forEach(function (element) {
-                            errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
-                        });
-                    }
-                }
-                else {
-                    errorMessage_1 = result['error']['message'] + '<br>';
-                }
-                var alert_2 = _this.alertCtrl.create({
-                    title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
-                    subTitle: 'Hubo errores al crear el Cliente:<br>',
-                    message: errorMessage_1,
-                    buttons: ['OK']
-                });
-                alert_2.present();
-            }
-        }, function (err) {
-        });
-    };
-    CrearClientePage = CrearClientePage_1 = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-crear-cliente',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\crear-cliente\crear-cliente.html"*/'\n<page-header></page-header>\n  \n  <ion-content>\n    <div padding class="content-overflow-cli">\n      <form  [formGroup]="clienteForm">\n\n        <ion-row justify-content-center>\n          <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n            <ion-item class="form-item">\n              <ion-label stacked>Nombre y Apellido:</ion-label>\n              <ion-input type="text" [formControl]="clienteForm.controls[\'name\']"></ion-input>\n            </ion-item>\n          </ion-col>\n            \n          <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n              <ion-item class="form-item">\n                <ion-label stacked>\n                  E-Mail: \n                  <span *ngIf="clienteForm.controls.email.hasError(\'pattern\')" style="float: right; color: #FB3D37">\n                    Ingrese un E-Mail válido\n                  </span>\n                </ion-label>\n                <ion-input type="email" [formControl]="clienteForm.controls[\'email\']"></ion-input>\n              </ion-item>\n          </ion-col>\n            \n          <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n              <ion-item class="form-item">\n                <ion-label stacked>Teléfono (Whatsapp):</ion-label>\n                <ion-input type="tel" [formControl]="clienteForm.controls[\'whatsapp\']"></ion-input>\n              </ion-item>\n          </ion-col>\n            \n          <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n              <ion-item class="form-item">\n                <ion-label stacked>Teléfono (Opcional):</ion-label>\n                <ion-input type="tel" [formControl]="clienteForm.controls[\'telefono\']"></ion-input>\n             </ion-item>\n          </ion-col>\n            \n          <ion-col col-12>\n              <ion-item class="form-item">\n                <ion-label stacked>Dirección:</ion-label>\n                <ion-input type="text" [formControl]="clienteForm.controls[\'direccion\']"></ion-input>\n            </ion-item>\n          </ion-col>\n\n          <ion-col col-12 col-lg-8 col-xl-8  no-padding class="celebraciones-container hidden-sm-down">\n              \n              <div  formArrayName="celebraciones_cliente" >\n\n                  <div no-padding [formGroupName]="i" *ngFor="let celebracion of clienteForm.controls.celebraciones_cliente.controls; let i = index">\n                    \n                        <div class="celebracion-agregada-descripcion">\n                            <ion-item no-lines class="item-celebracion-descripcion">\n                              <ion-avatar item-start  style="float: left; margin:0;">\n                                <img src="../../assets/imgs/confetti_menu.svg" class="img-celebracion">\n                              </ion-avatar>\n                              <ion-label style="color: #003300" stacked>Seleccione una Celebración:</ion-label>\n                              <ion-select (ionChange)="selectCelebracion(i)" interface="popover" formControlName="celebracion_id" class="celebracion-select" >\n                                  <ion-option value="{{cel.id}}" *ngFor="let cel of celebraciones" name="celebraciones_option">\n                                      {{cel.descripcion}}\n                                  </ion-option>\n                              </ion-select>\n                            </ion-item>\n                        </div>  \n\n                        <ion-input hidden formControlName="celebracion_descripcion" type="text"></ion-input>\n                                               \n                        <div class="celebracion-agregada-fecha">\n                          <ion-item no-lines class="item-celebracion-fecha">\n                              <ion-avatar item-start  style="float: left; margin:0;">\n                                <i class="far fa-calendar-alt icon-fecha"></i>\n                              </ion-avatar>\n                              <ion-label style="color: #003300" stacked>Indique la fecha de la Celebración:</ion-label>\n                              <ion-datetime class="celebracion-fecha" displayFormat="YYYY-MM-DD" pickerFormat="MMM/DD/YYYY" \n                            doneText="Aceptar" cancelText="Cancelar" formControlName="fecha" placeholder="YYYY-MM-DD"></ion-datetime>\n                          </ion-item>\n                        </div>\n                        \n                        <div class="celebracion-agregada-icon">\n                            <ion-item no-lines class="item-celebracion-icon">\n                              <a class="celebracion-delete" *ngIf="clienteForm.controls.celebraciones_cliente.length > 1" (click)="removeCelebracion(i)">\n                                <i class="fas fa-times "></i>\n                              </a>\n                            </ion-item>\n                        </div>\n                    </div>\n              </div>\n              <span  ion-button float-left icon-left clear (click)="addCelebracion()">\n                  <ion-icon name="add"></ion-icon>\n                  Agregar Celebracion\n              </span>\n            </ion-col>\n          \n          <ion-col col-12 no-padding class="celebraciones-container hidden-md-up">\n              \n              <div  formArrayName="celebraciones_cliente" >\n\n                  <div no-padding [formGroupName]="i" *ngFor="let celebracion of clienteForm.controls.celebraciones_cliente.controls; let i = index">\n                    \n                        <div class="celebracion-agregada-descripcion" style="width: 100%; margin-bottom: -1px;">\n                            <ion-item no-lines class="item-celebracion-descripcion">\n                              <ion-avatar item-start  style="float: left; margin:0;">\n                                <img src="../../assets/imgs/confetti_menu.svg" class="img-celebracion">\n                              </ion-avatar>\n                              <ion-label style="color: #003300" stacked>Seleccione una Celebración:</ion-label>\n                              <ion-select (ionChange)="selectCelebracion(i)" interface="popover" formControlName="celebracion_id" class="celebracion-select" >\n                                  <ion-option value="{{cel.id}}" *ngFor="let cel of celebraciones" name="celebraciones_option">\n                                      {{cel.descripcion}}\n                                  </ion-option>\n                              </ion-select>\n                            </ion-item>\n                        </div>  \n\n                        <ion-input hidden formControlName="celebracion_descripcion" type="text"></ion-input>\n                                               \n                        <div class="celebracion-agregada-fecha" style="width: 85%; border-left: 1px solid">\n                          <ion-item no-lines class="item-celebracion-fecha">\n                              <ion-avatar item-start  style="float: left; margin:0;">\n                                <i class="far fa-calendar-alt icon-fecha"></i>\n                              </ion-avatar>\n                              <ion-label style="color: #003300" stacked>Indique la fecha de la Celebración:</ion-label>\n                              <ion-datetime class="celebracion-fecha" displayFormat="YYYY-MM-DD" pickerFormat="MMM/DD/YYYY" \n                            doneText="Aceptar" cancelText="Cancelar" formControlName="fecha" placeholder="YYYY-MM-DD"></ion-datetime>\n                          </ion-item>\n                        </div>\n\n                        \n                        <div class="celebracion-agregada-icon" style="width: 15%;">\n                            <ion-item no-lines class="item-celebracion-icon">\n                              <a class="celebracion-delete" *ngIf="clienteForm.controls.celebraciones_cliente.length > 1" (click)="removeCelebracion(i)">\n                                <i class="fas fa-times "></i>\n                              </a>\n                            </ion-item>\n                        </div>\n                    </div>\n              </div>\n              <span  ion-button float-left icon-left clear (click)="addCelebracion()">\n                  <ion-icon name="add"></ion-icon>\n                  Agregar Celebracion\n              </span>\n            </ion-col> \n\n          \n\n        </ion-row>\n\n          \n\n        <ion-row class="sign-in-button-container">\n            <ion-col text-center>\n                <button class="succes-button" (click)="crearCliente(clienteForm.value)" [disabled]="!clienteForm.valid">\n                    <i class="fas fa-plus" style="font-size: 2rem"></i>&nbsp;Crear\n                </button>\n            </ion-col>\n        </ion-row>\n        \n        \n      </form>\n      \n    </div>\n  </ion-content>\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\crear-cliente\crear-cliente.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* PopoverController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_clientes_service_clientes_service__["a" /* ClientesServiceProvider */]])
-    ], CrearClientePage);
-    return CrearClientePage;
-    var CrearClientePage_1;
-}());
-
-//# sourceMappingURL=crear-cliente.js.map
-
-/***/ }),
-
-/***/ 218:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return regexValidators; });
-// The Angular email validator accepts an email like "rob@example", perhaps because "rob@localhost" could be valid.
-// The pureEmail regex does not accept "ryan@example" as a valid email address, which I think is a good thing.
-// See: EMAIL_REGEXP from https://github.com/angular/angular.js/blob/ffb6b2fb56d9ffcb051284965dd538629ea9687a/src/ng/directive/input.js#L16
-var PURE_EMAIL_REGEXP = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-// Passwords should be at least 8 characters long and should contain one number, one character and one special character.
-var PASSWORD_REGEXP = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&.-])[A-Za-z\d@$!%*#?&.-]{8,}$/;
-var regexValidators = {
-    email: PURE_EMAIL_REGEXP,
-    password: PASSWORD_REGEXP
-};
-//# sourceMappingURL=validator.js.map
-
-/***/ }),
-
-/***/ 219:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DatosPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the DatosPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var DatosPage = /** @class */ (function () {
-    function DatosPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    DatosPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DatosPage');
-    };
-    DatosPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-datos',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\datos\datos.html"*/'<page-header></page-header>\n\n<ion-content padding style="margin-top: 59px">\n  <h1 text-center ion-text color="principal">\n    <i class="fas fa-database"></i>\n    &nbsp;Datos\n  </h1>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\datos\datos.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-    ], DatosPage);
-    return DatosPage;
-}());
-
-//# sourceMappingURL=datos.js.map
-
-/***/ }),
-
-/***/ 22:
+/***/ 19:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ManejoMesasProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__imports_url__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__imports_url__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(34);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2245,7 +1725,7 @@ var ManejoMesasProvider = /** @class */ (function () {
     };
     // Get Mesas History Headers
     //----------------------------------------------------------
-    ManejoMesasProvider.prototype.getMesasHistoryHeaders = function (date) {
+    ManejoMesasProvider.prototype.getMesaHistory = function (date, num_mesa) {
         var _this = this;
         return new Promise(function (resolve) {
             var token;
@@ -2254,7 +1734,7 @@ var ManejoMesasProvider = /** @class */ (function () {
                 token = 'Bearer ' + val;
             });
             token = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImRiOGZmZWFjYjliY2M2ODdlZDNhMTFlMGUxYjBjYTQ4Y2NkMGU1ZDdmNTNiMDIwMjVmMmNjNTI1NDBlNjdmMDUyYWY1YTE3YzI3MjNmMzRhIn0.eyJhdWQiOiIxIiwianRpIjoiZGI4ZmZlYWNiOWJjYzY4N2VkM2ExMWUwZTFiMGNhNDhjY2QwZTVkN2Y1M2IwMjAyNWYyY2M1MjU0MGU2N2YwNTJhZjVhMTdjMjcyM2YzNGEiLCJpYXQiOjE1NDEwODgwNzIsIm5iZiI6MTU0MTA4ODA3MiwiZXhwIjoxNTcyNjI0MDcyLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.AufQk8pXPVFg0oexiQV5ixlXtnlRM0hy19IdrC-0Txi789zqy4lxSYbhLneF9Fi4ExWXlZTiWNAJnfia8AvMmEv1LlOvaHPSVj8BNNMFYiniX7RnaVYN7-SNlFc8XEALVbBX749Ns_6fmks0BDuTJ1n7o7OKqFkZUGBn7dtmlPT-J00O966lOTUBgHr7ka0HtCRm_PsOcIC3Bhus-Rtgn0yRcYjXmFqldxgN_VDAuL84cpfgEgsnf5Ky4heCMbh0W1cJ-28nM8dbzgkKNPKjBHBHKSHPwGjwsu0mPyJCf6-kHyj8Flwjx0LzXkWaqgKvrWBc3GjJSQk_k5Q1b5ngKV9llNIAEpE5EtD_Ve6WDaeRqBsXYy6haqNaXOs4ZBuE7E8Y1hf57l2dO3u8LovnCF3dXs2mKdjUTKysufnyIanEsYZ91Q33TS7X-FHJnWz0VOvDRv1ycHzAGRDV5Oqw1lFt2haJ2aZWpCh8uBfI5xYmSPqrRWjdhWV1-GcNuh6AAGyT5ZGVAse8A2MUHuL9Z7LwQZ6iejqPtH-uNfruuNePn346vWnzZ6iItovRHv6Vuv2x2GoAkMiOUwJ5ufNwaKackXDfZYOUeEkkeMoDl41CI4DGE5WUTIVfPN4UsHVzrgnnKdWCt-Q1Gt20vGCQo5R-OvfmsPvPDwVbOeGSaD0';
-            _this.http.get(__WEBPACK_IMPORTED_MODULE_2__imports_url__["a" /* constantes */].API_URL + 'historial_mesas_headers/' + date, {
+            _this.http.get(__WEBPACK_IMPORTED_MODULE_2__imports_url__["a" /* constantes */].API_URL + 'historial_mesa/' + date + '/' + num_mesa, {
                 headers: new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', token)
             })
                 .subscribe(function (data) {
@@ -2275,16 +1755,214 @@ var ManejoMesasProvider = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 218:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return regexValidators; });
+// The Angular email validator accepts an email like "rob@example", perhaps because "rob@localhost" could be valid.
+// The pureEmail regex does not accept "ryan@example" as a valid email address, which I think is a good thing.
+// See: EMAIL_REGEXP from https://github.com/angular/angular.js/blob/ffb6b2fb56d9ffcb051284965dd538629ea9687a/src/ng/directive/input.js#L16
+var PURE_EMAIL_REGEXP = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+// Passwords should be at least 8 characters long and should contain one number, one character and one special character.
+var PASSWORD_REGEXP = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&.-])[A-Za-z\d@$!%*#?&.-]{8,}$/;
+var regexValidators = {
+    email: PURE_EMAIL_REGEXP,
+    password: PASSWORD_REGEXP
+};
+//# sourceMappingURL=validator.js.map
+
+/***/ }),
+
+/***/ 219:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShowMesaHistoryPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__show_mesa_show_mesa__ = __webpack_require__(53);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the ShowMesaHistoryPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ShowMesaHistoryPage = /** @class */ (function () {
+    function ShowMesaHistoryPage(navCtrl, navParams, alertCtrl, manejoMesasService, modalCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.alertCtrl = alertCtrl;
+        this.manejoMesasService = manejoMesasService;
+        this.modalCtrl = modalCtrl;
+        this.initializeMesaHistory(this.navParams.get("mesa"));
+    }
+    ShowMesaHistoryPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ShowMesaHistoryPage');
+    };
+    // Inicialización de datos de la mesa seleccionada
+    //---------------------------------------------------------- 
+    ShowMesaHistoryPage.prototype.initializeMesaHistory = function (mesa) {
+        var _this = this;
+        this.selectedMesaHistory = mesa;
+        console.log(this.selectedMesaHistory);
+        if (this.selectedMesaHistory.cant_mesas > 0) {
+            this.horaAperturaHistory = [];
+            this.horaClausuraHistory = [];
+            var i = 0;
+            this.selectedMesaHistory.mesas.forEach(function (element) {
+                var time = new Date(element.apertura);
+                var horas = time.getHours();
+                var minutos = time.getMinutes();
+                var meridian = 'am';
+                if (horas > 12) {
+                    horas -= 12;
+                    meridian = 'pm';
+                }
+                _this.horaAperturaHistory[i] = horas + ':' + minutos + ' ' + meridian;
+                console.log(i);
+                console.log(_this.horaAperturaHistory[i]);
+                if (element.clausura) {
+                    time = new Date(element.clausura);
+                    horas = time.getHours();
+                    minutos = time.getMinutes();
+                    meridian = 'am';
+                    if (horas > 12) {
+                        horas -= 12;
+                        meridian = 'pm';
+                    }
+                    _this.horaClausuraHistory[i] = horas + ':' + minutos + ' ' + meridian;
+                }
+                else {
+                    _this.horaClausuraHistory[i] = '';
+                }
+                i++;
+            });
+        }
+    };
+    // Muestra la mesa seleccionada
+    //----------------------------------------------------------
+    ShowMesaHistoryPage.prototype.selectIntanceMesa = function (mesa) {
+        //console.log('Abriendo Mesa');
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__show_mesa_show_mesa__["a" /* ShowMesaPage */], { "parentPage": this, "mesa": mesa, "parentName": "ShowMesaHistoryPage", "fecha": this.navParams.get("parentPage").fechaForm.controls.fecha.value });
+    };
+    // Cerrar panel de mostrar historial de mesa
+    //----------------------------------------------------------
+    ShowMesaHistoryPage.prototype.closeMesaHistory = function () {
+        this.navParams.get("parentPage").getMesasHistory(this.navParams.get("parentPage").fechaForm.controls.fecha.value);
+        this.navCtrl.pop();
+    };
+    // Get Mesas History
+    //----------------------------------------------------------
+    ShowMesaHistoryPage.prototype.getMesaHistory = function (fecha, num_mesa) {
+        var _this = this;
+        this.manejoMesasService.getMesaHistory(fecha, num_mesa)
+            .then(function (result) {
+            //console.log(result);
+            if (!result['error']) {
+                _this.initializeMesaHistory(result);
+            }
+            else {
+                console.log('Error al obtener Historial de Mesas');
+                var errorMessage = '';
+                errorMessage = result['error']['message'] + '<br>';
+                var alert_1 = _this.alertCtrl.create({
+                    title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
+                    subTitle: 'Hubo errores al obtener las Historial de Mesas:<br>',
+                    message: errorMessage,
+                    buttons: ['OK']
+                });
+                alert_1.present();
+            }
+        });
+    };
+    ShowMesaHistoryPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-show-mesa-history',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\show-mesa-history\show-mesa-history.html"*/'<page-header></page-header>\n\n<ion-content padding style="margin-top: 59px">\n  <div class="titulo">\n    <h1 text-center ion-text color="principal">\n      <i class="fas fa-history"></i>\n      &nbsp;Hist. de Asistencia\n    </h1>\n  </div>\n\n  <div class="mesa-history-page">\n    <a class="cerrar-mesa-history" (click)="closeMesaHistory()">\n      <i class="fas fa-arrow-left"></i>&nbsp; Volver a Hist. de Asistencia \n    </a>\n    <div class="instanceMesa-title-bar">\n      <div class="table-cell">\n        <p class="mesa-numero">Historial de la Mesa {{selectedMesaHistory.num_mesa}}</p>\n      </div>\n    </div>\n    <div class="mesas-instancias">\n      <ion-row>\n        <ion-col col class="empty" *ngIf="selectedMesaHistory.mesas.length == 0">\n          ¡No hay Historial disponible para la Mesa Seleccionada!\n        </ion-col>\n      </ion-row> \n      <div  *ngFor="let mesaInstance of selectedMesaHistory.mesas; let i = index" (click)="selectIntanceMesa(mesaInstance)">\n          <a class="mesa-instance">\n                  <div class="mesa-instance-etiqueta">\n                      {{mesaInstance.etiqueta}}\n                  </div>\n                  <div class="mesa-instance-horas">\n                      <ion-row>\n                        <ion-col col-12 >\n                          <i class="far fa-clock"></i> &nbsp;Llegada: &nbsp;<span class="mesa-instance-horas-hora">{{horaAperturaHistory[i]}}</span>\n                        </ion-col>\n                        <ion-col col-12 >\n                          <i class="far fa-clock"></i> &nbsp;Salida: &nbsp;<span class="mesa-instance-horas-hora">{{horaClausuraHistory[i]}}</span>\n                        </ion-col>\n                      </ion-row>\n                  </div>\n                  <div class="mesa-instance-icons">\n                      <ion-row >\n                          <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_clientes_mesa > 0">\n                            <i class="fas fa-users"></i><br>\n                            {{mesaInstance.cant_clientes_mesa}}\n                          </ion-col>\n                          <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_celebraciones_mesa > 0">\n                            <img src="../../assets/imgs/confetti_menu.svg" class="img-confetti-history"/><br>\n                            {{mesaInstance.cant_celebraciones_mesa}}\n                          </ion-col>\n                          <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_fotos_mesa > 0">\n                            <i class="fas fa-camera"></i><br>\n                            {{mesaInstance.cant_fotos_mesa}}\n                          </ion-col>\n                          <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_correos_mesa > 0">\n                            <i class="fas fa-envelope"></i><br>\n                            {{mesaInstance.cant_correos_mesa}}\n                          </ion-col>\n                        </ion-row>\n                  </div>\n                </a>\n        </div>\n      </div>\n      \n  </div>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\show-mesa-history\show-mesa-history.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */]])
+    ], ShowMesaHistoryPage);
+    return ShowMesaHistoryPage;
+}());
+
+//# sourceMappingURL=show-mesa-history.js.map
+
+/***/ }),
+
 /***/ 220:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DatosPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the DatosPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var DatosPage = /** @class */ (function () {
+    function DatosPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    DatosPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DatosPage');
+    };
+    DatosPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-datos',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\datos\datos.html"*/'<page-header></page-header>\n\n<ion-content padding style="margin-top: 59px">\n  <h1 text-center ion-text color="principal">\n    <i class="fas fa-database"></i>\n    &nbsp;Datos\n  </h1>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\datos\datos.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+    ], DatosPage);
+    return DatosPage;
+}());
+
+//# sourceMappingURL=datos.js.map
+
+/***/ }),
+
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserPopoverPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login__ = __webpack_require__(222);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2354,16 +2032,16 @@ var UserPopoverPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 221:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_service_auth_service__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_service_auth_service__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__imports_validator__ = __webpack_require__(218);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2480,13 +2158,13 @@ var LoginPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 222:
+/***/ 223:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(223);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(244);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -2494,48 +2172,50 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 243:
+/***/ 244:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_tooltips__ = __webpack_require__(292);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__ = __webpack_require__(294);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(296);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_header_header__ = __webpack_require__(303);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_user_popover_user_popover__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login__ = __webpack_require__(221);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_manejo_mesas_manejo_mesas__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_historial_asistencia_historial_asistencia__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_admin_clientes_admin_clientes__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_admin_correos_admin_correos__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_datos_datos__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_crear_mesa_modal_crear_mesa_modal__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_show_mesa_show_mesa__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_editar_mesa_modal_editar_mesa_modal__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_mesa_celebraciones_mesa_celebraciones__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_mesa_clientes_mesa_clientes__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_mesa_fotos_mesa_fotos__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_mesa_correo_mesa_correo__ = __webpack_require__(305);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_initial_options_initial_options__ = __webpack_require__(306);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_crear_cliente_crear_cliente__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__angular_common_http__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__ionic_native_splash_screen__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__ionic_storage__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__providers_auth_service_auth_service__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__providers_clientes_service_clientes_service__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_tooltips__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__ = __webpack_require__(295);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(297);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_header_header__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_user_popover_user_popover__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_manejo_mesas_manejo_mesas__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_historial_asistencia_historial_asistencia__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_admin_clientes_admin_clientes__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_admin_correos_admin_correos__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_datos_datos__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_crear_mesa_modal_crear_mesa_modal__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_show_mesa_show_mesa__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_editar_mesa_modal_editar_mesa_modal__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_mesa_celebraciones_mesa_celebraciones__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_mesa_clientes_mesa_clientes__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_mesa_fotos_mesa_fotos__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_mesa_correo_mesa_correo__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_initial_options_initial_options__ = __webpack_require__(307);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_crear_cliente_crear_cliente__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_show_mesa_history_show_mesa_history__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__angular_common_http__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__ionic_native_splash_screen__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__ionic_storage__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__providers_auth_service_auth_service__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_clientes_service_clientes_service__ = __webpack_require__(115);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -2591,11 +2271,12 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_21__pages_mesa_fotos_mesa_fotos__["a" /* MesaFotosPage */],
                 __WEBPACK_IMPORTED_MODULE_22__pages_mesa_correo_mesa_correo__["a" /* MesaCorreoPage */],
                 __WEBPACK_IMPORTED_MODULE_23__pages_initial_options_initial_options__["a" /* InitialOptionsPage */],
-                __WEBPACK_IMPORTED_MODULE_24__pages_crear_cliente_crear_cliente__["a" /* CrearClientePage */]
+                __WEBPACK_IMPORTED_MODULE_24__pages_crear_cliente_crear_cliente__["a" /* CrearClientePage */],
+                __WEBPACK_IMPORTED_MODULE_25__pages_show_mesa_history_show_mesa_history__["a" /* ShowMesaHistoryPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_25__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_26__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_4_ionic_tooltips__["a" /* TooltipsModule */],
                 __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {
@@ -2608,7 +2289,7 @@ var AppModule = /** @class */ (function () {
                         { component: __WEBPACK_IMPORTED_MODULE_9__pages_login_login__["a" /* LoginPage */], name: 'LoginPage', segment: 'login' }
                     ],
                 }),
-                __WEBPACK_IMPORTED_MODULE_27__ionic_storage__["a" /* IonicStorageModule */].forRoot()
+                __WEBPACK_IMPORTED_MODULE_28__ionic_storage__["a" /* IonicStorageModule */].forRoot()
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
             entryComponents: [
@@ -2630,15 +2311,16 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_21__pages_mesa_fotos_mesa_fotos__["a" /* MesaFotosPage */],
                 __WEBPACK_IMPORTED_MODULE_22__pages_mesa_correo_mesa_correo__["a" /* MesaCorreoPage */],
                 __WEBPACK_IMPORTED_MODULE_23__pages_initial_options_initial_options__["a" /* InitialOptionsPage */],
-                __WEBPACK_IMPORTED_MODULE_24__pages_crear_cliente_crear_cliente__["a" /* CrearClientePage */]
+                __WEBPACK_IMPORTED_MODULE_24__pages_crear_cliente_crear_cliente__["a" /* CrearClientePage */],
+                __WEBPACK_IMPORTED_MODULE_25__pages_show_mesa_history_show_mesa_history__["a" /* ShowMesaHistoryPage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_26__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_27__ionic_native_splash_screen__["a" /* SplashScreen */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_28__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
-                __WEBPACK_IMPORTED_MODULE_29__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */],
-                __WEBPACK_IMPORTED_MODULE_30__providers_clientes_service_clientes_service__["a" /* ClientesServiceProvider */]
+                __WEBPACK_IMPORTED_MODULE_29__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
+                __WEBPACK_IMPORTED_MODULE_30__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */],
+                __WEBPACK_IMPORTED_MODULE_31__providers_clientes_service_clientes_service__["a" /* ClientesServiceProvider */]
             ]
         })
     ], AppModule);
@@ -2649,21 +2331,21 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 296:
+/***/ 297:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_manejo_mesas_manejo_mesas__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_historial_asistencia_historial_asistencia__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_admin_clientes_admin_clientes__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_admin_correos_admin_correos__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_datos_datos__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_manejo_mesas_manejo_mesas__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_historial_asistencia_historial_asistencia__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_admin_clientes_admin_clientes__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_admin_correos_admin_correos__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_datos_datos__ = __webpack_require__(220);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2730,14 +2412,14 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 303:
+/***/ 304:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_popover_user_popover__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_popover_user_popover__ = __webpack_require__(221);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(34);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2794,13 +2476,13 @@ var HeaderPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 305:
+/***/ 306:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MesaCorreoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2839,13 +2521,13 @@ var MesaCorreoPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 306:
+/***/ 307:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InitialOptionsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2888,10 +2570,292 @@ var InitialOptionsPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShowMesaPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__editar_mesa_modal_editar_mesa_modal__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mesa_clientes_mesa_clientes__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__mesa_celebraciones_mesa_celebraciones__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mesa_fotos_mesa_fotos__ = __webpack_require__(58);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+/**
+ * Generated class for the ShowMesaPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ShowMesaPage = /** @class */ (function () {
+    function ShowMesaPage(navCtrl, navParams, manejoMesasService, alertCtrl, platform, modalCtrl, toastCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.manejoMesasService = manejoMesasService;
+        this.alertCtrl = alertCtrl;
+        this.platform = platform;
+        this.modalCtrl = modalCtrl;
+        this.toastCtrl = toastCtrl;
+        this.initializeSelectedMesa(this.navParams.get("mesa"));
+        this.getClientesMesa();
+        this.getCelebracionesMesa();
+    }
+    ShowMesaPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        console.log('\nPAGINA SHOW MESA');
+        var elm = document.querySelector(".mesa-selected-page");
+        this.platform.ready().then(function (readySource) {
+            var width = _this.platform.width() - 15;
+            elm.style.width = width + 'px';
+        });
+    };
+    // Inicializa las variables importantes de la página
+    //----------------------------------------------------------
+    ShowMesaPage.prototype.initializeSelectedMesa = function (messa) {
+        this.mesa = messa;
+        var time = new Date(this.mesa.apertura);
+        var horas = time.getHours();
+        var minutos = time.getMinutes();
+        var meridian = 'am';
+        if (horas > 12) {
+            horas -= 12;
+            meridian = 'pm';
+        }
+        this.horaApertura = horas + ':' + minutos + ' ' + meridian;
+        if (this.mesa.clausura) {
+            time = new Date(this.mesa.clausura);
+            horas = time.getHours();
+            minutos = time.getMinutes();
+            meridian = 'am';
+            if (horas > 12) {
+                horas -= 12;
+                meridian = 'pm';
+            }
+            this.horaClausura = horas + ':' + minutos + ' ' + meridian;
+        }
+        else {
+            this.horaClausura = '';
+        }
+    };
+    // Se ejecuta cuando se redimensiona el Width de la pantalla
+    //----------------------------------------------------------
+    ShowMesaPage.prototype.onWindowResize = function () {
+        var elm = document.querySelector(".mesa-selected-page");
+        var width = window.outerWidth - 15;
+        elm.style.width = width + 'px';
+    };
+    // Cierra la pagina actual
+    //----------------------------------------------------------
+    ShowMesaPage.prototype.closeShowMesa = function () {
+        this.navCtrl.pop();
+    };
+    // Obtiene los Clientes de una Mesa
+    //----------------------------------------------------------
+    ShowMesaPage.prototype.getClientesMesa = function () {
+        var _this = this;
+        this.manejoMesasService.getClientesMesa(this.mesa.id).then(function (result) {
+            if (!result['error']) {
+                console.log('Clientes obtenidos Exitosamente');
+                //console.log(result);
+                //console.log(result['length']);
+                _this.clientesMesa = result;
+                _this.cantClientes = result['length'];
+            }
+            else {
+                console.log('Error al obtener clientes');
+                var errorMessage = '';
+                errorMessage = result['error']['message'] + '<br>';
+                var alert_1 = _this.alertCtrl.create({
+                    title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
+                    subTitle: 'Hubo errores al obtener los Clientes de la Mesa:<br>',
+                    message: errorMessage,
+                    buttons: ['OK']
+                });
+                alert_1.present();
+            }
+        });
+    };
+    // Obtiene las Celebraciones de una Mesa
+    //----------------------------------------------------------
+    ShowMesaPage.prototype.getCelebracionesMesa = function () {
+        var _this = this;
+        this.manejoMesasService.getCelebracionesMesa(this.mesa.id).then(function (result) {
+            if (!result['error']) {
+                console.log('Celebraciones obtenidas Exitosamente');
+                //  console.log(result);
+                _this.celebracionesMesa = result;
+                _this.cantCelebraciones = result['length'];
+            }
+            else {
+                console.log('Error al obtener celebraciones');
+                var errorMessage = '';
+                errorMessage = result['error']['message'] + '<br>';
+                var alert_2 = _this.alertCtrl.create({
+                    title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
+                    subTitle: 'Hubo errores al obtener las Celebraciones de la Mesa:<br>',
+                    message: errorMessage,
+                    buttons: ['OK']
+                });
+                alert_2.present();
+            }
+        });
+    };
+    // Abre el modal de Editar Mesa
+    //----------------------------------------------------------
+    ShowMesaPage.prototype.openMesaEditar = function () {
+        this.modalEditar = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__editar_mesa_modal_editar_mesa_modal__["a" /* EditarMesaModalPage */], { "parentPage": this, "mesa": this.mesa, "parentName": "ShowMesaPage" }, {
+            showBackdrop: true,
+            enableBackdropDismiss: true
+        });
+        this.modalEditar.present();
+    };
+    // Elimina un Cliente de la Mesa
+    //----------------------------------------------------------
+    ShowMesaPage.prototype.deleteClienteMesa = function (cliente) {
+        var _this = this;
+        this.manejoMesasService.deleteClienteMesa(cliente.id).then(function (result) {
+            if (!result['error']) {
+                console.log('Cliente eliminado de la mesa Exitosamente');
+                //  console.log(result);
+                _this.getClientesMesa();
+                if (_this.navParams.get("parentName") == "ManejoMesasPage") {
+                    _this.navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+                }
+                else if (_this.navParams.get("parentName") == "ShowMesaHistoryPage") {
+                    _this.navParams.get("parentPage").getMesaHistory(_this.navParams.get("fecha"), _this.mesa.num_mesa); /* Actualiza ShowMesaHistoryPage */
+                }
+                var toast = _this.toastCtrl.create({
+                    message: result['message'],
+                    duration: 3000,
+                    position: 'middle'
+                });
+                toast.present();
+            }
+            else {
+                console.log('Error al eliminar cliente de la mesa');
+                var errorMessage = '';
+                errorMessage = result['error']['message'] + '<br>';
+                var alert_3 = _this.alertCtrl.create({
+                    title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
+                    subTitle: 'Hubo errores al eliminar el cliente de la Mesa:<br>',
+                    message: errorMessage,
+                    buttons: ['OK']
+                });
+                alert_3.present();
+            }
+        });
+    };
+    // Elimina un Cliente de la Mesa
+    //----------------------------------------------------------
+    ShowMesaPage.prototype.deleteCelebracionMesa = function (celebracion) {
+        var _this = this;
+        this.manejoMesasService.deleteCelebracionMesa(celebracion.id).then(function (result) {
+            if (!result['error']) {
+                console.log('Celebración eliminada de la mesa Exitosamente');
+                //  console.log(result);
+                _this.getCelebracionesMesa();
+                if (_this.navParams.get("parentName") == "ManejoMesasPage") {
+                    _this.navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+                }
+                else if (_this.navParams.get("parentName") == "ShowMesaHistoryPage") {
+                    _this.navParams.get("parentPage").getMesaHistory(_this.navParams.get("fecha"), _this.mesa.num_mesa); /* Actualiza ManejoMesasPage */
+                }
+                var toast = _this.toastCtrl.create({
+                    message: result['message'],
+                    duration: 3000,
+                    position: 'middle'
+                });
+                toast.present();
+            }
+            else {
+                console.log('Error al eliminar celebración de la mesa');
+                var errorMessage = '';
+                errorMessage = result['error']['message'] + '<br>';
+                var alert_4 = _this.alertCtrl.create({
+                    title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
+                    subTitle: 'Hubo errores al eliminar la celebración de la Mesa:<br>',
+                    message: errorMessage,
+                    buttons: ['OK']
+                });
+                alert_4.present();
+            }
+        });
+    };
+    // Abre el modal de Clientes de la Mesa
+    //----------------------------------------------------------
+    ShowMesaPage.prototype.openMesaClientes = function () {
+        this.modalClientesMesa = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_4__mesa_clientes_mesa_clientes__["a" /* MesaClientesPage */], { "parentPage": this, "mesa": this.mesa, "parentName": "ShowMesaPage" }, {
+            showBackdrop: true,
+            enableBackdropDismiss: true
+        });
+        this.modalClientesMesa.present();
+    };
+    // Abre el modal de Celebraciones de la Mesa
+    //----------------------------------------------------------
+    ShowMesaPage.prototype.openMesaCelebraciones_show = function () {
+        this.modalCelebracionesMesa = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__mesa_celebraciones_mesa_celebraciones__["a" /* MesaCelebracionesPage */], { "parentPage": this, "mesa": this.mesa, "parentName": "ShowMesaPage" }, {
+            showBackdrop: true,
+            enableBackdropDismiss: true
+        });
+        this.modalCelebracionesMesa.present();
+    };
+    // Abre el modal de Fotos de la Mesa
+    //----------------------------------------------------------
+    ShowMesaPage.prototype.openMesaFotos = function () {
+        this.modalFotosMesa = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_6__mesa_fotos_mesa_fotos__["a" /* MesaFotosPage */], { "parentPage": this, "mesa": this.mesa, "parentName": "ShowMesaPage" }, {
+            showBackdrop: true,
+            enableBackdropDismiss: true
+        });
+        this.modalFotosMesa.present();
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* HostListener */])('window:resize'),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], ShowMesaPage.prototype, "onWindowResize", null);
+    ShowMesaPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-show-mesa',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\show-mesa\show-mesa.html"*/'<page-header></page-header>\n\n<ion-content padding style="margin-top: 59px">\n  <h1 text-center ion-text color="principal">\n      <img src="../../assets/imgs/meeting_principal.svg" width="50em" style="margin-bottom: -10px">\n    &nbsp;Manejo de Mesas\n  </h1>\n\n  <div class="mesa-selected-page">\n    <a class="cerrar-mesa" (click)="closeShowMesa()">\n      <i class="fas fa-arrow-left"></i>&nbsp; Volver a Manejo de Mesas \n    </a>\n    <div class="mesa-options-bar">\n      <ion-row>\n        <ion-col col>\n          <a (click)="openMesaEditar()"><i class="far fa-edit"></i></a>\n        </ion-col>\n        <ion-col col >\n          <a (click)="openMesaCelebraciones_show()"><img src="../../assets/imgs/confetti_menu.svg" class="option-img"/></a>\n        </ion-col>\n        <ion-col col >\n          <a (click)="openMesaClientes()"><i class="fas fa-user"></i></a>\n        </ion-col>\n        <ion-col col >\n          <a (click)="openMesaFotos()"><i class="fas fa-camera"></i></a>\n        </ion-col>\n        <ion-col col >\n          <a (click)="openMesaCorreo()"><i class="fas fa-envelope"></i></a>\n        </ion-col>\n      </ion-row>\n    </div>\n    <div class="mesa-title-bar">\n      <div class="table-cell">\n        <p class="mesa-numero">Mesa {{mesa.num_mesa}}:</p>\n        <p class="mesa-etiqueta">&nbsp; {{mesa.etiqueta}}</p>\n      </div>\n    </div>\n    <div class="mesa-horas-bar">\n      <ion-row>\n        <ion-col col-12 >\n          <i class="far fa-clock"></i> &nbsp; Hora de Apertura: &nbsp;<span style="text-decoration: bold; font-size: 2.4rem">{{horaApertura}}</span>\n        </ion-col>\n        <ion-col col-12 >\n          <i class="far fa-clock"></i> &nbsp; Hora de Clausura: &nbsp;<span style="text-decoration: bold; font-size: 2.4rem">{{horaClausura}}</span>\n        </ion-col>\n      </ion-row>\n    </div>\n    <ion-row >\n      <ion-col col class="title-section">\n        Motivo de Celebración:\n      </ion-col>\n    </ion-row>\n    <div class="mesa-celebraciones-bar">\n      <ion-row>\n        <ion-col col class="empty" *ngIf="cantCelebraciones == 0">\n          ¡No se han agregado Celebraciones aún!\n        </ion-col>\n      </ion-row>  \n      <ion-row *ngFor="let clebracion of celebracionesMesa" >\n        <ion-col col>\n          <img src="../../assets/imgs/confetti_menu.svg"/> &nbsp;{{clebracion.celebracion_descripcion}} (<span class="cliente-celebracion-bar">{{clebracion.cliente_name}}</span>)\n          <a (click)="deleteCelebracionMesa(clebracion)"><i class="far fa-trash-alt icon-delete"></i></a>\n        </ion-col>\n      </ion-row>\n    </div>\n    <ion-row >\n      <ion-col col class="title-section">\n        Clientes de la Mesa:\n      </ion-col>\n    </ion-row>\n    <div class="mesa-clientes-bar">\n      <ion-row>\n        <ion-col col class="empty" *ngIf="cantClientes == 0">\n          ¡No se han agregado Clientes aún!\n        </ion-col>\n      </ion-row>\n      <ion-row *ngFor="let cliente of clientesMesa">\n        <ion-col col >\n          <i class="fas fa-user"></i> &nbsp; {{cliente.cliente_name}} <a (click)="deleteClienteMesa(cliente)"><i class="far fa-trash-alt icon-delete"></i></a>\n        </ion-col>\n      </ion-row>\n    </div>\n  </div>\n    \n    \n    \n  </ion-content>\n  '/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\show-mesa\show-mesa.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
+    ], ShowMesaPage);
+    return ShowMesaPage;
+}());
+
+//# sourceMappingURL=show-mesa.js.map
+
+/***/ }),
+
+/***/ 54:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditarMesaModalPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2982,7 +2946,13 @@ var EditarMesaModalPage = /** @class */ (function () {
                     console.log('Mesa Actualizada Exitosamente');
                     if (_this.navParams.get("parentName") == "ShowMesaPage") {
                         _this.navParams.get("parentPage").initializeSelectedMesa(result['mesa']); /* Actualiza ShowMesaPage */
-                        _this.navParams.get("parentPage").navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+                        if (_this.navParams.get("parentPage").navParams.get("parentName") == "ManejoMesasPage") {
+                            _this.navParams.get("parentPage").navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+                        }
+                        else if (_this.navParams.get("parentPage").navParams.get("parentName") == "ShowMesaHistoryPage") {
+                            _this.navParams.get("parentPage").navParams.get("parentPage")
+                                .getMesaHistory(_this.navParams.get("parentPage").navParams.get("fecha"), _this.mesa.num_mesa); /* Actualiza ShowMesaHistoryPage */
+                        }
                     }
                     else if (_this.navParams.get("parentName") == "ManejoMesasPage") {
                         _this.navParams.get("parentPage").initializeSelectedMesa(result['mesa']); /* Actualiza ManejoMesasPage SelectedMesa */
@@ -3028,13 +2998,13 @@ var EditarMesaModalPage = /** @class */ (function () {
                     else {
                         errorMessage_1 = result['error']['message'] + '<br>';
                     }
-                    var alert = _this.alertCtrl.create({
+                    var alert_1 = _this.alertCtrl.create({
                         title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
                         subTitle: 'Hubo errores al Editar la Mesa:<br>',
                         message: errorMessage_1,
                         buttons: ['OK']
                     });
-                    alert.present();
+                    alert_1.present();
                 }
             }, function (err) {
             });
@@ -3044,25 +3014,30 @@ var EditarMesaModalPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-editar-mesa-modal',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\editar-mesa-modal\editar-mesa-modal.html"*/'<ion-header>\n    <div class="modal-header">\n      <p class="modal-title" >Editar Mesa</p>\n  \n      <button class="modal-close-icon" (click)="closeModal()">\n        <i class="fas fa-times" style="font-size: 2.3rem"></i>\n      </button>\n    </div>      \n  </ion-header>\n  \n  <ion-content>\n    <div padding class="content-overflow">\n      <form  [formGroup]="editMesaForm">\n        \n        <ion-item class="form-item">\n          <ion-label stacked>Numero de la Mesa:</ion-label>\n          <ion-input type="number" [formControl]="editMesaForm.controls[\'num_mesa\']" readonly></ion-input>\n        </ion-item>\n        \n        <ion-item class="form-item">\n          <ion-label stacked>Etiqueta de la Mesa:</ion-label>\n          <ion-input type="text" [formControl]="editMesaForm.controls[\'etiqueta\']"></ion-input>\n        </ion-item>\n        \n        <ion-item class="form-item">\n          <ion-label stacked>Fecha y Hora de Apertura:</ion-label>\n          <ion-datetime displayFormat="YYYY-MM-DD HH:mm" pickerFormat="MMM/DD/YYYY hh:mma" \n          doneText="Aceptar" cancelText="Cancelar"	[formControl]="editMesaForm.controls[\'apertura\']"></ion-datetime>\n        </ion-item>\n        \n        <ion-item class="form-item">\n          <ion-label stacked>Fecha y Hora de Clausura (Opcional):</ion-label>\n          <ion-datetime displayFormat="YYYY-MM-DD HH:mm" pickerFormat="MMM/DD/YYYY hh:mma" \n          doneText="Aceptar" cancelText="Cancelar" [formControl]="editMesaForm.controls[\'clausura\']"></ion-datetime>\n        </ion-item>\n        \n        \n        \n        <ion-row class="sign-in-button-container">\n          <ion-col text-center>\n            <button class="succes-button" (click)="editarMesa()" [disabled]="!editMesaForm.valid">\n              <i class="far fa-save" style="font-size: 2rem"></i>&nbsp;Guardar\n            </button>\n          </ion-col>\n        </ion-row>\n        \n        \n      </form>\n      \n    </div>\n  </ion-content>\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\editar-mesa-modal\editar-mesa-modal.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]) === "function" && _f || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
     ], EditarMesaModalPage);
     return EditarMesaModalPage;
-    var _a, _b, _c, _d, _e, _f;
 }());
 
 //# sourceMappingURL=editar-mesa-modal.js.map
 
 /***/ }),
 
-/***/ 54:
+/***/ 55:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MesaClientesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_clientes_service_clientes_service__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_clientes_service_clientes_service__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_crear_cliente_crear_cliente__ = __webpack_require__(56);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3077,6 +3052,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 /**
  * Generated class for the MesaClientesPage page.
  *
@@ -3084,11 +3061,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var MesaClientesPage = /** @class */ (function () {
-    function MesaClientesPage(navCtrl, navParams, manejoMesasService, clientesService, alertCtrl, toastCtrl) {
+    function MesaClientesPage(navCtrl, navParams, manejoMesasService, clientesService, modalCtrl, alertCtrl, toastCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.manejoMesasService = manejoMesasService;
         this.clientesService = clientesService;
+        this.modalCtrl = modalCtrl;
         this.alertCtrl = alertCtrl;
         this.toastCtrl = toastCtrl;
         this.getAllClientes();
@@ -3141,13 +3119,13 @@ var MesaClientesPage = /** @class */ (function () {
                 console.log('Error al obtener celebraciones');
                 var errorMessage = '';
                 errorMessage = result['error']['message'] + '<br>';
-                var alert = _this.alertCtrl.create({
+                var alert_1 = _this.alertCtrl.create({
                     title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
                     subTitle: 'Hubo errores al obtener los Clientes:<br>',
                     message: errorMessage,
                     buttons: ['OK']
                 });
-                alert.present();
+                alert_1.present();
             }
         });
     };
@@ -3223,7 +3201,13 @@ var MesaClientesPage = /** @class */ (function () {
                         //console.log(result);
                         if (_this.navParams.get("parentName") == "ShowMesaPage") {
                             _this.navParams.get("parentPage").getClientesMesa(); /* Actualiza ShowMesaPage */
-                            _this.navParams.get("parentPage").navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+                            if (_this.navParams.get("parentPage").navParams.get("parentName") == "ManejoMesasPage") {
+                                _this.navParams.get("parentPage").navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+                            }
+                            else if (_this.navParams.get("parentPage").navParams.get("parentName") == "ShowMesaHistoryPage") {
+                                _this.navParams.get("parentPage").navParams.get("parentPage")
+                                    .getMesaHistory(_this.navParams.get("parentPage").navParams.get("fecha"), _this.mesa.num_mesa); /* Actualiza ShowMesaHistoryPage */
+                            }
                         }
                         else if (_this.navParams.get("parentName") == "ManejoMesasPage") {
                             _this.navParams.get("parentPage").getClientesMesa(_this.mesa); /* Actualiza ManejoMesasPage SelectedMesa */
@@ -3245,13 +3229,13 @@ var MesaClientesPage = /** @class */ (function () {
                     else {
                         console.log('Error al Agregar Clientes');
                         var errorMessage = result['error']['message'] + '<br>';
-                        var alert = _this.alertCtrl.create({
+                        var alert_2 = _this.alertCtrl.create({
                             title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
                             subTitle: 'Hubo errores al agregar los Clientes:<br>',
                             message: errorMessage,
                             buttons: ['OK']
                         });
-                        alert.present();
+                        alert_2.present();
                     }
                 });
             }
@@ -3262,28 +3246,44 @@ var MesaClientesPage = /** @class */ (function () {
             }
         });
     };
+    // Abre el modal de Fotos de la Mesa
+    //----------------------------------------------------------
+    MesaClientesPage.prototype.openCrearClienteModal = function () {
+        this.modalCrearMesa = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_4__pages_crear_cliente_crear_cliente__["a" /* CrearClientePage */], { "parentPage": this, "mesa": this.mesa, "parentName": "MesaClientesPage", "IsModal": true }, {
+            showBackdrop: true,
+            enableBackdropDismiss: true
+        });
+        this.modalCrearMesa.present();
+    };
     MesaClientesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-mesa-clientes',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\mesa-clientes\mesa-clientes.html"*/'<ion-header>\n    <div class="modal-header">\n      <p class="modal-title" >Clientes de la Mesa</p>\n  \n      <button class="modal-close-icon" (click)="closeModal()">\n        <i class="fas fa-times" style="font-size: 2.3rem"></i>\n      </button>\n    </div>      \n  </ion-header>\n  \n  <ion-content>\n\n    <div padding class="search-bar">\n\n      <ion-row>\n        <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n          <button class="button-agregar-mesa" (click)="openCrearMesaModal()">\n            <i class="fas fa-user-plus" style="font-size: 2rem"> </i> &nbsp;Crear Cliente\n          </button>\n        </ion-col>\n        <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n          <ion-searchbar\n          [showCancelButton]="shouldShowCancel"\n          (ionInput)="filterItems($event)">\n          </ion-searchbar>\n        </ion-col>\n      </ion-row>\n\n    </div>\n\n    <div  class="lista-overflow">\n\n      <ion-list class="client-list">\n        <button ion-item *ngFor="let cliente of items" (click)="changeItemState(cliente)">\n          <i class="far fa-check-square icon-check" item-start *ngIf="cliente.check_mesa == \'checked\'"></i>\n          <i class="far fa-square icon-blank" item-start *ngIf="cliente.check_mesa == \'N\'"></i>\n          <h1 class="client-name-check" *ngIf="cliente.check_mesa == \'checked\'">{{cliente.name}}</h1>\n          <h2 class="client-email-check" *ngIf="cliente.check_mesa == \'checked\'">{{cliente.email}}</h2>\n          <h1 class="client-name" *ngIf="cliente.check_mesa == \'N\'">{{cliente.name}}</h1>\n          <h2 class="client-email" *ngIf="cliente.check_mesa == \'N\'">{{cliente.email}}</h2>\n        </button>\n      </ion-list>\n\n    </div>\n\n    <button class="button-guardar-clientes" (click)="guardar()">\n      <i class="fas fa-save" style="font-size: 2rem"> </i> &nbsp;Guardar\n    </button>\n\n  </ion-content>\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\mesa-clientes\mesa-clientes.html"*/,
+            selector: 'page-mesa-clientes',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\mesa-clientes\mesa-clientes.html"*/'<ion-header>\n    <div class="modal-header">\n      <p class="modal-title" >Clientes de la Mesa</p>\n  \n      <button class="modal-close-icon" (click)="closeModal()">\n        <i class="fas fa-times" style="font-size: 2.3rem"></i>\n      </button>\n    </div>      \n  </ion-header>\n  \n  <ion-content>\n\n    <div padding class="search-bar">\n\n      <ion-row>\n        <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n          <button class="button-agregar-mesa" (click)="openCrearClienteModal()">\n            <i class="fas fa-user-plus" style="font-size: 2rem"> </i> &nbsp;Crear Cliente\n          </button>\n        </ion-col>\n        <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n          <ion-searchbar\n          [showCancelButton]="shouldShowCancel"\n          (ionInput)="filterItems($event)">\n          </ion-searchbar>\n        </ion-col>\n      </ion-row>\n\n    </div>\n\n    <div  class="lista-overflow">\n\n      <ion-list class="client-list">\n        <button ion-item *ngFor="let cliente of items" (click)="changeItemState(cliente)">\n          <i class="far fa-check-square icon-check" item-start *ngIf="cliente.check_mesa == \'checked\'"></i>\n          <i class="far fa-square icon-blank" item-start *ngIf="cliente.check_mesa == \'N\'"></i>\n          <h1 class="client-name-check" *ngIf="cliente.check_mesa == \'checked\'">{{cliente.name}}</h1>\n          <h2 class="client-email-check" *ngIf="cliente.check_mesa == \'checked\'">{{cliente.email}}</h2>\n          <h1 class="client-name" *ngIf="cliente.check_mesa == \'N\'">{{cliente.name}}</h1>\n          <h2 class="client-email" *ngIf="cliente.check_mesa == \'N\'">{{cliente.email}}</h2>\n        </button>\n      </ion-list>\n\n    </div>\n\n    <button class="button-guardar-clientes" (click)="guardar()">\n      <i class="fas fa-save" style="font-size: 2rem"> </i> &nbsp;Guardar\n    </button>\n\n  </ion-content>\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\mesa-clientes\mesa-clientes.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_clientes_service_clientes_service__["a" /* ClientesServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_clientes_service_clientes_service__["a" /* ClientesServiceProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]) === "function" && _f || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_clientes_service_clientes_service__["a" /* ClientesServiceProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
     ], MesaClientesPage);
     return MesaClientesPage;
-    var _a, _b, _c, _d, _e, _f;
 }());
 
 //# sourceMappingURL=mesa-clientes.js.map
 
 /***/ }),
 
-/***/ 55:
+/***/ 56:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MesaCelebracionesPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CrearClientePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_clientes_service_clientes_service__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__imports_validator__ = __webpack_require__(218);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3297,6 +3297,232 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+/**
+ * Generated class for the CrearClientePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var CrearClientePage = /** @class */ (function () {
+    function CrearClientePage(navCtrl, navParams, formBuilder, alertCtrl, popoverCtrl, toastCtrl, clienteService) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.formBuilder = formBuilder;
+        this.alertCtrl = alertCtrl;
+        this.popoverCtrl = popoverCtrl;
+        this.toastCtrl = toastCtrl;
+        this.clienteService = clienteService;
+        this.isModal = null;
+        this.clienteForm = this.formBuilder.group({
+            name: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([
+                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required
+                ])
+            ],
+            email: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([
+                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].pattern(__WEBPACK_IMPORTED_MODULE_4__imports_validator__["a" /* regexValidators */].email),
+                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required
+                ])
+            ],
+            whatsapp: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([
+                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required
+                ])
+            ],
+            telefono: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([
+                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required
+                ])
+            ],
+            direccion: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([
+                    __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required
+                ])
+            ],
+            celebraciones_cliente: this.formBuilder.array([this.initCelebracion()])
+        });
+        if (this.navParams.get("IsModal")) {
+            this.isModal = true;
+        }
+        this.getAllCelebrciones();
+    }
+    CrearClientePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CrearClientePage');
+    };
+    // Inicializa el Input  si no existen celebraciones agregadas
+    //----------------------------------------------------------
+    CrearClientePage.prototype.initCelebracion = function () {
+        return this.formBuilder.group({
+            celebracion_descripcion: [''],
+            fecha: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required],
+            celebracion_id: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required],
+            id: -1
+        });
+    };
+    // Inicializa el Input si existen celebraciones agregadas
+    //----------------------------------------------------------
+    CrearClientePage.prototype.initCelebracionesCliente = function (celebracion_cliente) {
+        return this.formBuilder.group({
+            celebracion_descripcion: [celebracion_cliente.celebracion_descripcion],
+            fecha: [celebracion_cliente.fecha, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required],
+            celebracion_id: celebracion_cliente.celebracion_id,
+            id: celebracion_cliente.id
+        });
+    };
+    // Agrega un input al arreglo de Inputs
+    //----------------------------------------------------------
+    CrearClientePage.prototype.addCelebracion = function () {
+        var control = this.clienteForm.controls.celebraciones_cliente;
+        control.push(this.initCelebracion());
+    };
+    // Remueveun input del arreglo de Inputs
+    //----------------------------------------------------------
+    CrearClientePage.prototype.removeCelebracion = function (i) {
+        var control = this.clienteForm.controls.celebraciones_cliente;
+        control.removeAt(i);
+    };
+    // Acción cuando se selcciona una celebración
+    //----------------------------------------------------------
+    CrearClientePage.prototype.selectCelebracion = function (index) {
+        var control = this.clienteForm.controls.celebraciones_cliente.value;
+        var celebracion = this.celebraciones.filter(function (item) {
+            return (item.id == control[index].celebracion_id);
+        });
+        control[index].celebracion_descripcion = celebracion[0].descripcion;
+        //console.log(control[index].celebracion_id);
+        //console.log(control[index].celebracion_descripcion);
+    };
+    // Remueveun input del arreglo de Inputs
+    //----------------------------------------------------------
+    CrearClientePage.prototype.getAllCelebrciones = function () {
+        var _this = this;
+        this.clienteService.getCelebraciones().then(function (result) {
+            if (!result['error']) {
+                console.log('Celebraciones obtenidas Exitosamente');
+                console.log(result);
+                _this.celebraciones = result;
+            }
+            else {
+                console.log('Error al obtener Celebraciones');
+                console.log(result);
+                var errorMessage = '';
+                errorMessage = result['error']['message'] + '<br>';
+                var alert = _this.alertCtrl.create({
+                    title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
+                    subTitle: 'Hubo errores al obtener las Celebraciones:<br>',
+                    message: errorMessage,
+                    buttons: ['OK']
+                });
+                alert.present();
+            }
+        });
+    };
+    // Crea el cliente y las celebraciones agregadas
+    //----------------------------------------------------------
+    CrearClientePage.prototype.crearCliente = function (formResult) {
+        var _this = this;
+        this.clienteService.crearCliente(formResult).then(function (result) {
+            if (!result['error']) {
+                console.log('Cliente creado Exitosamente');
+                var toast = _this.toastCtrl.create({
+                    message: result['message'],
+                    duration: 3000,
+                    position: 'middle'
+                });
+                toast.present();
+                if (_this.navParams.get("parentName") == "MesaClientesPage") {
+                    _this.navParams.get("parentPage").getAllClientes(); /* Actualiza MesaClientesPage */
+                }
+                else if (_this.navParams.get("parentName") == "MesaCelebracionesPage") {
+                    _this.navParams.get("parentPage").getAllClientes(); /* Actualiza MesaCelebracionesPage */
+                }
+                _this.navCtrl.pop();
+            }
+            else {
+                console.log('Error en los datos enviados');
+                var errorMessage_1 = '';
+                if (result['error']['errors']) {
+                    if (result['error']['errors']['name']) {
+                        result['error']['errors']['name'].forEach(function (element) {
+                            errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
+                        });
+                    }
+                    if (result['error']['errors']['email']) {
+                        result['error']['errors']['email'].forEach(function (element) {
+                            errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
+                        });
+                    }
+                    if (result['error']['errors']['whatsapp']) {
+                        result['error']['errors']['whatsapp'].forEach(function (element) {
+                            errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
+                        });
+                    }
+                    if (result['error']['errors']['direccion']) {
+                        result['error']['errors']['direccion'].forEach(function (element) {
+                            errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
+                        });
+                    }
+                    if (result['error']['errors']['celebraciones_cliente']) {
+                        result['error']['errors']['celebraciones_cliente'].forEach(function (element) {
+                            errorMessage_1 += '<i class="fas fa-exclamation-circle error-item"></i> ' + element + '<br>';
+                        });
+                    }
+                }
+                else {
+                    errorMessage_1 = result['error']['message'] + '<br>';
+                }
+                var alert = _this.alertCtrl.create({
+                    title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
+                    subTitle: 'Hubo errores al crear el Cliente:<br>',
+                    message: errorMessage_1,
+                    buttons: ['OK']
+                });
+                alert.present();
+            }
+        }, function (err) {
+        });
+    };
+    // Cierra el Modal
+    //----------------------------------------------------------
+    CrearClientePage.prototype.closeModal = function () {
+        this.navCtrl.pop();
+    };
+    CrearClientePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-crear-cliente',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\crear-cliente\crear-cliente.html"*/'\n<page-header *ngIf="!isModal"></page-header>\n<ion-header *ngIf="isModal">\n    <div class="modal-header">\n      <p class="modal-title" >Crear Cliente</p>\n  \n      <button class="modal-close-icon" (click)="closeModal()">\n        <i class="fas fa-times" style="font-size: 2.3rem"></i>\n      </button>\n    </div>      \n  </ion-header>\n  \n  <ion-content>\n    <div padding class="content-overflow-cli">\n      <form  [formGroup]="clienteForm">\n\n        <ion-row justify-content-center>\n          <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n            <ion-item class="form-item">\n              <ion-label stacked>Nombre y Apellido:</ion-label>\n              <ion-input type="text" [formControl]="clienteForm.controls[\'name\']"></ion-input>\n            </ion-item>\n          </ion-col>\n            \n          <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n              <ion-item class="form-item">\n                <ion-label stacked>\n                  E-Mail: \n                  <span *ngIf="clienteForm.controls.email.hasError(\'pattern\')" style="float: right; color: #FB3D37">\n                    Ingrese un E-Mail válido\n                  </span>\n                </ion-label>\n                <ion-input type="email" [formControl]="clienteForm.controls[\'email\']"></ion-input>\n              </ion-item>\n          </ion-col>\n            \n          <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n              <ion-item class="form-item">\n                <ion-label stacked>Teléfono (Whatsapp):</ion-label>\n                <ion-input type="tel" [formControl]="clienteForm.controls[\'whatsapp\']"></ion-input>\n              </ion-item>\n          </ion-col>\n            \n          <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n              <ion-item class="form-item">\n                <ion-label stacked>Teléfono (Opcional):</ion-label>\n                <ion-input type="tel" [formControl]="clienteForm.controls[\'telefono\']"></ion-input>\n             </ion-item>\n          </ion-col>\n            \n          <ion-col col-12>\n              <ion-item class="form-item">\n                <ion-label stacked>Dirección:</ion-label>\n                <ion-input type="text" [formControl]="clienteForm.controls[\'direccion\']"></ion-input>\n            </ion-item>\n          </ion-col>\n\n          <ion-col col-12 col-lg-8 col-xl-8  no-padding class="celebraciones-container hidden-sm-down" *ngIf="!isModal">\n              \n              <div  formArrayName="celebraciones_cliente" >\n\n                  <div no-padding [formGroupName]="i" *ngFor="let celebracion of clienteForm.controls.celebraciones_cliente.controls; let i = index">\n                    \n                        <div class="celebracion-agregada-descripcion">\n                            <ion-item no-lines class="item-celebracion-descripcion">\n                              <ion-avatar item-start  style="float: left; margin:0;">\n                                <img src="../../assets/imgs/confetti_menu.svg" class="img-celebracion">\n                              </ion-avatar>\n                              <ion-label style="color: #003300" stacked>Seleccione una Celebración:</ion-label>\n                              <ion-select (ionChange)="selectCelebracion(i)" interface="popover" formControlName="celebracion_id" class="celebracion-select" >\n                                  <ion-option value="{{cel.id}}" *ngFor="let cel of celebraciones" name="celebraciones_option">\n                                      {{cel.descripcion}}\n                                  </ion-option>\n                              </ion-select>\n                            </ion-item>\n                        </div>  \n\n                        <ion-input hidden formControlName="celebracion_descripcion" type="text"></ion-input>\n                                               \n                        <div class="celebracion-agregada-fecha">\n                          <ion-item no-lines class="item-celebracion-fecha">\n                              <ion-avatar item-start  style="float: left; margin:0;">\n                                <i class="far fa-calendar-alt icon-fecha"></i>\n                              </ion-avatar>\n                              <ion-label style="color: #003300" stacked>Indique la fecha de la Celebración:</ion-label>\n                              <ion-datetime class="celebracion-fecha" displayFormat="YYYY-MM-DD" pickerFormat="MMM/DD/YYYY" \n                            doneText="Aceptar" cancelText="Cancelar" formControlName="fecha" placeholder="YYYY-MM-DD"></ion-datetime>\n                          </ion-item>\n                        </div>\n                        \n                        <div class="celebracion-agregada-icon">\n                            <ion-item no-lines class="item-celebracion-icon">\n                              <a class="celebracion-delete" *ngIf="clienteForm.controls.celebraciones_cliente.length > 1" (click)="removeCelebracion(i)">\n                                <i class="fas fa-times "></i>\n                              </a>\n                            </ion-item>\n                        </div>\n                    </div>\n              </div>\n              <span  ion-button float-left icon-left clear (click)="addCelebracion()">\n                  <ion-icon name="add"></ion-icon>\n                  Agregar Celebracion\n              </span>\n            </ion-col>\n\n          <ion-col col-12  no-padding class="celebraciones-container hidden-sm-down" *ngIf="isModal">\n              \n              <div  formArrayName="celebraciones_cliente" >\n\n                  <div no-padding [formGroupName]="i" *ngFor="let celebracion of clienteForm.controls.celebraciones_cliente.controls; let i = index">\n                    \n                        <div class="celebracion-agregada-descripcion">\n                            <ion-item no-lines class="item-celebracion-descripcion">\n                              <ion-avatar item-start  style="float: left; margin:0;">\n                                <img src="../../assets/imgs/confetti_menu.svg" class="img-celebracion">\n                              </ion-avatar>\n                              <ion-label style="color: #003300" stacked>Seleccione una Celebración:</ion-label>\n                              <ion-select (ionChange)="selectCelebracion(i)" interface="popover" formControlName="celebracion_id" class="celebracion-select" >\n                                  <ion-option value="{{cel.id}}" *ngFor="let cel of celebraciones" name="celebraciones_option">\n                                      {{cel.descripcion}}\n                                  </ion-option>\n                              </ion-select>\n                            </ion-item>\n                        </div>  \n\n                        <ion-input hidden formControlName="celebracion_descripcion" type="text"></ion-input>\n                                               \n                        <div class="celebracion-agregada-fecha">\n                          <ion-item no-lines class="item-celebracion-fecha">\n                              <ion-avatar item-start  style="float: left; margin:0;">\n                                <i class="far fa-calendar-alt icon-fecha"></i>\n                              </ion-avatar>\n                              <ion-label style="color: #003300" stacked>Indique la fecha de la Celebración:</ion-label>\n                              <ion-datetime class="celebracion-fecha" displayFormat="YYYY-MM-DD" pickerFormat="MMM/DD/YYYY" \n                            doneText="Aceptar" cancelText="Cancelar" formControlName="fecha" placeholder="YYYY-MM-DD"></ion-datetime>\n                          </ion-item>\n                        </div>\n                        \n                        <div class="celebracion-agregada-icon">\n                            <ion-item no-lines class="item-celebracion-icon">\n                              <a class="celebracion-delete" *ngIf="clienteForm.controls.celebraciones_cliente.length > 1" (click)="removeCelebracion(i)">\n                                <i class="fas fa-times "></i>\n                              </a>\n                            </ion-item>\n                        </div>\n                    </div>\n              </div>\n              <span  ion-button float-left icon-left clear (click)="addCelebracion()">\n                  <ion-icon name="add"></ion-icon>\n                  Agregar Celebracion\n              </span>\n            </ion-col>\n          \n          <ion-col col-12 no-padding class="celebraciones-container hidden-md-up">\n              \n              <div  formArrayName="celebraciones_cliente" >\n\n                  <div no-padding [formGroupName]="i" *ngFor="let celebracion of clienteForm.controls.celebraciones_cliente.controls; let i = index">\n                    \n                        <div class="celebracion-agregada-descripcion" style="width: 100%; margin-bottom: -1px;">\n                            <ion-item no-lines class="item-celebracion-descripcion">\n                              <ion-avatar item-start  style="float: left; margin:0;">\n                                <img src="../../assets/imgs/confetti_menu.svg" class="img-celebracion">\n                              </ion-avatar>\n                              <ion-label style="color: #003300" stacked>Seleccione una Celebración:</ion-label>\n                              <ion-select (ionChange)="selectCelebracion(i)" interface="popover" formControlName="celebracion_id" class="celebracion-select" >\n                                  <ion-option value="{{cel.id}}" *ngFor="let cel of celebraciones" name="celebraciones_option">\n                                      {{cel.descripcion}}\n                                  </ion-option>\n                              </ion-select>\n                            </ion-item>\n                        </div>  \n\n                        <ion-input hidden formControlName="celebracion_descripcion" type="text"></ion-input>\n                                               \n                        <div class="celebracion-agregada-fecha" style="width: 85%; border-left: 1px solid">\n                          <ion-item no-lines class="item-celebracion-fecha">\n                              <ion-avatar item-start  style="float: left; margin:0;">\n                                <i class="far fa-calendar-alt icon-fecha"></i>\n                              </ion-avatar>\n                              <ion-label style="color: #003300" stacked>Indique la fecha de la Celebración:</ion-label>\n                              <ion-datetime class="celebracion-fecha" displayFormat="YYYY-MM-DD" pickerFormat="MMM/DD/YYYY" \n                            doneText="Aceptar" cancelText="Cancelar" formControlName="fecha" placeholder="YYYY-MM-DD"></ion-datetime>\n                          </ion-item>\n                        </div>\n\n                        \n                        <div class="celebracion-agregada-icon" style="width: 15%;">\n                            <ion-item no-lines class="item-celebracion-icon">\n                              <a class="celebracion-delete" *ngIf="clienteForm.controls.celebraciones_cliente.length > 1" (click)="removeCelebracion(i)">\n                                <i class="fas fa-times "></i>\n                              </a>\n                            </ion-item>\n                        </div>\n                    </div>\n              </div>\n              <span  ion-button float-left icon-left clear (click)="addCelebracion()">\n                  <ion-icon name="add"></ion-icon>\n                  Agregar Celebracion\n              </span>\n            </ion-col> \n\n          \n\n        </ion-row>\n\n          \n\n        <ion-row class="sign-in-button-container">\n            <ion-col text-center>\n                <button class="succes-button" (click)="crearCliente(clienteForm.value)" [disabled]="!clienteForm.valid">\n                    <i class="fas fa-plus" style="font-size: 2rem"></i>&nbsp;Crear\n                </button>\n            </ion-col>\n        </ion-row>\n        \n        \n      </form>\n      \n    </div>\n  </ion-content>\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\crear-cliente\crear-cliente.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* PopoverController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* PopoverController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_3__providers_clientes_service_clientes_service__["a" /* ClientesServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_clientes_service_clientes_service__["a" /* ClientesServiceProvider */]) === "function" && _g || Object])
+    ], CrearClientePage);
+    return CrearClientePage;
+    var _a, _b, _c, _d, _e, _f, _g;
+}());
+
+//# sourceMappingURL=crear-cliente.js.map
+
+/***/ }),
+
+/***/ 57:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MesaCelebracionesPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_crear_cliente_crear_cliente__ = __webpack_require__(56);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
 /**
  * Generated class for the MesaCelebracionesPage page.
  *
@@ -3304,10 +3530,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var MesaCelebracionesPage = /** @class */ (function () {
-    function MesaCelebracionesPage(navCtrl, navParams, manejoMesasService, alertCtrl, toastCtrl) {
+    function MesaCelebracionesPage(navCtrl, navParams, manejoMesasService, modalCtrl, alertCtrl, toastCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.manejoMesasService = manejoMesasService;
+        this.modalCtrl = modalCtrl;
         this.alertCtrl = alertCtrl;
         this.toastCtrl = toastCtrl;
         this.getAllClientes();
@@ -3400,13 +3627,13 @@ var MesaCelebracionesPage = /** @class */ (function () {
                 console.log('Error al obtener celebraciones');
                 var errorMessage = '';
                 errorMessage = result['error']['message'] + '<br>';
-                var alert = _this.alertCtrl.create({
+                var alert_1 = _this.alertCtrl.create({
                     title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
                     subTitle: 'Hubo errores al obtener los Clientes:<br>',
                     message: errorMessage,
                     buttons: ['OK']
                 });
-                alert.present();
+                alert_1.present();
             }
         });
     };
@@ -3425,13 +3652,13 @@ var MesaCelebracionesPage = /** @class */ (function () {
                 console.log('Error al obtener celebraciones');
                 var errorMessage = '';
                 errorMessage = result['error']['message'] + '<br>';
-                var alert = _this.alertCtrl.create({
+                var alert_2 = _this.alertCtrl.create({
                     title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
                     subTitle: 'Hubo errores al obtener las Celebraciones:<br>',
                     message: errorMessage,
                     buttons: ['OK']
                 });
-                alert.present();
+                alert_2.present();
             }
         });
     };
@@ -3496,7 +3723,13 @@ var MesaCelebracionesPage = /** @class */ (function () {
                         //console.log(result);
                         if (_this.navParams.get("parentName") == "ShowMesaPage") {
                             _this.navParams.get("parentPage").getCelebracionesMesa(); /* Actualiza ShowMesaPage */
-                            _this.navParams.get("parentPage").navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+                            if (_this.navParams.get("parentPage").navParams.get("parentName") == "ManejoMesasPage") {
+                                _this.navParams.get("parentPage").navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+                            }
+                            else if (_this.navParams.get("parentPage").navParams.get("parentName") == "ShowMesaHistoryPage") {
+                                _this.navParams.get("parentPage").navParams.get("parentPage")
+                                    .getMesaHistory(_this.navParams.get("parentPage").navParams.get("fecha"), _this.mesa.num_mesa); /* Actualiza ShowMesaHistoryPage */
+                            }
                         }
                         else if (_this.navParams.get("parentName") == "ManejoMesasPage") {
                             _this.navParams.get("parentPage").getCelebracionesMesa(_this.mesa); /* Actualiza ManejoMesasPage SelectedMesa */
@@ -3518,13 +3751,13 @@ var MesaCelebracionesPage = /** @class */ (function () {
                     else {
                         console.log('Error al Agregar Celebraciones');
                         var errorMessage = result['error']['message'] + '<br>';
-                        var alert = _this.alertCtrl.create({
+                        var alert_3 = _this.alertCtrl.create({
                             title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
                             subTitle: 'Hubo errores al agregar las Celebraciones:<br>',
                             message: errorMessage,
                             buttons: ['OK']
                         });
-                        alert.present();
+                        alert_3.present();
                     }
                 });
             }
@@ -3535,29 +3768,42 @@ var MesaCelebracionesPage = /** @class */ (function () {
             }
         });
     };
+    // Abre el modal de Fotos de la Mesa
+    //----------------------------------------------------------
+    MesaCelebracionesPage.prototype.openCrearClienteModal = function () {
+        this.modalCrearMesa = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__pages_crear_cliente_crear_cliente__["a" /* CrearClientePage */], { "parentPage": this, "mesa": this.mesa, "parentName": "MesaCelebracionesPage", "IsModal": true }, {
+            showBackdrop: true,
+            enableBackdropDismiss: true
+        });
+        this.modalCrearMesa.present();
+    };
     MesaCelebracionesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-mesa-celebraciones',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\mesa-celebraciones\mesa-celebraciones.html"*/'<ion-header>\n  <div class="modal-header">\n    <p class="modal-title" >Celebraciones de la Mesa</p>\n\n    <button class="modal-close-icon" (click)="close_Modal()">\n      <i class="fas fa-times" style="font-size: 2.3rem"></i>\n    </button>\n  </div>      \n</ion-header>\n\n<ion-content >\n\n  <div padding class="search-bar">\n\n    <ion-row>\n      \n      <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n        <button class="button-agregar-mesa" (click)="openCrearMesaModal()">\n          <i class="fas fa-user-plus" style="font-size: 2rem"> </i> &nbsp;Crear Cliente\n        </button>\n      </ion-col>\n      \n      <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n        <ion-searchbar\n        [showCancelButton]="shouldShowCancel"\n        (ionInput)="filterItems($event)">\n        </ion-searchbar>\n      </ion-col>\n    </ion-row>\n\n  </div>\n\n  <ion-row >\n    <ion-col col-6 class="border ">\n      <div  class="clientes-overflow">\n        \n        <ion-list class="client-list" >\n          <button ion-item *ngFor="let cliente of items_cli" (click)="selectCliente(cliente.id)" id="cliente_{{cliente.id}}">\n            <h1 class="cliente-name-check" *ngIf="cliente.check_mesa == \'checked\'">{{cliente.name}}<br></h1>\n            <h2 class="cliente-email-check" *ngIf="cliente.check_mesa == \'checked\'">{{cliente.email}}</h2>\n            <h1 class="cliente-name" *ngIf="cliente.check_mesa == \'N\'">{{cliente.name}} <br></h1>\n            <h2 class="cliente-email" *ngIf="cliente.check_mesa == \'N\'">{{cliente.email}}</h2>\n          </button>\n        </ion-list>\n      \n      </div>\n    </ion-col>\n    <ion-col col-6 >\n      <div  class="celebraciones-overflow">\n\n        <button class="button-agregar-celebracion" (click)="openCrearCelebracionModal()" *ngIf="items_cel">\n            <img src="../../assets/imgs/confetti_white.svg" class="add-celeb-img"/> <i class="fas fa-plus"></i>\n        </button>\n        \n        <ion-list class="client-list" >\n          <button ion-item *ngFor="let celebracion of items_cel" (click)="changeCelebracionState(celebracion)">\n            <i class="far fa-check-square clebracion-icon-check" item-start *ngIf="celebracion.check_mesa == \'checked\'"></i>\n            <i class="far fa-square clebracion-icon-blank" item-start *ngIf="celebracion.check_mesa == \'N\'"></i>\n            <h1 class="clebracion-name-check" *ngIf="celebracion.check_mesa == \'checked\'">{{celebracion.celebracion_descripcion}} <br></h1>\n            <h2 class="clebracion-cliente-check" *ngIf="celebracion.check_mesa == \'checked\'">{{celebracion.cliente_name}}</h2>\n            <h1 class="clebracion-name" *ngIf="celebracion.check_mesa == \'N\'">{{celebracion.celebracion_descripcion}}<br></h1>\n            <h2 class="clebracion-cliente" *ngIf="celebracion.check_mesa == \'N\'">{{celebracion.cliente_name}}</h2>\n          </button>\n        </ion-list>\n      \n      </div>\n    </ion-col>\n  </ion-row>  \n      \n      <button class="button-guardar-celebraciones" (click)="guardar()">\n        <i class="fas fa-save" style="font-size: 2rem"> </i> &nbsp;Guardar\n      </button>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\mesa-celebraciones\mesa-celebraciones.html"*/,
+            selector: 'page-mesa-celebraciones',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\mesa-celebraciones\mesa-celebraciones.html"*/'<ion-header>\n  <div class="modal-header">\n    <p class="modal-title" >Celebraciones de la Mesa</p>\n\n    <button class="modal-close-icon" (click)="close_Modal()">\n      <i class="fas fa-times" style="font-size: 2.3rem"></i>\n    </button>\n  </div>      \n</ion-header>\n\n<ion-content >\n\n  <div padding class="search-bar">\n\n    <ion-row>\n      \n      <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n        <button class="button-agregar-mesa" (click)="openCrearClienteModal()">\n          <i class="fas fa-user-plus" style="font-size: 2rem"> </i> &nbsp;Crear Cliente\n        </button>\n      </ion-col>\n      \n      <ion-col col-12 col-md-6 col-lg-6 col-xl-6>\n        <ion-searchbar\n        [showCancelButton]="shouldShowCancel"\n        (ionInput)="filterItems($event)">\n        </ion-searchbar>\n      </ion-col>\n    </ion-row>\n\n  </div>\n\n  <ion-row >\n    <ion-col col-6 class="border ">\n      <div  class="clientes-overflow">\n        \n        <ion-list class="client-list" >\n          <button ion-item *ngFor="let cliente of items_cli" (click)="selectCliente(cliente.id)" id="cliente_{{cliente.id}}">\n            <h1 class="cliente-name-check" *ngIf="cliente.check_mesa == \'checked\'">{{cliente.name}}<br></h1>\n            <h2 class="cliente-email-check" *ngIf="cliente.check_mesa == \'checked\'">{{cliente.email}}</h2>\n            <h1 class="cliente-name" *ngIf="cliente.check_mesa == \'N\'">{{cliente.name}} <br></h1>\n            <h2 class="cliente-email" *ngIf="cliente.check_mesa == \'N\'">{{cliente.email}}</h2>\n          </button>\n        </ion-list>\n      \n      </div>\n    </ion-col>\n    <ion-col col-6 >\n      <div  class="celebraciones-overflow">\n\n        <button class="button-agregar-celebracion" (click)="openCrearCelebracionModal()" *ngIf="items_cel">\n            <img src="../../assets/imgs/confetti_white.svg" class="add-celeb-img"/> <i class="fas fa-plus"></i>\n        </button>\n        \n        <ion-list class="client-list" >\n          <button ion-item *ngFor="let celebracion of items_cel" (click)="changeCelebracionState(celebracion)">\n            <i class="far fa-check-square clebracion-icon-check" item-start *ngIf="celebracion.check_mesa == \'checked\'"></i>\n            <i class="far fa-square clebracion-icon-blank" item-start *ngIf="celebracion.check_mesa == \'N\'"></i>\n            <h1 class="clebracion-name-check" *ngIf="celebracion.check_mesa == \'checked\'">{{celebracion.celebracion_descripcion}} <br></h1>\n            <h2 class="clebracion-cliente-check" *ngIf="celebracion.check_mesa == \'checked\'">{{celebracion.cliente_name}}</h2>\n            <h1 class="clebracion-name" *ngIf="celebracion.check_mesa == \'N\'">{{celebracion.celebracion_descripcion}}<br></h1>\n            <h2 class="clebracion-cliente" *ngIf="celebracion.check_mesa == \'N\'">{{celebracion.cliente_name}}</h2>\n          </button>\n        </ion-list>\n      \n      </div>\n    </ion-col>\n  </ion-row>  \n      \n      <button class="button-guardar-celebraciones" (click)="guardar()">\n        <i class="fas fa-save" style="font-size: 2rem"> </i> &nbsp;Guardar\n      </button>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\mesa-celebraciones\mesa-celebraciones.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]) === "function" && _e || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
     ], MesaCelebracionesPage);
     return MesaCelebracionesPage;
-    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=mesa-celebraciones.js.map
 
 /***/ }),
 
-/***/ 56:
+/***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MesaFotosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_manejo_mesas_manejo_mesas__ = __webpack_require__(19);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3657,13 +3903,13 @@ var MesaFotosPage = /** @class */ (function () {
                 console.log('Error al obtener fotos');
                 var errorMessage = '';
                 errorMessage = result['error']['message'] + '<br>';
-                var alert = _this.alertCtrl.create({
+                var alert_1 = _this.alertCtrl.create({
                     title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
                     subTitle: 'Hubo errores al obtener las Fotos de la Mesa:<br>',
                     message: errorMessage,
                     buttons: ['OK']
                 });
-                alert.present();
+                alert_1.present();
             }
         });
     };
@@ -3709,7 +3955,13 @@ var MesaFotosPage = /** @class */ (function () {
                 console.log('Fotos Agregadas Exitosamente');
                 //console.log(result);
                 if (_this.navParams.get("parentName") == "ShowMesaPage") {
-                    _this.navParams.get("parentPage").navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+                    if (_this.navParams.get("parentPage").navParams.get("parentName") == "ManejoMesasPage") {
+                        _this.navParams.get("parentPage").navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+                    }
+                    else if (_this.navParams.get("parentPage").navParams.get("parentName") == "ShowMesaHistoryPage") {
+                        _this.navParams.get("parentPage").navParams.get("parentPage")
+                            .getMesaHistory(_this.navParams.get("parentPage").navParams.get("fecha"), _this.mesa.num_mesa); /* Actualiza ShowMesaHistoryPage */
+                    }
                 }
                 else if (_this.navParams.get("parentName") == "ManejoMesasPage") {
                     _this.navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
@@ -3729,13 +3981,13 @@ var MesaFotosPage = /** @class */ (function () {
             else {
                 console.log('Error al Agregar Foto a la mesa');
                 var errorMessage = result['error']['message'] + '<br>';
-                var alert = _this.alertCtrl.create({
+                var alert_2 = _this.alertCtrl.create({
                     title: '<p class="alert-title"><i class="fas fa-exclamation-circle"></i>&nbsp;Errores en los datos</p>',
                     subTitle: 'Hubo errores al agregar las fotos a la mesa:<br>',
                     message: errorMessage,
                     buttons: ['OK']
                 });
-                alert.present();
+                alert_2.present();
             }
         });
     };
@@ -3743,15 +3995,19 @@ var MesaFotosPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-mesa-fotos',template:/*ion-inline-start:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\mesa-fotos\mesa-fotos.html"*/'<ion-header>\n    <div class="modal-header">\n      <p class="modal-title" >Fotos de la Mesa</p>\n  \n      <button class="modal-close-icon" (click)="closeModal()">\n        <i class="fas fa-times" style="font-size: 2.3rem"></i>\n      </button>\n    </div>      \n  </ion-header>\n  \n  <ion-content>\n\n    <div padding class="search-bar">\n\n      <ion-row justify-content-center>\n        <ion-col col >\n          <button class="button-agregar-mesa" (click)="addFoto()">\n            <i class="fas fa-user-plus" style="font-size: 2rem"> </i> &nbsp;Agregar Referencia de Foto\n          </button>\n        </ion-col>\n      </ion-row>\n\n    </div>\n\n    <div  class="fotos-overflow">\n        <form [formGroup]="fotosMesaForm" >\n            <div  formArrayName="fotosMesa" >\n\n                <div no-padding [formGroupName]="i" *ngFor="let foto of fotosMesaForm.controls.fotosMesa.controls; let i = index">\n                  \n                      <div class="referencia-item">\n                          <ion-item class="item-input-foto">\n                            <ion-label floating>Referencia {{i+1}}:</ion-label>\n                            <ion-input  type="text"  maxlength="50" formControlName="descripcion"></ion-input>\n                          </ion-item>\n                        <ion-item no-lines col-2 class="item-icon-foto" >\n                          <a class="button-trash" *ngIf="fotosMesaForm.controls.fotosMesa.length > 1" (click)="removeFoto(i)">\n                            <i class="far fa-trash-alt"></i>\n                          </a>\n                        </ion-item>\n                      </div>\n                  \n                  </div>\n\n            </div>  \n                         \n        </form>\n    </div>\n        \n        <button class="button-guardar-fotos" (click)="guardar(fotosMesaForm.value)" [disabled]="!fotosMesaForm.valid">\n          <i class="fas fa-save" style="font-size: 2rem"> </i> &nbsp;Guardar \n        </button>\n        \n      </ion-content>\n\n'/*ion-inline-end:"C:\Users\Personal\Documents\Miguel\07 - Freelancer\Proyectos\Jhony Maracas\Frontend\JME\src\pages\mesa-fotos\mesa-fotos.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]) === "function" && _f || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_manejo_mesas_manejo_mesas__["a" /* ManejoMesasProvider */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
     ], MesaFotosPage);
     return MesaFotosPage;
-    var _a, _b, _c, _d, _e, _f;
 }());
 
 //# sourceMappingURL=mesa-fotos.js.map
 
 /***/ })
 
-},[222]);
+},[223]);
 //# sourceMappingURL=main.js.map

@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
 
 
 import { ManejoMesasProvider } from '../../providers/manejo-mesas/manejo-mesas';
 import { ClientesServiceProvider } from '../../providers/clientes-service/clientes-service';
+import { CrearClientePage } from '../../pages/crear-cliente/crear-cliente';
 
 /**
  * Generated class for the MesaClientesPage page.
@@ -23,11 +25,13 @@ export class MesaClientesPage {
   clientes: any;
   mesa: any;
   items: any;
+  modalCrearMesa: any;
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               public manejoMesasService: ManejoMesasProvider, 
               public clientesService: ClientesServiceProvider, 
+              public modalCtrl: ModalController,
               public alertCtrl: AlertController, 
               private toastCtrl: ToastController) {
 
@@ -188,7 +192,13 @@ export class MesaClientesPage {
             
             if(this.navParams.get("parentName") == "ShowMesaPage"){
               this.navParams.get("parentPage").getClientesMesa(); /* Actualiza ShowMesaPage */
-              this.navParams.get("parentPage").navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+              if(this.navParams.get("parentPage").navParams.get("parentName") == "ManejoMesasPage"){
+                this.navParams.get("parentPage").navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+              }else 
+              if(this.navParams.get("parentPage").navParams.get("parentName") == "ShowMesaHistoryPage"){
+                this.navParams.get("parentPage").navParams.get("parentPage")
+                .getMesaHistory(this.navParams.get("parentPage").navParams.get("fecha"), this.mesa.num_mesa); /* Actualiza ShowMesaHistoryPage */
+              }
             }else 
             if(this.navParams.get("parentName") == "ManejoMesasPage"){
               this.navParams.get("parentPage").getClientesMesa(this.mesa); /* Actualiza ManejoMesasPage SelectedMesa */
@@ -234,5 +244,14 @@ export class MesaClientesPage {
     
   }
   
+  // Abre el modal de Fotos de la Mesa
+  //----------------------------------------------------------
+  openCrearClienteModal(){
+    this.modalCrearMesa = this.modalCtrl.create(CrearClientePage, { "parentPage": this, "mesa": this.mesa, "parentName": "MesaClientesPage", "IsModal": true }, {
+      showBackdrop: true,
+      enableBackdropDismiss: true
+    });
+    this.modalCrearMesa.present();
+  }
   
 }

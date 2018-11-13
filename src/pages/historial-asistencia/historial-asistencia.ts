@@ -7,6 +7,8 @@ import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 import { ManejoMesasProvider } from '../../providers/manejo-mesas/manejo-mesas';
 
 import { ShowMesaPage } from '../show-mesa/show-mesa';
+import { CrearMesaModalPage } from '../crear-mesa-modal/crear-mesa-modal';
+import { ShowMesaHistoryPage } from '../show-mesa-history/show-mesa-history';
 import { EditarMesaModalPage } from '../editar-mesa-modal/editar-mesa-modal';
 import { MesaClientesPage } from '../mesa-clientes/mesa-clientes';
 import { MesaCelebracionesPage } from '../mesa-celebraciones/mesa-celebraciones';
@@ -109,7 +111,7 @@ export class HistorialAsistenciaPage {
             this.mesasHistory = result;
             this.initializeItems();
             this.loading.dismiss();
-          }, 2000);
+          }, 1000);
       }else{
         this.loading.dismiss();
         console.log('Error al obtener Historial de Mesas');
@@ -161,20 +163,24 @@ export class HistorialAsistenciaPage {
   // Muestra la mesa seleccionada
   //----------------------------------------------------------
    selectMesaHistory(mesa) {
-    //console.log('Abriendo Mesa');
-    if(window.outerWidth < 960){
-      //this.navCtrl.push(ShowMesaPage, { "parentPage": this, "mesa": mesa });
-    }else{
+     this.platform.ready().then((readySource) => {
+       let width = this.platform.width();
+       console.log('Abriendo Historial Mesa: '+width);
+      if(width < 960){
+        this.navCtrl.push(ShowMesaHistoryPage, { "parentPage": this, "mesa": mesa });
+      }else{
 
-      console.log('\nPANEL HISTORIAL MESA SELECCIONADA');
-      this.initializeMesaHistory(mesa);
+        console.log('\nPANEL HISTORIAL MESA SELECCIONADA');
+        this.initializeMesaHistory(mesa);
 
-      if(!this.selectedMesa){
-        let elm = <HTMLElement>document.querySelector(".mesas-history-principal");
-        elm.style.width = '60%';
-        elm.style.height = '650px';
+        if(!this.selectedMesa){
+          let elm = <HTMLElement>document.querySelector(".mesas-history-principal");
+          elm.style.width = '60%';
+          elm.style.height = '650px';
+        }
       }
-    }
+    });
+
   }
 
   // Inicialización de datos de la mesa seleccionada
@@ -224,21 +230,25 @@ export class HistorialAsistenciaPage {
   //----------------------------------------------------------
   selectIntanceMesa(mesa: any) {
     //console.log('Abriendo Mesa');
-    if(window.outerWidth < 960){
-      this.navCtrl.push(ShowMesaPage, { "parentPage": this, "mesa": mesa });
-    }else{
+    this.platform.ready().then((readySource) => {
+      let width = this.platform.width();
+      if(width < 960){
+        this.navCtrl.push(ShowMesaPage, { "parentPage": this, "mesa": mesa });
+      }else{
 
-      console.log('\nPANEL MESA SELECCIONADA');
-      this.initializeInstanceMesa(mesa);
-      this.getClientesMesa(mesa);
-      this.getCelebracionesMesa(mesa);
+        console.log('\nPANEL MESA SELECCIONADA');
+        this.initializeInstanceMesa(mesa);
+        this.getClientesMesa(mesa);
+        this.getCelebracionesMesa(mesa);
 
-      let elm = <HTMLElement>document.querySelector(".mesas-history-principal");
-      elm.style.width = '30%';
+        let elm = <HTMLElement>document.querySelector(".mesas-history-principal");
+        elm.style.width = '30%';
 
-      elm = <HTMLElement>document.querySelector(".mesa-history-instences");
-      elm.style.width = '30%';
-    }
+        elm = <HTMLElement>document.querySelector(".mesa-history-instences");
+        elm.style.width = '30%';
+      }
+    });
+
   }
 
   // Inicialización de datos de la mesa seleccionada
@@ -468,5 +478,16 @@ export class HistorialAsistenciaPage {
     });
     this.modalFotosMesa.present();
   }
+
+    // Llamada al modal de crear mesa
+    //----------------------------------------------------------
+    openCrearMesaModal() {
+      this.modalCrear = this.modalCtrl.create(CrearMesaModalPage, { "parentPage": this, "parentName": "HistorialAsistenciaPage", "fecha": this.fechaForm.controls.fecha.value }, {
+        showBackdrop: true,
+        enableBackdropDismiss: true
+      });
+      this.modalCrear.present();
+      console.log("modal");
+    }
 
 }

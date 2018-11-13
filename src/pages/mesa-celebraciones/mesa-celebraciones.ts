@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
 
 import { ManejoMesasProvider } from '../../providers/manejo-mesas/manejo-mesas';
+import { CrearClientePage } from '../../pages/crear-cliente/crear-cliente';
 
 /**
  * Generated class for the MesaCelebracionesPage page.
@@ -25,10 +27,12 @@ export class MesaCelebracionesPage {
   items_cel: any;
   selectedCliente: any;
   selectedCliente_anterior: any;
+  modalCrearMesa: any;
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               public manejoMesasService: ManejoMesasProvider, 
+              public modalCtrl: ModalController,
               public alertCtrl: AlertController, 
               private toastCtrl: ToastController) {
 
@@ -258,8 +262,14 @@ export class MesaCelebracionesPage {
                //console.log(result);
                
                if(this.navParams.get("parentName") == "ShowMesaPage"){
-                 this.navParams.get("parentPage").getCelebracionesMesa(); /* Actualiza ShowMesaPage */
-                 this.navParams.get("parentPage").navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+                  this.navParams.get("parentPage").getCelebracionesMesa(); /* Actualiza ShowMesaPage */
+                  if(this.navParams.get("parentPage").navParams.get("parentName") == "ManejoMesasPage"){
+                    this.navParams.get("parentPage").navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+                  }else 
+                  if(this.navParams.get("parentPage").navParams.get("parentName") == "ShowMesaHistoryPage"){
+                    this.navParams.get("parentPage").navParams.get("parentPage")
+                    .getMesaHistory(this.navParams.get("parentPage").navParams.get("fecha"), this.mesa.num_mesa); /* Actualiza ShowMesaHistoryPage */
+                  }
               }else 
                if(this.navParams.get("parentName") == "ManejoMesasPage"){
                  this.navParams.get("parentPage").getCelebracionesMesa(this.mesa); /* Actualiza ManejoMesasPage SelectedMesa */
@@ -303,7 +313,16 @@ export class MesaCelebracionesPage {
        });
     
        
-     }
+  }
 
+    // Abre el modal de Fotos de la Mesa
+  //----------------------------------------------------------
+  openCrearClienteModal(){
+    this.modalCrearMesa = this.modalCtrl.create(CrearClientePage, { "parentPage": this, "mesa": this.mesa, "parentName": "MesaCelebracionesPage", "IsModal": true }, {
+      showBackdrop: true,
+      enableBackdropDismiss: true
+    });
+    this.modalCrearMesa.present();
+  }
 
 }

@@ -1,0 +1,67 @@
+<page-header></page-header>
+
+<ion-content padding style="margin-top: 59px">
+  <div class="titulo">
+    <h1 text-center ion-text color="principal">
+      <i class="fas fa-history"></i>
+      &nbsp;Hist. de Asistencia
+    </h1>
+  </div>
+
+  <div class="mesa-history-page">
+    <a class="cerrar-mesa-history" (click)="closeMesaHistory()">
+      <i class="fas fa-arrow-left"></i>&nbsp; Volver a Hist. de Asistencia 
+    </a>
+    <div class="instanceMesa-title-bar">
+      <div class="table-cell">
+        <p class="mesa-numero">Historial de la Mesa {{selectedMesaHistory.num_mesa}}</p>
+      </div>
+    </div>
+    <div class="mesas-instancias">
+      <ion-row>
+        <ion-col col class="empty" *ngIf="selectedMesaHistory.mesas.length == 0">
+          ¡No hay Historial disponible para la Mesa Seleccionada!
+        </ion-col>
+      </ion-row> 
+      <div  *ngFor="let mesaInstance of selectedMesaHistory.mesas; let i = index" (click)="selectIntanceMesa(mesaInstance)">
+          <a class="mesa-instance">
+                  <div class="mesa-instance-etiqueta">
+                      {{mesaInstance.etiqueta}}
+                  </div>
+                  <div class="mesa-instance-horas">
+                      <ion-row>
+                        <ion-col col-12 >
+                          <i class="far fa-clock"></i> &nbsp;Llegada: &nbsp;<span class="mesa-instance-horas-hora">{{horaAperturaHistory[i]}}</span>
+                        </ion-col>
+                        <ion-col col-12 >
+                          <i class="far fa-clock"></i> &nbsp;Salida: &nbsp;<span class="mesa-instance-horas-hora">{{horaClausuraHistory[i]}}</span>
+                        </ion-col>
+                      </ion-row>
+                  </div>
+                  <div class="mesa-instance-icons">
+                      <ion-row >
+                          <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_clientes_mesa > 0">
+                            <i class="fas fa-users"></i><br>
+                            {{mesaInstance.cant_clientes_mesa}}
+                          </ion-col>
+                          <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_celebraciones_mesa > 0">
+                            <img src="../../assets/imgs/confetti_menu.svg" class="img-confetti-history"/><br>
+                            {{mesaInstance.cant_celebraciones_mesa}}
+                          </ion-col>
+                          <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_fotos_mesa > 0">
+                            <i class="fas fa-camera"></i><br>
+                            {{mesaInstance.cant_fotos_mesa}}
+                          </ion-col>
+                          <ion-col col class="card-mesa-icon-history" *ngIf="mesaInstance.cant_correos_mesa > 0">
+                            <i class="fas fa-envelope"></i><br>
+                            {{mesaInstance.cant_correos_mesa}}
+                          </ion-col>
+                        </ion-row>
+                  </div>
+                </a>
+        </div>
+      </div>
+      
+  </div>
+
+</ion-content>

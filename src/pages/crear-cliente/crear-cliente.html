@@ -1,5 +1,14 @@
 
-<page-header></page-header>
+<page-header *ngIf="!isModal"></page-header>
+<ion-header *ngIf="isModal">
+    <div class="modal-header">
+      <p class="modal-title" >Crear Cliente</p>
+  
+      <button class="modal-close-icon" (click)="closeModal()">
+        <i class="fas fa-times" style="font-size: 2.3rem"></i>
+      </button>
+    </div>      
+  </ion-header>
   
   <ion-content>
     <div padding class="content-overflow-cli">
@@ -46,7 +55,55 @@
             </ion-item>
           </ion-col>
 
-          <ion-col col-12 col-lg-8 col-xl-8  no-padding class="celebraciones-container hidden-sm-down">
+          <ion-col col-12 col-lg-8 col-xl-8  no-padding class="celebraciones-container hidden-sm-down" *ngIf="!isModal">
+              
+              <div  formArrayName="celebraciones_cliente" >
+
+                  <div no-padding [formGroupName]="i" *ngFor="let celebracion of clienteForm.controls.celebraciones_cliente.controls; let i = index">
+                    
+                        <div class="celebracion-agregada-descripcion">
+                            <ion-item no-lines class="item-celebracion-descripcion">
+                              <ion-avatar item-start  style="float: left; margin:0;">
+                                <img src="../../assets/imgs/confetti_menu.svg" class="img-celebracion">
+                              </ion-avatar>
+                              <ion-label style="color: #003300" stacked>Seleccione una Celebración:</ion-label>
+                              <ion-select (ionChange)="selectCelebracion(i)" interface="popover" formControlName="celebracion_id" class="celebracion-select" >
+                                  <ion-option value="{{cel.id}}" *ngFor="let cel of celebraciones" name="celebraciones_option">
+                                      {{cel.descripcion}}
+                                  </ion-option>
+                              </ion-select>
+                            </ion-item>
+                        </div>  
+
+                        <ion-input hidden formControlName="celebracion_descripcion" type="text"></ion-input>
+                                               
+                        <div class="celebracion-agregada-fecha">
+                          <ion-item no-lines class="item-celebracion-fecha">
+                              <ion-avatar item-start  style="float: left; margin:0;">
+                                <i class="far fa-calendar-alt icon-fecha"></i>
+                              </ion-avatar>
+                              <ion-label style="color: #003300" stacked>Indique la fecha de la Celebración:</ion-label>
+                              <ion-datetime class="celebracion-fecha" displayFormat="YYYY-MM-DD" pickerFormat="MMM/DD/YYYY" 
+                            doneText="Aceptar" cancelText="Cancelar" formControlName="fecha" placeholder="YYYY-MM-DD"></ion-datetime>
+                          </ion-item>
+                        </div>
+                        
+                        <div class="celebracion-agregada-icon">
+                            <ion-item no-lines class="item-celebracion-icon">
+                              <a class="celebracion-delete" *ngIf="clienteForm.controls.celebraciones_cliente.length > 1" (click)="removeCelebracion(i)">
+                                <i class="fas fa-times "></i>
+                              </a>
+                            </ion-item>
+                        </div>
+                    </div>
+              </div>
+              <span  ion-button float-left icon-left clear (click)="addCelebracion()">
+                  <ion-icon name="add"></ion-icon>
+                  Agregar Celebracion
+              </span>
+            </ion-col>
+
+          <ion-col col-12  no-padding class="celebraciones-container hidden-sm-down" *ngIf="isModal">
               
               <div  formArrayName="celebraciones_cliente" >
 

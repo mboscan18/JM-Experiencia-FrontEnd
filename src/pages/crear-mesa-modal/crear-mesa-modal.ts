@@ -75,8 +75,14 @@ export class CrearMesaModalPage {
       this.manejoMesasService.crearMesa(mesaData).then((result) =>{
         if (!result['error']){
           console.log('Mesa creada Exitosamente');
+
+          if(this.navParams.get("parentName") == "ManejoMesasPage"){
+            this.navParams.get("parentPage").getMesasActivas(); /* Actualiza ManejoMesasPage */
+          }else 
+          if(this.navParams.get("parentName") == "HistorialAsistenciaPage"){
+            this.navParams.get("parentPage").getMesasHistory(this.navParams.get("fecha")); /* Actualiza ManejoMesasPage */
+          }
           
-          this.navParams.get("parentPage").getMesasActivas();
           let toast = this.toastCtrl.create({
             message: 'Mesa Aperturada Exitosamente',
             duration: 3000,
